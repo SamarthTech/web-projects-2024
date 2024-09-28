@@ -9,7 +9,7 @@
 
 <a href="https://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-ba8e23" alt="PRs Welcome"/></a>
 <a href="http://www.firsttimersonly.com/"><img src="https://img.shields.io/badge/first--timers--only-friendly-blue" alt="First-timer friendly"/></a>
-<a href="http://www.firsttimersonly.com/"><img src="https://img.shields.io/badge/web--development-projects-008080?logo=javascript" alt="First-timer friendly"/></a>
+<a href=""><img src="https://img.shields.io/badge/web--development-projects-008080?logo=javascript" alt="Web Development"/></a>
 <a href="https://github.com/SamarthTech/web-dev-projects-hacktoberfest24"> <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/></a>
  <a href="https://github.com/SamarthTech" ><img src="https://img.shields.io/badge/Contributions-welcome-darkviolet.svg?style=flat&logo=git" alt="Contributions" /></a>
 
@@ -21,7 +21,7 @@
 
 🚀 Samarth presents to you `Open Odyssey 1.0` - an Open-source extravaganza. On our inaugural season, we bring to you a special Hacktoberfest edition, collaborating with MLH (Major League Hacking) 🥳 
 
-🌐 HacktoberFest is your gateway to the vibrant world of open source. A month-long celebration of all things open-source. This year marks the 1th anniversary of Hacktoberfest, and we’re calling on your support! Join us on this epic journey and earn yourself an exclusive digital reward kit from DigitalOcean and our sponsors and partners...
+🌐 HacktoberFest is your gateway to the vibrant world of open source. A month-long celebration of all things open-source. This year marks the 11th anniversary of Hacktoberfest, and we’re calling on your support! Join us on this epic journey and earn yourself an exclusive digital reward kit from DigitalOcean and our sponsors and partners...
 
 📢 Sign up for Hacktoberfest 2024, and contribute 4 pull requests (PRs) between October 1st-31st to claim your stash of cool REWARDS 🔥
 
