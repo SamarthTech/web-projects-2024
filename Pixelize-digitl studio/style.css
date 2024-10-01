@@ -1,0 +1,434 @@
+*{
+    padding: 0;
+    margin: 0;  
+    scrollbar-width: none;  
+}
+@font-face {
+  font-family: Gliker;
+  src: url(assets/Gliker-BoldSemiCondensed.ttf);
+}
+/*=====================================
+            Navigation Bar
+======================================*/
+nav{
+    display: flex;
+    padding: 0.8em;
+    justify-content: space-between;
+    background-color: #8a36eb;
+}
+nav>a{
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
+.logo{
+    display: none;
+}
+nav>.menu{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly ;
+}
+nav>.menu>a{
+    color: white;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+nav>.menu>a:hover{
+    color: yellow;
+}
+/*=====================================
+            Home Page
+======================================*/
+main{
+    display: block;
+    background-color: #8a36eb;
+}
+main>.img-1{
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding: 1em 0 0 0;
+}
+.img-1-responsive{
+    display: none;
+}
+main>p{
+    width: 50%;
+    margin: auto;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    text-align: center;
+}
+.let-start{
+    background-color: black;
+    width: 100px;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 1.2em;
+
+}
+.let-start>a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: black;
+
+}
+/*Slide*/
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+@keyframes slide2{
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+section{
+  background-color: #8a36eb;
+}
+.t1,
+.t2 {
+  overflow: hidden;
+  color: black;
+  background-color: white ;
+  white-space: nowrap;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  position: relative;
+  font-size: 3em;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.star-icon{
+  width: 1em;
+  padding: 0 5px 5px 5px;
+}
+section:hover .slide1,
+section:hover .slide2 {
+  animation-play-state: paused;
+}
+.slide1 {
+  display: inline-block;
+  animation: 30s slide infinite linear;
+}.slide2 {
+  display: inline-block;
+  animation: 30s slide2 infinite linear;
+}
+.t1{  
+  transform:rotate(3deg);
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+
+}.t2{  
+  transform:rotate(-3deg);
+  width: 100%;
+}
+/*=====================================
+          About Us Page
+======================================*/
+.about-us{
+  padding-top: 6em;
+  overflow: hidden;
+}
+.about-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-img img{
+  width: 80%;
+}
+.about-text{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.about-text .title{
+  color: white;
+  font-family: Gliker;
+  font-size: 5em;
+  line-height: 0.8em;
+}
+
+.about-text .subtitle{
+  color: white;
+  font-size: 2.5em;
+  line-height: 1em;
+  font-weight: 500;
+}
+.about-text p{
+  width: 90%;
+  padding-top: 0.5em;
+  font-size: 1.2em;
+  line-height: 1.3em;
+}
+.about-text a{
+  margin-top: 2em;
+}
+.about-text a img{
+  width: 40%;
+  border-radius: 50px;
+}
+p{
+  background-color: #8a36eb;
+  color: white;
+}
+/*=====================================
+          Services Page
+======================================*/
+.services{
+  padding-top: 3em;
+}
+.services .title{
+  font-family: gliker;
+  color: white;
+  font-size: 8em;
+  text-align: center;
+}
+.services-opt{
+  padding:  0 2em 0 2em;
+}
+.services img{
+  border-radius: 15px;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.services img:hover{
+  border: 5px solid yellow;
+}
+/*=====================================
+          Member Page
+======================================*/
+.mb-title{
+  display: none;
+}
+.member{
+  background-color: #8a36eb;
+  padding: 3em 5em 0 5em;
+}
+.member-img img{
+  width: 100%;
+}
+.member-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 50%;
+}
+.member-text .title{
+  font-family: gliker;
+  font-size: 8em;
+  line-height: 0.8em;
+  color: white;
+}
+.member-text p{
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+/*=====================================
+              Ready
+======================================*/
+.ready{
+  padding: 0;
+}
+.ready img{
+  margin-left: 5%;
+  width: 90%;
+}
+/*=====================================
+              Review
+======================================*/
+.review{
+  padding: 2em 0;
+}
+.review-number {
+  display: flex;
+  padding: 1em 2em;
+  justify-content: space-evenly;
+}
+.review-number .r-number p{
+  padding: 0 0.5em;
+  font-size: 5em;
+  font-family: gliker;
+  color: white;
+  margin-bottom: 0;
+  line-height: 1em;
+}
+.review-number .r-number span{
+  padding: 0 0.5em;
+  font-size: 1.2em;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  color:  #f4c811;
+}
+.review-text {
+  color: white;
+  font-size: 1.2em;
+  line-height: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.company-logos{
+box-sizing: border-box;
+  background: #f2f2f2;
+  width: 100%;
+  margin: 1.5em 0;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.company-logos {
+  overflow: hidden;
+  padding: 20px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+.company-logos:before,
+.company-logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+.company-logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+.Testimonal{
+  padding: 1.5em 0;
+}
+.Testimonal .col-lg-4 {
+  line-height: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Testimonal .col-lg-4 p .p1{
+  font-size: 3.5em;
+}
+.Testimonal .col-lg-4 p .p2{
+  font-size: 2.5em;
+}
+.Testimonal .col-lg-8 {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  margin-bottom: 0;
+}
+.review-opt .row{
+  display: flex;
+  justify-content: space-evenly;
+}
+.review-opt .col-lg-3{
+  padding: 1em;
+  border: 2px solid yellow;
+  border-radius: 25px;
+}
+.review-opt .col-lg-3 img{
+  width: 40%;
+}
+.review-opt .col-lg-3 p{
+  padding: 0.5em 0;
+  margin-bottom: 0;
+  line-height: 1.2em;
+  font-size: 1.2em;
+}
+.review-opt .col-lg-3 span{
+  display: flex;
+}
+.review-opt .col-lg-3 span img{
+  width: 50px;
+}
+.review-opt .col-lg-3 span p{
+  margin-left: 1em;
+  line-height: 1em;
+}
+.keep-in-touch{
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.keep-in-touch .col-lg-6{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.keep-in-touch .col-lg-6>p{
+  font-family: gliker;
+  font-size: 5em;
+  line-height: 0.8em;
+  margin-bottom: 0.5em;
+}
+.keep-text img{
+  width: 50%;
+}
+.keep-text p{
+  line-height: 1.2em;
+  width: 80%;
+  font-size: 1.2em;
+  padding-top: 10px;
+}
+.contact-links a{
+  text-decoration: none;
+}
+.contact-opt{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  border-bottom: 2px solid white;
+  padding: 0.5em 0;
+}
+.contact-opt p{
+  margin-bottom: 0;
+}
+.contact-opt img{
+  width:25px;
+}
+.water-mark{
+  background-color: #8a36eb;
+  padding: 1em;
+  border-top: 2px solid white;
+}
+.water-mark a{
+  color: white;
+  text-decoration: none;
+}
