@@ -5,7 +5,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
-const apiKey = 'e9249c5327e03443857702bb70a1ecb5'; // Make sure to secure your API key in production
+const apiKey = 'your API key'; // Make sure to secure your API key in production
 
 // Separate function to add markers
 function addMarkers() {
