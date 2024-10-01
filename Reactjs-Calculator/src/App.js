@@ -28,6 +28,11 @@ const App = () => {
     }
   };
 
+  // Utility function to check if the expression is complete (no trailing operators)
+  const isExpressionComplete = (expression) => {
+    return !/[+\-*/.]$/.test(expression);
+  };
+
   useEffect(() => {
     if (result === "") {
       setLiveResult("");
@@ -35,9 +40,15 @@ const App = () => {
     }
 
     try {
-      const evaluated = evaluate(result);
-      setLiveResult(evaluated.toString());
-    } catch (err) {}
+      if (isExpressionComplete(result)) {
+        const evaluated = evaluate(result);
+        setLiveResult(evaluated.toString());
+      } else {
+        setLiveResult(""); // Don't show live result for incomplete expressions
+      }
+    } catch (err) {
+      setLiveResult("");
+    }
   }, [result]);
 
   return (
