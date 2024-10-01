@@ -1,0 +1,32 @@
+ #app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    transition: 1s;
+}
+
+#buttons2, .box{
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    transition: 1s;
+    height: 0px;
+}
+
+#output{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+/* Path: App.js */
