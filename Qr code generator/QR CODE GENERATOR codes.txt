@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport"
-		content="width=device-width, 
-						initial-scale=1.0" />
+		content="width=device-width,initial-scale=1.0" />
 	<title>QR Code Generator</title>
 	<style>
 		h1, h3 {
@@ -18,9 +16,7 @@
 		align-items: center;
 		}
 	</style>
-
-	<script src=
-"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
 	</script>
 </head>
 <body>
@@ -30,8 +26,7 @@
 		<h3>Enter QR code content and generate QR</h3>
 	</header>
 	<main>
-		<form action="/"
-			id="qr-generation-form">
+		<form action="/" id="qr-generation-form">
 			<input type="text"
 				name="qr-code-content"
 				id="qr-content"
@@ -41,13 +36,16 @@
 			<input type="submit"
 				value="Generate QR Code" />
 		</form><br />
-		<div id="qr-code"></div>
+		<div id="qr-code"></div> <br>
+		<!-- Download Button-->
+		<button id="download-qr" style="display:none;">Download QR Code</button>
 	</main>
 </body>
 <script>
 	let qrContentInput = document.getElementById("qr-content");
-	let qrGenerationForm = 
-	document.getElementById("qr-generation-form");
+	let qrGenerationForm = document.getElementById("qr-generation-form");
+	// Download feature
+	let downloadButton = document.getElementById("download-qr");
 	let qrCode;
 	
 	function generateQrCode(qrContent) {
@@ -60,7 +58,6 @@
 		correctLevel: QRCode.CorrectLevel.H,
 	});
 	}
-	
 	// Event listener for form submit event
 	qrGenerationForm.addEventListener("submit", function (event) {
 	// Prevent form submission
@@ -76,6 +73,19 @@
 		// again using same object
 		qrCode.makeCode(qrContent);
 	}
+	//Dowload Feature
+	  // Show download button after generating the QR code
+	downloadButton.style.display = "inline";
+	});
+	// Event listener for download button click
+	downloadButton.addEventListener("click", function () {
+		let qrCanvas = document.querySelector("#qr-code canvas");
+		let qrImage = qrCanvas.toDataURL("image/png");
+		// Create a temporary link to trigger download
+		let downloadLink = document.createElement("a");
+		downloadLink.href = qrImage;
+		downloadLink.download = "qr-code.png";
+		downloadLink.click();
 	});
 </script>
 
