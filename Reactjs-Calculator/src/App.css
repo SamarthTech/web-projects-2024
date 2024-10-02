@@ -99,3 +99,9 @@ input:focus, input:active, button:focus, button:active{
   color: #262834;
   font-weight: 600;
 }
+.live-result {
+  font-size: 0.8em;
+  color: #666;
+  text-align: right;
+  padding-right: 5px;
+}
