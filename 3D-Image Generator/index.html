@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>3D Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"  media="screen and (max-width: 600px)"    href="/styles/phone.css">
+  <link rel="stylesheet" href="styles/style.css">
+
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+
+<body>
+   <!---
+ 
+
+
+   <button class="btn"><a href="https://saptadev27.vercel.app/ ">Welcome to Saptarshi's Portfolio</a></button>
+
+-->
+<div class="body">
+  <div class="heading">
+    <h1>  <span>Shutterstock</span> Image <span>Downloader</span></h1>
+  </div>
+  <div class="inputs">
+    <input type="text" name="text" id="imageUrl" placeholder="Enter the Image Link" required="">
+  </div>
+    
+  
+  <div class="button">
+    <button class="btn" onclick="generateDownloadLink()"> Generate Download Link
+    </button>
+  </div>
+  <div class="tag">
+    <a id="downloadLink" style="display:none;"></a>
+  </div>
+</div>
+  <script src="App/script.js"></script>
+  <script type="module" src="App/main.js"></script>
+</body>
+
+</html>
