@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------
+  2. Preloader
+----------------------------------------------------------------*/
+.cs_preloader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  font-size: 80px;
+  background-color: var(--web-wash);
+}
+
+.cs_preloader_in {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  border-radius: 50%;
+  &:after,
+  &:before {
+    content: '';
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    margin-left: -65px;
+    margin-top: -65px;
+  }
+  &:after {
+    border-color: transparent;
+    border-top-color: var(--accent);
+    animation: spin 1s ease-in-out infinite;
+    z-index: 2;
+  }
+  &:before {
+    border-color: var(--accent);
+    opacity: 0.2;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

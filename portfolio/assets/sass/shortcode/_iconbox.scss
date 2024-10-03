@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------
+  8. Iconbox
+----------------------------------------------------------------*/
+.cs_iconbox.cs_style_1 {
+  padding: 47px 41px 47px 110px;
+  position: relative;
+  border: 1px solid #2f2f30;
+  transition: all 0.4s ease;
+  @media (max-width: 991px) {
+    padding: 37px 31px 37px 90px;
+  }
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    .cs_iconbox_icon {
+      img {
+        transform: rotateY(360deg);
+      }
+    }
+  }
+  .cs_iconbox_icon {
+    position: absolute;
+    left: 41px;
+    top: 51px;
+    @media (max-width: 991px) {
+      left: 31px;
+    }
+    img {
+      width: 35px;
+      transition: all 1.5s ease;
+    }
+  }
+}
+.cs_iconbox.cs_style_2 {
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  .cs_iconbox_in {
+    padding: 60px 20px 50px;
+    border-radius: 200px 200px 0 0;
+  }
+  .cs_iconbox_icon {
+    height: 60px;
+    transition: all 0.4s ease;
+  }
+  &:hover {
+    transform: translateY(-6px);
+    .cs_iconbox_icon {
+      transform: rotateY(0deg);
+    }
+  }
+}

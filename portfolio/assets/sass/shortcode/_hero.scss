@@ -1,0 +1,212 @@
+/*--------------------------------------------------------------
+  7. Hero
+----------------------------------------------------------------*/
+.cs_hero.cs_style_1 {
+  min-height: 700px;
+  padding: 300px 0 220px 0;
+  @media (max-width: 1550px) {
+    padding: 260px 0 220px 0;
+  }
+  @media (max-width: 1199px) {
+    text-align: center;
+    padding: 180px 0 150px 0;
+  }
+  .cs_hero_text {
+    max-width: 700px;
+    @media (max-width: 1199px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .cs_hero_subtitle {
+    max-width: 520px;
+    @media (max-width: 1199px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .cs_hero_social_btns {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    right: calc((100vw - 1300px) / 2 / 2);
+    margin-right: -25px;
+    @media (max-width: 1400px) {
+      right: calc((100vw - 1120px) / 2 / 2);
+    }
+    @media (max-width: 1199px) {
+      display: none;
+    }
+    a {
+      height: 50px;
+      width: 50px;
+      background-color: #242424;
+      color: var(--secondary);
+      box-shadow: 0px 6.65px 5.32px rgba(0, 0, 0, 0.03);
+      &:hover {
+        background-color: #333333;
+        color: var(--primary);
+      }
+    }
+  }
+  .cs_moving_text_wrap.cs_style_1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgba(205, 203, 209, 0.04);
+  }
+  .cs_hero_btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    @media (max-width: 1199px) {
+      justify-content: center;
+    }
+  }
+  .cs_hero_icon {
+    position: absolute;
+    top: -110px;
+    left: -130px;
+    @media (max-width: 1450px) {
+      left: -90px;
+      top: -125px;
+    }
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+  .cs_hero_img {
+    position: absolute;
+    right: 15px;
+    bottom: -100px;
+    max-width: 558px;
+    width: 100%;
+    padding: 0 50px;
+    @media (max-width: 1400px) {
+      right: 12px;
+      bottom: -60px;
+      max-width: 510px;
+      padding: 0 30px;
+    }
+    @media (max-width: 1199px) {
+      position: relative;
+      right: initial;
+      margin-left: auto;
+      margin-right: auto;
+      bottom: initial;
+      margin-top: 50px;
+    }
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .cs_hero_img_shape {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.cs_social_btns_1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  a {
+    height: 50px;
+    width: 50px;
+    background-color: #242424;
+    color: #fff;
+    box-shadow: 0px 6.65px 5.32px rgba(0, 0, 0, 0.03);
+    &:hover {
+      background-color: #333333;
+    }
+  }
+  &.cs_type_1 {
+    justify-content: flex-start;
+  }
+}
+.cs_hero.cs_style_2 {
+  padding: 140px 0 80px;
+  height: 100vh;
+  min-height: 750px;
+  max-height: 1100px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  @media (max-width: 575px) {
+    min-height: initial;
+    max-width: initial;
+    height: initial;
+  }
+  .cs_hero_text {
+    position: relative;
+    z-index: 2;
+    @media (max-width: 991px) {
+      br {
+        display: none;
+      }
+    }
+  }
+  h1 {
+    margin-bottom: 25px;
+    span {
+      display: inline-block;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        height: 16px;
+        width: 100%;
+        background-image: url('../img/icons/hero_shape.svg');
+        bottom: -5px;
+        background-size: 100% 100%;
+      }
+    }
+    b {
+      font-weight: inherit;
+      color: var(--accent);
+    }
+  }
+  .cs_hero_img {
+    border-radius: 250px 250px 20px 20px;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+  .cs_hero_img_2 {
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 6px solid rgba(255, 255, 255, 0.1);
+    @media (max-width: 575px) {
+      height: 180px;
+      width: 180px;
+    }
+  }
+  .cs_btn.cs_style_1 {
+    min-width: 180px;
+  }
+  .cs_blur_effect {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    height: 150px;
+    width: 150px;
+    background: var(--accent);
+    opacity: 0.8;
+    -webkit-filter: blur(125px);
+    filter: blur(125px);
+  }
+}
