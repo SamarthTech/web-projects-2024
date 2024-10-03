@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #121212;
+}
+
+#header {
+    background-color: #4CAF50;
+    padding: 15px 0;
+}
+
+#header h1 {
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+}
+
+#header nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+#header nav a:hover {
+    color: #fff;
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home {
+    background-color: black;
+}
+
+#about {
+    background-color: #1c1c1c;
+}
+
+#about h2 {
+    margin-bottom: 30px;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-content img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: scaleIn 0.5s forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#contact {
+    background-color: #c2c0c3;
+    padding: 40px 0;
+}
+
+#contact h1 {
+    font-family: Verdana;
+    font-size: 3rem;
+    color: black;
+    animation: fadeIn 0.5s forwards;
+}
+
+#contact form {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#contact label {
+    color: #ffffff;
+    font-family: Verdana;
+    width: 100px;
+}
+
+#contact input,
+#contact textarea {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: border 0.3s;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border: 2px solid #4CAF50;
+    outline: none;
+}
+
+#contact button {
+    padding: 10px 20px;
+    font-family: Verdana;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #ccc;
+}
+
+footer {
+    background-color: #4CAF50;
+    padding: 15px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+footer img {
+    width: 24px;
+    /* Set size for logos */
+    height: 24px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    background-color: black;
+    padding: 15px 0;
+    text-align: center;
+    color: #4CAF50;
+    font-size: 24px;
+}
+
+.about-content div {
+    max-width: 600px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.about-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes scaleIn {
+from {
+    transform: scale(0);
+    opacity: 0;
+}
+to {
+    transform: scale(1);
+    opacity: 1;
+}
+}
+
+#header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 0; /* Padding around the header */
+}
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+    color: #FFD700; /* Gold color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+.separator {
+    color: white;
+    margin: 0 10px;
+}
