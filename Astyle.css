@@ -1,0 +1,620 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    animation: fadeIn 1s ease;
+    /* Fade in effect for body */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* Reduced padding for a more compact look */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    margin-left: 80px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    /* Added transform */
+}
+
+nav ul li a:hover {
+    color: #e50914;
+    transform: scale(1.05);
+    /* Scale on hover */
+}
+
+.banner {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f562aaf4-5dbb-4603-a32b-6ef6c2230136/dh0w8qv-9d8ee6b2-b41a-4681-ab9b-8a227560dc75.jpg/v1/fill/w_1280,h_720,q_75,strp/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZjU2MmFhZjQtNWRiYi00NjAzLWEzMmItNmVmNmMyMjMwMTM2XC9kaDB3OHF2LTlkOGVlNmIyLWI0MWEtNDY4MS1hYjliLThhMjI3NTYwZGM3NS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.LOYKSxIDqfPwWHR0SSJ-ugGQ6bECF0yO6Cmc0F26CQs');
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    animation: slideIn 1s ease;
+    /* Slide in effect for banner */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner h1 {
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 2;
+}
+
+.banner h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #fff;
+    z-index: 2;
+}
+
+.banner p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #fff;
+    z-index: 2;
+}
+
+.banner button {
+    margin: 3vh;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Added transform */
+    z-index: 2;
+}
+
+.banner button:hover {
+    background-color: #ff3f34;
+    transform: scale(1.05);
+    /* Scale on hover */
+}
+
+.email-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.email-input input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    height: 60px;
+    width: 500px;
+}
+
+.email-input .get-started {
+    height: 60px;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: bold;
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Added transform */
+}
+
+.email-input .get-started:hover {
+    background-color: #ff3f34;
+    transform: scale(1.05);
+    /* Scale on hover */
+}
+
+.dropdown-container {
+    display: flex;
+    /* Align dropdowns in a row */
+    justify-content: flex-start;
+    /* Center the dropdowns */
+    margin: 20px 0;
+    /* Space above and below */
+}
+
+.dropdown {
+    margin: 0 10px;
+    /* Space between dropdowns */
+}
+
+.dropdown select {
+    padding: 10px;
+    /* Padding inside the dropdown */
+    border: 2px solid white;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: #141414;
+    /* Background color */
+    color: white;
+    /* Text color */
+    font-family: 'Arial', sans-serif;
+    /* Font family */
+    font-size: 1rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
+}
+
+.dropdown select:hover {
+    background-color: black;
+    /* Change background on hover */
+    color: white;
+    /* Text color stays white on hover */
+}
+
+.dropdown select:focus {
+    outline: none;
+    /* Remove outline on focus */
+    background-color: black;
+    /* Lighter background when focused */
+}
+
+.content {
+    padding: 20px;
+    margin-left: 120px;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.movie-container {
+    display: flex;
+    /* Align items in a row */
+    align-items: center;
+    /* Hide overflow */
+    margin-top: 20px;
+    /* Space above the movie section */
+    padding-right: 80px;
+    /* Ensure a gap of 80px from the right */
+}
+
+.movies {
+    display: flex;
+    /* Align movies in a row */
+    gap: 15px;
+    /* Space between movie items */
+    transition: transform 0.3s ease;
+    /* Smooth transition for scrolling */
+}
+
+.movie {
+    
+    /* Center movie titles and images *
+    /* Set width for movie items */
+    opacity: 0;
+    /* Start with hidden opacity */
+    animation: fadeIn 0.5s forwards;
+    /* Fade in effect for movie items */
+}
+
+.movie:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.movie:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.movie:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.movie:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.movie:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.movie img {
+    width: 100%;
+    /* Make the image responsive */
+    height: 300px;
+    /* Fixed height for equal size */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire area */
+    border-radius: 10px;
+    /* Rounded corners */
+    transition: transform 0.3s;
+    /* Smooth scaling on hover */
+    margin-bottom: 20px;
+}
+
+.movie img:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+}
+
+.scroll-btn {
+    background-color: #e50914;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Padding for button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth background transition */
+    font-size: 18px;
+    /* Font size for button */
+}
+
+.scroll-btn:hover {
+    background-color: #ff3f34;
+    /* Change color on hover */
+    transform: scale(1.1);
+    /* Scale on hover */
+}
+
+.scroll-btn.right {
+    margin-left: 10px;
+    /* Space between button and movie section */
+}
+
+.header h1 {
+    margin-left: 120px;
+}
+
+.container {
+    display: flex;
+    /* Use Flexbox for alignment */
+    justify-content: space-between;
+    /* Evenly space items */
+    align-items: flex-start;
+    /* Align items at the start */
+    padding: 20px;
+    /* Add some padding around the container */
+    margin-left: 120px;
+    margin-right: 80px;
+
+}
+
+
+.item {
+    padding: 20px;
+    height: 50vh;
+    border-radius: 20px;
+    /* Rounded corners */
+    margin: 10px;
+    width: 50vh;
+    word-wrap: break-word;
+    background-color: #424874;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Add shadow for depth */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* Smooth transition for hover effect */
+    position: relative;
+    opacity: 0;
+    /* Start with opacity 0 for fade-in effect */
+    animation: fadeIn 0.5s forwards;
+    /* Apply fade-in animation */
+
+}
+
+/* Font styles for headings and paragraphs */
+.item h2 {
+    font-family: 'Montserrat', sans-serif;
+    /* Different font for headings */
+    font-size: 2rem;
+    /* Heading font size */
+    color: white;
+    /* Heading color */
+    margin-bottom: 10px;
+    /* Space between h2 and p */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Transition for color and transform */
+}
+
+.item p {
+    font-family: 'Open Sans', sans-serif;
+    /* Different font for paragraphs */
+    font-size: 1rem;
+    /* Paragraph font size */
+    margin: 0;
+    /* Remove default margin */
+    transition: color 0.3s ease;
+    /* Transition for color */
+}
+
+/* Unique symbols for each item */
+.item-1::before {
+    content: '📥';
+    /* Download symbol */
+}
+
+.item-2::before {
+    content: '🌍';
+    /* Globe symbol */
+}
+
+.item-3::before {
+    content: '📺';
+    /* TV symbol */
+}
+
+.item-4::before {
+    content: '👶';
+    /* Baby symbol */
+}
+
+.item::before {
+    font-size: 2rem;
+    /* Size of the symbol */
+    color: #e50914;
+    /* Color of the symbol */
+    position: absolute;
+    /* Position it absolutely within the item */
+    top: 40vh;
+    /* Position from the top */
+    left: 30vh;
+    /* Position from the left */
+}
+
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Start transparent */
+        transform: translateY(20px);
+        /* Move down slightly */
+    }
+
+    to {
+        opacity: 1;
+        /* End fully visible */
+        transform: translateY(0);
+        /* Back to original position */
+    }
+}
+
+/* Scale effect on hover */
+.item:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Deeper shadow on hover */
+}
+
+/* Apply fade-in animation to the items */
+.item {
+    animation: fadeIn 0.5s ease forwards;
+    /* Apply the animation */
+}
+
+
+.end select {
+    margin-left: 120px;
+    padding: 10px;
+    /* Padding inside the dropdown */
+    border: 2px solid white;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: #141414;
+    /* Background color */
+    color: white;
+    /* Text color */
+    font-family: 'Arial', sans-serif;
+    /* Font family */
+    font-size: 1rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
+}
+
+.end select:hover {
+    background-color: black;
+    /* Change background on hover */
+    color: white;
+    /* Text color stays white on hover */
+}
+
+.end select:focus {
+    outline: none;
+    /* Remove outline on focus */
+    background-color: black;
+    /* Lighter background when focused */
+}
+
+.end1 {
+    margin-bottom: 10vh;
+    margin-left: 120px;
+    margin-top: 5vh;
+    font-size: large;
+}
+
+.endcont {
+    display: flex;
+    /* Use flexbox for alignment */
+    /* Spread items across the width */
+    margin-bottom: 10px;
+    /* Space between rows */
+    
+}
+
+.end-item {
+    margin: 0 80px;
+    /* Space between items */
+    flex: 1;
+    /* Allow items to grow evenly */
+    text-align: center;
+    /* Center text within each item */
+    max-width: 100px;
+    margin-left: 120px;
+    
+    /* border: 2px solid white; */
+}
+
+.end-item a {
+
+    color: white;
+    /* Change link color */
+}
+
+.end-item a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+
+.end-drop {
+    margin-top: 10vh;
+    /* Center the dropdown */
+    margin-bottom: 5vh;
+    width: 80px;
+    height: 50px;
+    
+}
+.foot p{
+ margin-left: 120px;
+ margin-bottom: 5vh;
+}
+.email {
+    margin-top: 5vh;
+    text-align: center; /* Center text in the paragraph */
+}
+
+.input-button-container {
+    display: flex;         /* Use flexbox to align items in a row */
+    justify-content: center; /* Center the input and button */
+    margin-top: 10px;     /* Add some space above the input-button container */
+}
+
+.email input {
+    background-color: #424874;
+    border-radius: 5px;
+    padding: 10px;       /* Add padding for a better look */
+    width: 600px;        /* Set width for the input */
+    margin-right: 10px;
+    height: 60px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 2px solid black;
+/* Add space between the input and button */
+}
+
+.email button {
+    padding: 10px 20px;  /* Add padding for the button */
+    cursor: pointer;  
+    border-radius: 10px;
+    background-color: red; 
+    color: white; 
+    font-weight: bold;
+    font-family: Arial;  
+    font-size: 1.2rem;;/* Change cursor to pointer on hover */
+}
+.faq-container {
+    margin-left: 120px;
+    margin-right: 80px;
+    position: relative; /* Positioning for the plus sign */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 5vh;
+}
+.faq{
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+.fag1 {
+    margin: 3vh;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    height: 70px; 
+    background-color: rgb(56, 54, 54);
+    padding: 30px;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    transition: transform 0.2s; /* Add a transition effect */
+}
+
+.fag1:hover {
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
