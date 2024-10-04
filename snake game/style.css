@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.wrapper{
+    width: 65vmin;
+    height: 70vmin;
+    background-color: #709dea;
+    flex-direction: column;
+    display: flex;
+    border-radius: 10px;
+}
+.game-details{
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+.play-board{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(30,1fr) / repeat(30, 1fr);
+    background-color: #315ca6;
+}
+.play-board .food{
+    background-color: red;
+}
+.play-board .head{
+    background-color: #00ff00;
+}
+.play-board .body {
+    background-color: #33cc33;
+}
