@@ -50,6 +50,9 @@ The app should now be running on \`http://localhost:3000\`.
 - JavaScript
 - CSS
 
+## License
+This project is licensed under the MIT License. See the LICENSE file for more information.
+
 ## Contributing
 
 Feel free to fork the repository, submit issues, or make pull requests. All contributions are welcome!

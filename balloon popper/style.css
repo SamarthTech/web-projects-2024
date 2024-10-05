@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#score {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#balloon-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 600px;
+    height: 400px;
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+    background-color: #e9ecef;
+    overflow: hidden; /* Ensure balloons don’t go outside container */
+}
+
+.balloon {
+    width: 60px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;  /* Position balloons at the bottom of the container */
+    animation: moveBalloon 5s linear infinite;
+}
+
+.balloon:hover {
+    background-color: #ff4d4d;
+}
+
+@keyframes moveBalloon {
+    from {
+        transform: translateY(0); /* Start from the bottom */
+    }
+    to {
+        transform: translateY(-400px); /* Move upwards by 400px */
+    }
+}
+
+#start-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-btn:hover {
+    background-color: #2980b9;
+}

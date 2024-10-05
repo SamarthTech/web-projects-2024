@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Header Styles */
+#header {
+    background-color: #505a50;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
+
+/* Home Section */
+#home {
+    background: url('https://source.unsplash.com/1600x900/?technology') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FFD700;
+    margin: 0 0 20px;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #FFD700;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #FFA500;
+}
+
+/* About Section */
+#about {
+    background-color: #1c1c1c;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4CAF50;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-content img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-content div {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Achievements Section */
+#achievements {
+    background-color: #2e2e2e;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#achievements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #FFD700;
+}
+
+.achievements-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.achievement-item {
+    background-color: #4CAF50;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.achievement-item:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.achievement-item p {
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #353a35;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+#contact form {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+#contact label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+#contact button {
+    padding: 15px 30px;
+    background-color: #FFD700;
+    color: #1a1a1a;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #FFA500;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: #FFD700;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #4CAF50;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #fff;
+}
