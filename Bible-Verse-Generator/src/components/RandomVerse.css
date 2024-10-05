@@ -1,0 +1,45 @@
+/* Styling the verse container */
+.verse-container {
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling the table */
+  .verse-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .verse-table th, .verse-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Georgia', serif;
+  }
+  
+  .verse-table th {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  /* Styling the button */
+  .fetch-btn {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .fetch-btn:hover {
+    background-color: #34495e;
+  }
+  
