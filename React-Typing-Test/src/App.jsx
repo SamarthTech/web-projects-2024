@@ -1,25 +1,69 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 function App() {
-  const [words, setWords] = useState(10);
   const [stringOfWords, setStringOfWords] = useState("");
+  const [charsTyped, setCharsTyped] = useState(-1); // Stores the index upto which the chars have been typed
+  const [timeElapsed, setTimeElapsed] = useState(0); // Stores time in seconds
+  const [isTimerTicking, setIsTimerTicking] = useState(false);
 
-  const refreshWords = () => {
-    fetch(`https://random-word-api.herokuapp.com/word?number=${words}`)
+  const clearInput = () => (document.getElementById("input").value = "");
+
+  const handleKeyStroke = (event) => {
+    const key = event.nativeEvent.data;
+    if (key != null) {
+      if (charsTyped == -1) setTimeElapsed(0);
+      setIsTimerTicking(true);
+      if (key == stringOfWords[charsTyped + 1]) {
+        setCharsTyped((charsTyped) => charsTyped + 1);
+      }
+    }
+
+    if (charsTyped + 1 == stringOfWords.length) {
+      clearInput();
+    }
+  };
+
+  const refreshWords = useCallback(() => {
+    fetch(`https://random-word-api.herokuapp.com/word?number=10`)
       .then((res) => res.json())
       .then((data) => setStringOfWords(data.join(" ")));
-  };
+
+    setCharsTyped(-1);
+    clearInput();
+    setIsTimerTicking(false);
+  }, []);
 
   useEffect(() => {
     refreshWords();
-  }, []);
+  }, [refreshWords]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      isTimerTicking && setTimeElapsed((timeElapsed) => timeElapsed + 1);
+      console.log(timeElapsed);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [timeElapsed, isTimerTicking]);
 
   return (
     <>
       <h1>Type++</h1>
-      <div>{stringOfWords}</div>
-      <button onSubmit={refreshWords}>Refresh</button>
-      <textarea name="abc" id="def"></textarea>
+      <span>{stringOfWords}</span>
+      <button onClick={refreshWords}>Refresh</button>
+      <div>
+        {timeElapsed == 0
+          ? 0
+          : Math.round(((charsTyped + 1) / timeElapsed) * 12)}{" "}
+        WPM
+      </div>
+      <br />
+      <input
+        id="input"
+        onChange={(e) => handleKeyStroke(e)}
+        style={{ height: "25px", width: "900px" }}
+        type="text"
+      />
     </>
   );
 }
