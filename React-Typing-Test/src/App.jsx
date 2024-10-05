@@ -16,6 +16,7 @@ function App() {
       if (key == stringOfWords[charsTyped + 1]) {
         setCharsTyped((charsTyped) => charsTyped + 1);
       }
+      if (charsTyped + 2 == stringOfWords.length) setIsTimerTicking(false);
     }
 
     if (charsTyped + 1 == stringOfWords.length) {
@@ -40,7 +41,6 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       isTimerTicking && setTimeElapsed((timeElapsed) => timeElapsed + 1);
-      console.log(timeElapsed);
     }, 1000);
 
     return () => clearInterval(interval);
