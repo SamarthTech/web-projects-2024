@@ -1,0 +1,168 @@
+html {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #eeeeee;
+}
+
+body {
+    padding: 7%;
+    padding-top: 4%;
+    line-height: 45px;
+
+    background-color: #151515;
+}
+
+h1 {
+    font-weight: 360;
+    font-size: 2.7rem;
+    padding-bottom: 0;
+}
+
+hr {
+    border-color: #353535;
+    margin-right:40%;
+    margin-left:40%;
+    margin-top:1%;
+    margin-bottom:1%;
+    opacity: 0;
+
+    animation:  500ms ease-out 500ms 1 expandMargin;
+    animation-fill-mode: forwards;
+}
+
+.profileDesc {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #dddddd;
+    transform: none;
+    opacity: 0;
+    /* min-height: 20%; */
+}
+
+.top-profile-info {
+    margin-bottom: 20%;
+}
+
+.projects {
+    margin-left: 2%;
+}
+
+.project-description {
+    font-size: 1.3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 25px;
+}
+
+.image-column {
+    flex: 50%;
+    padding: 0 25px;
+}
+
+.image-column img {
+    margin-top: 50px;
+    vertical-align: middle;
+}
+
+img{
+    border-radius: 5%;
+}
+
+a{
+    color: white;
+}
+
+
+/* animations */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes expandMargin {
+    0% { 
+        margin-right:40%;
+        margin-left:40%;
+        margin-top:1%;
+        margin-bottom:1%;
+        opacity: 0;
+    }
+    100% { 
+        margin-right:0%;
+        margin-left:0%;
+        margin-top:5%;
+        margin-bottom:5%;
+        opacity: 1;
+    }
+}
+
+
+.fade-in-at-start-2s-del { 
+    animation: 2s ease-out 500ms 1 fadeIn;
+    animation-fill-mode: both;
+}
+
+.fade-in-at-start-2s { animation: 2s ease-out 0s 1 fadeIn; }
+.fade-in-at-start-1s { animation: 1s ease-out 0s 1 fadeIn; }
+
+
+@media (max-aspect-ratio: 1/1) {
+    body {
+        padding: 7%;
+        padding-top: 5%;
+        line-height: 75px;
+    }
+
+    h1 {
+        font-size: 5rem;
+        padding-top: 2%;
+        padding-bottom: 6%;
+    }
+
+    .profileDesc {
+        font-size: 0.8rem;
+    }
+
+    .top-profile-info {
+        margin-bottom: 40%;
+    }
+
+    .projects {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .project-description {
+        font-size: 1.3rem;
+    }
+
+    @keyframes expandMargin {
+        0% { 
+            margin-right:50%;
+            margin-left:50%;
+            margin-top:1%;
+            margin-bottom:1%;
+            opacity: 0;
+        }
+        100% { 
+            margin-right:0%;
+            margin-left:0%;
+            margin-top:15%;
+            margin-bottom:15%;
+            opacity: 1;
+        }
+    }
+
+    * {
+        box-sizing: content-box;
+    }
+}

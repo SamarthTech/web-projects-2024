@@ -1,251 +1,241 @@
+/* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: #121212;
-}
-
-#header {
-    background-color: #4CAF50;
-    padding: 15px 0;
-}
-
-#header h1 {
-    font-family: 'Comic Sans MS', cursive;
-    margin: 0;
-}
-
-#header nav a {
-    text-decoration: none;
-    color: black;
-    margin: 0 15px;
-    font-size: 20px;
-    transition: color 0.3s;
-}
-
-#header nav a:hover {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
     color: #fff;
 }
 
-section {
-    padding: 50px 0;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s forwards;
+/* Header Styles */
+#header {
+    background-color: #505a50;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
+
+/* Home Section */
 #home {
-    background-color: black;
+    background: url('https://source.unsplash.com/1600x900/?technology') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FFD700;
+    margin: 0 0 20px;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #FFD700;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #FFA500;
+}
+
+/* About Section */
 #about {
     background-color: #1c1c1c;
+    padding: 80px 0;
+    text-align: center;
 }
 
 #about h2 {
-    margin-bottom: 30px;
-    animation: slideIn 0.5s forwards;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4CAF50;
 }
 
 .about-content {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    margin: 0 auto;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .about-content img {
     width: 300px;
     height: auto;
-    margin-right: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: scaleIn 0.5s forwards;
-}
-
-@keyframes scaleIn {
-    from {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-#contact {
-    background-color: #c2c0c3;
-    padding: 40px 0;
-}
-
-#contact h1 {
-    font-family: Verdana;
-    font-size: 3rem;
-    color: black;
-    animation: fadeIn 0.5s forwards;
-}
-
-#contact form {
-    background-color: black;
-    padding: 20px;
-    border-radius: 8px;
-    width: 50%;
-    margin: auto;
-    text-align: left;
-    animation: fadeIn 1s ease-in-out;
-}
-
-#contact label {
-    color: #ffffff;
-    font-family: Verdana;
-    width: 100px;
-}
-
-#contact input,
-#contact textarea {
-    flex: 1;
-    padding: 10px;
-    margin-bottom: 15px;
-    transition: border 0.3s;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-    border: 2px solid #4CAF50;
-    outline: none;
-}
-
-#contact button {
-    padding: 10px 20px;
-    font-family: Verdana;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#contact button:hover {
-    background-color: #ccc;
-}
-
-footer {
-    background-color: #4CAF50;
-    padding: 15px 0;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-    margin: 0 10px;
-}
-
-footer img {
-    width: 24px;
-    /* Set size for logos */
-    height: 24px;
-    vertical-align: middle;
-}
-
-.footer-bottom {
-    background-color: black;
-    padding: 15px 0;
-    text-align: center;
-    color: #4CAF50;
-    font-size: 24px;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .about-content div {
     max-width: 600px;
     text-align: left;
-    padding: 0 20px;
 }
 
 .about-content p {
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-@keyframes fadeIn {
-from {
-    opacity: 0;
-    transform: translateY(20px);
-}
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
-}
-
-@keyframes scaleIn {
-from {
-    transform: scale(0);
-    opacity: 0;
-}
-to {
-    transform: scale(1);
-    opacity: 1;
-}
-}
-
-#header {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px 0; /* Padding around the header */
-}
-.header-container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.title {
-    font-family: 'Comic Sans MS', cursive;
-    font-size: 2.5rem;
-    color: white;
-    margin: 0;
-}
-nav {
-    display: flex;
-    align-items: center;
-}
-nav a {
-    text-decoration: none;
-    color: white;
-    margin: 0 15px;
     font-size: 1.2rem;
-    transition: color 0.3s, transform 0.3s;
+    margin-bottom: 20px;
 }
-nav a:hover {
-    color: #FFD700; /* Gold color on hover */
-    transform: scale(1.1); /* Slightly enlarge the text */
+
+/* Achievements Section */
+#achievements {
+    background-color: #2e2e2e;
+    padding: 80px 0;
+    text-align: center;
 }
-.separator {
-    color: white;
+
+#achievements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #FFD700;
+}
+
+.achievements-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.achievement-item {
+    background-color: #4CAF50;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.achievement-item:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.achievement-item p {
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #353a35;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+#contact form {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+#contact label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+#contact button {
+    padding: 15px 30px;
+    background-color: #FFD700;
+    color: #1a1a1a;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #FFA500;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: #FFD700;
     margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #4CAF50;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #fff;
 }
