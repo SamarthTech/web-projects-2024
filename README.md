@@ -2,9 +2,8 @@
 
 # 🎉 Welcome to `OPEN ODYSSEY 1.0` 🎉
 
-# Web Development Projects - Hacktoberfest 2024
+# Web Development Projects
 
-<a href="https://hacktoberfest.com/"><img src="https://img.shields.io/badge/Hacktoberfest-2024-darkgreen?style=for-the-badge&logo=hackster&logoColor=50da4c" alt="Hacktober Badge"/></a>
 <a href="https://bit.ly/open-odyssey-1"><img src="https://img.shields.io/badge/Major%20League%20Hacking%20USA-MLH-white?style=for-the-badge&logo=majorleaguehacking&color=red" alt="MLH Badge"/></a>
 
 <a href="https://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-ba8e23" alt="PRs Welcome"/></a>
@@ -15,17 +14,11 @@
 
 </div>
 
-![HacktoberFest 2024](https://events.mlh.io/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbmNyIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--91b1f7a1789ef6d613dbe59293325fa1271ec711/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2QzNKbGMybDZaVWtpRGpFeU1EQjROakF3SVFZN0JsUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb74e2531ca3e0ee463ad8c55d04110fcf863b74/DEVX%20Hacks%20(1200%20x%20600%20px)%20(1).png)
+![Open odyssey](https://events.mlh.io/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbmNyIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--91b1f7a1789ef6d613dbe59293325fa1271ec711/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2QzNKbGMybDZaVWtpRGpFeU1EQjROakF3SVFZN0JsUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb74e2531ca3e0ee463ad8c55d04110fcf863b74/DEVX%20Hacks%20(1200%20x%20600%20px)%20(1).png)
 
 ## The Open Source Adventure Awaits! 🗺️
 
 🚀 Samarth presents to you `Open Odyssey 1.0` - an Open-source extravaganza. On our inaugural season, we bring to you a special Hacktoberfest edition, collaborating with MLH (Major League Hacking) 🥳 
-
-🌐 HacktoberFest is your gateway to the vibrant world of open source. A month-long celebration of all things open-source. This year marks the 11th anniversary of Hacktoberfest, and we’re calling on your support! Join us on this epic journey and earn yourself an exclusive digital reward kit from DigitalOcean and our sponsors and partners...
-
-📢 Sign up for Hacktoberfest 2024, and contribute 4 pull requests (PRs) between October 1st-31st to claim your stash of cool REWARDS 🔥
-
-### [Click to Participate in HacktoberFest 2024](https://hacktoberfest.com/participation/)
 
 # INSTRUCTIONS - Get Ready for the Adventure 🧭
 
@@ -38,9 +31,7 @@ Before you begin, ensure you have the following installed:
 - [Node.js and npm](https://nodejs.org/) (if applicable)
 - Any specific tools/libraries your project relies on.
 
-## Register in HacktoberFest '24 - [HacktoberFest 2024 Authorization](https://hacktoberfest.com/auth/)
 
-Visit the above link and Register yourselves under HacktoberFest 2024. Authorize by either your GitHub(RECOMMENDED) or GitLab.
 
 ## The Right Contribution
 
@@ -106,7 +97,6 @@ This repository is specifically marked for Web Development Projects. Please stic
     Whats in for the Leaders of the Leaderboard ???
     ### Social Shoutout & Certificate to Top 5 Project Contributors
 
-- ## Digital Rewards & Badges from DigitalOcean
 
 - ## Certificates for all Participants
 

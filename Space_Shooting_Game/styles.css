@@ -1,0 +1,81 @@
+/* canvas {
+    box-shadow: black 20px 10px 50px;
+  } */
+  #canvas-container {
+    position: relative;
+    margin: 0px; /* Adjust the margin as needed */
+    width: calc(100% - 100px); /* Adjust the width based on your desired spacing */
+    height: calc(100% - 80px); /* Adjust the height based on your desired spacing */
+  }
+  #gameCanvas {
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Optional: Set a background color for the canvas */
+  }
+  h1 {
+    display: inline;
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 2.9em;
+    font-family: "Helvetica";
+  }
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(
+      0deg,
+      rgb(97, 98, 99) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .about{
+    float:left;
+    margin-left: -160px;
+    margin-top: 20px;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 380px;
+    background-color: rgb(96, 95, 95);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  #restart {
+    width: 120px;
+    height: 120px;
+    margin-top: 30%;
+    overflow:visible;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+    border: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+    cursor: pointer;
+  }
