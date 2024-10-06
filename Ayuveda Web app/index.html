@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayurveda Clinic</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      /* Custom styles here */
+      .section {
+        padding: 80px 0;
+      }
+      .section-heading {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+      }
+      .card-img-top {
+        height: 200px; /* Adjust as needed */
+        object-fit: cover;
+      }
+      .card-body {
+        padding: 1.25rem;
+      }
+      .card-title {
+        font-size: 1.25rem;
+      }
+      .card-text {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Ayurveda Clinic</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#regular-checkup">Regular Checkup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#symptoms-solutions"
+                >Symptoms & Solutions</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ayurvedic-routine"
+                >Ayurvedic Routine</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#history">History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#alternative-medicine"
+                >Alternative Medicine</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="home" class="section">
+      <div class="container text-center">
+        <h1 class="section-heading">Welcome to Ayurveda Clinic</h1>
+        <p class="lead">
+          Your source for natural health solutions based on Ayurvedic
+          principles.
+        </p>
+        <!-- Placeholder image -->
+        <img src="" class="img-fluid mt-4" alt="Ayurveda Image" />
+      </div>
+    </div>
+
+    <!-- Regular Checkup Section -->
+    <div id="regular-checkup" class="section bg-light">
+      <div class="container">
+        <h2 class="section-heading text-center mb-5">Regular Checkup</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              class="form-control"
+              id="age"
+              placeholder="Enter your age"
+            />
+          </div>
+          <div class="form-group">
+            <label for="symptoms">Symptoms (if any)</label>
+            <textarea
+              class="form-control"
+              id="symptoms"
+              rows="3"
+              placeholder="Describe any symptoms you are experiencing"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Symptoms & Solutions Section -->
+    <div id="symptoms-solutions" class="section">
+      <div class="container">
+        <h2 class="section-heading text-center mb-5">Symptoms & Solutions</h2>
+        <div class="row">
+          <!-- Card 1: Digestive Issues -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="" class="card-img-top" alt="Digestive Issues" />
+              <div class="card-body">
+                <h5 class="card-title">Digestive Issues</h5>
+                <p class="card-text">
+                  Learn about common digestive symptoms and their Ayurvedic
+                  solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Stress & Anxiety -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo5nmbfcjW8EpBkxe65TuV627fjOHAFdX7UQ&s"
+                class="card-img-top"
+                alt="Stress & Anxiety"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Stress & Anxiety</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Insomnia -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="" class="card-img-top" alt="Insomnia" />
+              <div class="card-body">
+                <h5 class="card-title">Insomnia</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+          <!--Skin disorder -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="" class="card-img-top" alt="Insomnia" />
+              <div class="card-body">
+                <h5 class="card-title">Skin Disorder</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3: Insomnia -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="" class="card-img-top" alt="Insomnia" />
+              <div class="card-body">
+                <h5 class="card-title">Respiratory Issues</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3: Insomnia -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoQoCSjZjm0Gi2K_NOnWTUONJfIduHv2o_1A&s"
+                class="card-img-top"
+                alt="Insomnia"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Menstrual Irregularities</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+          <!-- Weiht Managment -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="" alt="Insomnia" />
+              <div class="card-body">
+                <h5 class="card-title">Weight Managment</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3: Insomnia -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="data:image/jpeg;base64,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"
+                class="card-img-top"
+                alt="Insomnia"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Fatigue and Low Energy</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+          <!-- Card hair and scalp -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjtvlJwBhpLBL_nhT6Oz7DjKcUyU1FhiNUQ&s"
+                class="card-img-top"
+                alt="Insomnia"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hair and Scalp Issues</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional cards can be added similarly -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Ayurvedic Routine Section -->
+    <div id="ayurvedic-routine" class="section bg-light">
+      <div class="container">
+        <h2 class="section-heading text-center mb-5">Ayurvedic Routine</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Morning Routine</h4>
+                <p class="card-text">
+                  Start your day the Ayurvedic way with these rejuvenating
+                  practices:
+                </p>
+                <ul class="list-unstyled">
+                  <li>
+                    <strong>Wake up early:</strong> Rise before sunrise to align
+                    with natural rhythms.
+                  </li>
+                  <li>
+                    <strong>Drink warm water:</strong> Flush out toxins and
+                    stimulate digestion.
+                  </li>
+                  <li>
+                    <strong>Practice yoga or meditation:</strong> Set the tone
+                    for the day with mind-body exercises to promote balance and
+                    flexibility.
+                  </li>
+                  <li>
+                    <strong>Ayurvedic self-massage (Abhyanga):</strong> Nourish
+                    your skin and improve circulation with warm oil massage
+                    before bathing.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Evening Routine</h4>
+                <p class="card-text">
+                  Wind down your day with these calming Ayurvedic rituals:
+                </p>
+                <ul class="list-unstyled">
+                  <li>
+                    <strong>Have a light dinner:</strong> Opt for easily
+                    digestible foods to promote sound sleep.
+                  </li>
+                  <li>
+                    <strong>Take a short walk:</strong> Aid digestion and clear
+                    the mind with a gentle stroll after dinner.
+                  </li>
+                  <li>
+                    <strong>Wind down with herbal tea:</strong> Sip on soothing
+                    herbal infusions like chamomile or ashwagandha to relax the
+                    body and mind.
+                  </li>
+                  <li>
+                    <strong>Pranayama (breathing exercises):</strong> Enhance
+                    respiratory health and calmness with deep breathing
+                    exercises before bed.
+                  </li>
+                  <li>
+                    <strong>Journalling:</strong> Reflect on the day and set
+                    intentions for tomorrow to promote mental clarity and
+                    emotional balance.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- History Section -->
+    <div id="history" class="section">
+      <div class="container">
+        <h2 class="section-heading text-center mb-5">History</h2>
+        <p class="lead text-center">
+          Explore the journey and evolution of Ayurveda through centuries.
+        </p>
+        <p>
+          Ayurveda, originating from ancient India, is believed to be one of the
+          oldest healing sciences. It has been passed down through generations,
+          adapting and evolving over thousands of years. Originally documented
+          in the Vedas, particularly the Atharva Veda, Ayurveda emphasizes a
+          holistic approach to health, focusing on balance and harmony between
+          body, mind, and spirit.
+        </p>
+        <p>
+          Over time, Ayurveda has integrated insights from various cultures and
+          civilizations, incorporating knowledge of medicinal plants, dietary
+          guidelines, yoga, meditation, and personalized therapies. Today,
+          Ayurveda continues to thrive as a comprehensive system of natural
+          health care, offering solutions for a wide range of health issues
+          while promoting overall wellness and longevity.
+        </p>
+        <p class="text-center">
+          Discover how Ayurveda's rich history informs its practices and
+          benefits people worldwide today.
+        </p>
+      </div>
+    </div>
+    <!-- Alternative Medicine Section -->
+    <div id="alternative-medicine" class="section bg-light">
+      <div class="container">
+        <h2 class="section-heading text-center mb-5">Alternative Medicine</h2>
+        <p class="lead text-center">
+          Explore Ayurvedic alternatives to commonly used modern drugs.
+        </p>
+        <div class="row">
+          <!-- Card 1: Diabetes -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3RS8vEKGVl96V40P9xsmehN20m4aN6BilTQ&s"
+                class="card-img-top"
+                alt="Diabetes"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Diabetes Management</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Hypertension -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="" class="card-img-top" alt="Hypertension" />
+              <div class="card-body">
+                <h5 class="card-title">Hypertension Management</h5>
+                <p class="card-text">
+                  Explore Ayurvedic remedies for maintaining healthy blood
+                  pressure levels.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Stress -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREWNd-m-bL174ZKTTeMncX2jeqe95daEqM9w&s"
+                class="card-img-top"
+                alt="Stress"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Stress Management</h5>
+                <p class="card-text">
+                  Learn about Ayurvedic techniques to alleviate stress and
+                  promote relaxation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional cards (4-6) -->
+          <!-- Card 4: Insomnia -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlEcLi3bbjJ1_tWqfxKrVxBe5I_PHahRpJiw&s"
+                class="card-img-top"
+                alt="Insomnia"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Insomnia Relief</h5>
+                <p class="card-text">
+                  Discover Ayurvedic techniques for improving sleep quality and
+                  combating insomnia.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Digestive Disorders -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6G0_gqiMuh7o-gKeVyiZ85VsEi7Dc6SqboQ&s"
+                class="card-img-top"
+                alt="Digestive Disorders"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Digestive Disorders</h5>
+                <p class="card-text">
+                  Explore natural Ayurvedic remedies for common digestive issues
+                  like acidity and indigestion.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Immune Boosting -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo8eTWTWYt5eEW2L9ZgZX6VpGKZei5mYxLng&s"
+                class="card-img-top"
+                alt="Immune Boosting"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Immune System Support</h5>
+                <p class="card-text">
+                  Strengthen your immune system with Ayurvedic herbs and
+                  lifestyle practices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p>&copy; 2024 Ayurveda Clinic. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
