@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open Quiz.html",
-            "file": "c:\\Users\\pc\\OneDrive\\Documents\\Quiz app\\Quiz.html"
+            "name": "Open index.html",
+            "file": "c:\\Users\\pc\\OneDrive\\Documents\\Quiz app\\index.html"
         }
     ]
 }

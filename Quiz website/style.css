@@ -1,4 +1,4 @@
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,19 +6,19 @@
 
 
 body{
-        background-image: url("../OG-image-3.jpg");
-        background-repeat: no-repeat; 
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
-        display: flex;
+    background-image: url("../OG-image-3.jpg");
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+body{
+    font-family: 'Arial', sans-serif;
+     background-color: #f4f4f4;
+    display: flex;
         justify-content: center;
         align-items: center;
         height: 115vh;
-    
-    }
-
+}
       
 
 .quiz-container {
