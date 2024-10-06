@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simon Says</title>
-    <link rel="icon" href="catt.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <title>SimonGame</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
-    <h1 id="welcomeMessage">Welcome to the Game!</h1>
-    <h1>Simon Says Game</h1>
-    <h2>Press any key to start the game.</h2>
-
-    <div class="btn-container">
-        <div class="lineone">
-        <div class="btn red" type="button" id="red"></div>
-        <div class="btn blue" type="button" id="blue"></div>
+    <h1>PRESS KEY TO START OR CLICK TO START</h1>
+    <div class="container">
+        <div class="row1">
+            <button id="green"></button>
+            <button id="red"></button>
+        </div>
+        <div class="row2">
+            <button id="yellow"></button>
+            <button id="blue"></button>
+        </div>
     </div>
-    <div class="linetwo">
-        <div class="btn orange" type="button" id="orange"></div>
-        <div class="btn purple" type="button" id="purple"></div>
-    </div>
-    </div>
-    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
