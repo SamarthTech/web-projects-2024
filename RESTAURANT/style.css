@@ -1,0 +1,517 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Set a default font */
+    background-color: ivory;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    /* Placeholder for logo styling */
+    width: 100px;
+    /* Adjust width as needed */
+    height: 50px;
+    /* Adjust height as needed */
+    display: flex;
+    margin-left: 3vh;
+    padding: 1vh;
+}
+
+.logo i {
+    margin: 10px;
+    /* Space between icons */
+    font-size: 24px;
+    /* Size of the icons */
+    color: whitesmoke;
+    /* Icon color */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+.header1 {
+    text-align: center;
+    /* Center the title */
+    font-style: italic;
+    font-family: 'Pacifico', cursive;
+    /* Changed to a new decorative font */
+    color: rgb(201, 62, 62);
+    font-size: 1.6rem;
+
+
+}
+
+button {
+    padding: 10px 10px;
+    /* Increase button padding for size */
+    background-color: rgba(255, 255, 255, 0);
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: 2px solid white;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Increase font size */
+    width: 150px;
+    font-weight: bold;
+    margin-top: 2vh;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.button {
+    margin-right: 50px;
+}
+button:hover{
+    background-color:rgba(255, 255, 255, 0.76);
+    color: black;
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 380px;
+    margin-top: 20px;
+
+
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: color 0.3s, transform 0.3s;
+    /* Added transform */
+}
+
+nav ul li a:hover {
+    color: #e50914;
+    transform: scale(1.05);
+    /* Scale on hover */
+}
+
+.background {
+background-image: url('https://img.freepik.com/free-vector/restaurant-mural-wallpaper_23-2148698592.jpg');   
+ background-size: cover;
+    /* Cover the entire div */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    height: 850px;
+    /* Flexbox for layout */
+    flex-direction: column;
+    /* Column layout */
+    align-items: center;
+
+}
+
+.content {
+    margin-top: 100px;
+
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    /* Decorative font */
+    animation: fadeIn 2s ease-in-out;
+    /* Changed to fade-in animation */
+}
+.content p{
+    color: white;
+    text-align: center;
+    width: 1000px;
+    margin: auto;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        /* Start fully transparent */
+        transform: translateY(20px);
+        /* Start slightly lower */
+    }
+
+    100% {
+        opacity: 1;
+        /* End fully visible */
+        transform: translateY(0);
+        /* End at original position */
+    }
+}
+.cbutton {
+    display: flex;                 /* Use flexbox for alignment */
+    justify-content: center;      /* Center the buttons horizontally */
+    margin-top: 20px;        /* Add some spacing above */
+}
+
+.cobutton {
+    display: flex;                 /* Use flexbox for the buttons */
+    gap: 10px;                    /* Add space between the buttons */
+}
+.pcont1{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.pizzaimg {
+    margin-top: 80px;
+    z-index: 1;
+}
+.sidecont{
+    width: 100%;
+    position: relative;
+    bottom: 241px;
+    height: 250px;
+    background-color: gainsboro;
+}
+
+.pizzaimgs {
+    width: 100%;
+    margin-top: 245px;
+    display: flex;
+    flex-direction: row;
+    background-color: gainsboro;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.pizza1 img,
+.pizza2 img,
+.pizza3 img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: 5px solid #fff; /* Optional: Add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+    display: flex;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.pizza2 {
+    position: relative;
+    width: 200px;
+    bottom: 20px;
+}
+.pizza1 {
+    position: relative;
+    bottom: 160px;
+    width: 200px;   
+    left: 40px;
+}
+.pizza3{
+    position: relative;
+    width: 200px;
+    bottom: 160px;
+}
+.pizza1 p,
+.pizza2 p,
+.pizza3 p{
+    font-size: small;
+    
+}
+.pizza1 img{
+    position: relative;
+    right: 105px
+}
+.pizza2 img{
+    position: relative;
+    right: 100px;
+}
+.pizza3 img{
+    position: relative;
+    right: 110px;
+}
+.b1{ 
+    background-image: url('https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=');
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    background-size: cover;
+    /* Cover the entire div */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    height: 500px;
+    width: 100%;
+    /* Flexbox for layout */
+    flex-direction: row;
+    /* Column layout */
+    align-items: center;
+    max-width: fit-content;
+    padding: 50px;
+}
+.c1 p{
+    width: 70%;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.c1 h5{
+  text-align: left;
+  color: white;
+  font-size: 4rem ;
+  width: min-content;
+  height: 200px;
+}
+.c img {
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+
+.c p{
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+.sec{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: gainsboro;
+}
+.sec h6{
+    font-size: 1rem;
+}
+.sec h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sec p{
+    width: 500px;
+}
+.sec button{
+    color: red;
+    border-color: black;
+}
+.meimg{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    height: 350px;
+}
+.meimg1 img,
+.meimg2 img,
+.meimg3 img{
+    height: 300px;
+}
+.meimg1,
+.meimg3{
+    position: relative;
+    bottom: 200px;
+    color: red;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+}
+.meimg2{
+    position: relative;
+    bottom: 80px;
+    color: red;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+}
+.best{
+    display: flex;
+    justify-content: space-between;
+}
+.best h1{
+    margin-left:130px ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+.best button{
+    margin-right: 80px;
+    height: 60px;
+    border-color: black;
+    color: red;
+}
+.food img{
+    margin-left: 90px;
+    margin-bottom: 10vh;
+    border-radius: 20px;
+}
+.fooditem{
+    display: flex;
+    justify-content: space-around;
+}
+.foods img{
+    border-radius: 40px;
+    margin: 10px;
+}
+.maincont{
+    margin-top: 100px;
+}
+.scont{
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.scont h6{
+    font-size: 1.5rem;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+.scont h2{
+    font-size: 4rem;
+    margin-top: 10px;
+    position: relative;
+    bottom: 50px;
+}
+.scont p{
+    width: 500px;
+    margin-left: 410px;
+    padding: 20px;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 80px;
+}
+.loco-cont{
+    background-color: gainsboro;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.loco h1{
+    color: red;
+}
+.fran-cont{
+    margin-top: 100px;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+.fran h5 {
+    font-size: 1rem;
+}
+.fran{
+    text-align: left;
+    margin-left: 80px;
+    font-size: 1.5rem;
+}
+.fran1{
+    margin-left: 500px;
+    margin-right: 100px;
+    text-align: left;
+}
+.fran1 button{
+    color: red;
+    border-color: black;
+}
+.end-cont{
+    margin-top:100px;
+    margin-left: 80px;
+    display: flex;
+    margin-left: 80px;
+    gap: 200px;
+
+}
+.end-cont p{
+    font-size: 1.2rem;
+}
+.end-cont h4{
+    font-size: 1.5rem;
+}
+.end{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.end-button{
+    display: flex;
+    gap: 10px;
+}
+.end-button button{
+    border-color: black;
+    color: red;
+}
+
+    .logo1 {
+        /* Placeholder for logo styling */
+        width: 100px;
+        /* Adjust width as needed */
+        height: 50px;
+        /* Adjust height as needed */
+        display: flex;
+        margin-left: 3vh;
+        padding: 1vh;
+    }
+    
+    .logo1 i {
+        position: relative;
+        right: 35px;
+        margin: 10px;
+        /* Space between icons */
+        font-size: 24px;
+        /* Size of the icons */
+        color: black;
+        /* Icon color */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+    }
+    .e1{
+        text-align: left;
+    }
+   .e1 p{
+    width: 200px;
+   }
+   .e1 h1{
+    color: #e50914;
+    font-weight: 400;
+   }
+   .end-cont1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+
+   }
+   .e2,
+   .e3,
+   .e4 {
+    font-weight: 400;
+ }
+.last{
+    display: flex;
+    justify-content: space-around;
+}
