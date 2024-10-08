@@ -1,0 +1,36 @@
+.backgrounddesigns .toptext{
+    animation : toptextanim 2s ease;
+}
+
+@keyframes toptextanim{
+    0% {transform: translateX(-1000px); opacity: 0;}
+    100%{transform: translateX(0);opacity: 1;}
+}
+
+.backgrounddesigns .bottomtext{
+    animation : bottomtextanim 2s ease;
+}
+
+@keyframes bottomtextanim{
+    0% {transform: translateX(300px); opacity: 0;}
+    100%{transform: translateX(0);opacity: 1;}
+}
+
+nav {
+    animation : navanim 1s ease;
+}
+
+@keyframes navanim{
+    0% {transform: translateY(50px); opacity: 0;}
+    100%{transform: translateY(0);opacity: 1;}
+}
+
+.content .text{
+    animation : textanim 1s ease;
+}
+
+@keyframes textanim{
+    0% {transform: translateY(-30px); opacity: 0;}
+    100%{transform: translateY(0);opacity: 1;}
+}
+
