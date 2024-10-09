@@ -185,3 +185,5 @@ const viewmore = (event) => {
 	// console.log(getNote[0]);
   noteModal.innerHTML = htmlModalContent(getNote[0]);
 };
+
+
