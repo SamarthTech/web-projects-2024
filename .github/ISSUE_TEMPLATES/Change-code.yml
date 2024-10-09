@@ -1,0 +1,21 @@
+### Title of the Issue
+- [ ] **Have you named the issue title clearly and descriptively?**  
+<!-- Example: "refactor: [Component] Optimize search algorithm" -->
+<!-- Use format: "refactor: [affected section] concise description" -->
+
+### Description
+<!-- Provide a detailed description of the code change you're suggesting and why it's necessary. -->
+
+### Affected Sections (Code or Documentation)
+<!-- Specify which sections of the codebase or documentation will be affected by this change. -->
+
+- [ ] Code
+- [ ] Documentation
+
+### Impact Analysis
+<!-- Describe the impact of this change on the project, including possible side effects and necessary modifications in the related modules or components. -->
+
+### Checklist
+- [ ] I have followed the issue title guidelines.
+- [ ] I have categorized the change as code or documentation.
+- [ ] I have included a clear and detailed description of the change.
