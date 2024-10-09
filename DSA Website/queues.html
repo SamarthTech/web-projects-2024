@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Queues</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="dsa.html" class="dsa-button">DSA</a>
+                    <ul class="dropdown">
+                      
+                        <li><a href="arrays.html">Array</a></li>
+                        <li><a href="stacks.html">Stacks</a></li>
+                        <li><a href="linked-lists.html">Linked List</a></li>
+                        <li><a href="hashing.html">Hashing</a></li>
+                        <li><a href="heaps.html">Heaps</a></li>
+                        <li><a href="trees.html">Trees</a></li>
+                        <li><a href="graphs.html">Graphs</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Understanding Queues</h1>
+
+    <h2>What is a Queue?</h2>
+    <p>A queue is a linear data structure that follows the First In, First Out (FIFO) principle. The first element added to the queue is the first one to be removed.</p>
+
+    <h2>Basic Operations on Queues</h2>
+    <ul>
+        <li><strong>Enqueue:</strong> Adds an element to the back of the queue.</li>
+        <li><strong>Dequeue:</strong> Removes the element from the front of the queue.</li>
+        <li><strong>Front:</strong> Returns the front element without removing it.</li>
+        <li><strong>isEmpty:</strong> Checks if the queue is empty.</li>
+    </ul>
+
+    <h2>Queue Example</h2>
+    <div class="example">
+        <code>
+            class Queue {<br>
+                constructor() {<br>
+                    this.items = [];<br>
+                }<br>
+                enqueue(element) {<br>
+                    this.items.push(element);<br>
+                }<br>
+                dequeue() {<br>
+                    return this.items.shift();<br>
+                }<br>
+                front() {<br>
+                    return this.items[0];<br>
+                }<br>
+                isEmpty() {<br>
+                    return this.items.length === 0;<br>
+                }<br>
+            }
+        </code>
+    </div>
+
+    <h2>Interactive Queue Example</h2>
+    <p>Add and remove elements from the queue!</p>
+    <input type="text" id="queueElement" placeholder="Enter queue element">
+    <button onclick="enqueueToQueue()">Enqueue</button>
+    <button onclick="dequeueFromQueue()">Dequeue</button>
+    <button onclick="frontQueue()">Front</button>
+    
+    <div class="queue-container" id="queueDisplay">
+        <h3>Current Queue:</h3>
+        <pre id="queueOutput">[]</pre>
+    </div>
+
+    <script>
+        class Queue {
+            constructor() {
+                this.items = [];
+            }
+
+            enqueue(element) {
+                this.items.push(element);
+            }
+
+            dequeue() {
+                if (this.isEmpty()) {
+                    return 'Queue is empty';
+                }
+                return this.items.shift();
+            }
+
+            front() {
+                if (this.isEmpty()) {
+                    return 'Queue is empty';
+                }
+                return this.items[0];
+            }
+
+            isEmpty() {
+                return this.items.length === 0;
+            }
+
+            display() {
+                return JSON.stringify(this.items, null, 2);
+            }
+        }
+
+        const queue = new Queue();
+
+        function enqueueToQueue() {
+            const element = document.getElementById('queueElement').value;
+            if (element) {
+                queue.enqueue(element);
+                document.getElementById('queueOutput').innerText = queue.display();
+                document.getElementById('queueElement').value = ''; // Clear input
+            } else {
+                alert('Please enter a valid element to enqueue!');
+            }
+        }
+
+        function dequeueFromQueue() {
+            const dequeuedElement = queue.dequeue();
+            document.getElementById('queueOutput').innerText = queue.display();
+            alert(dequeuedElement === 'Queue is empty' ? dequeuedElement : `Dequeued: ${dequeuedElement}`);
+        }
+
+        function frontQueue() {
+            const frontElement = queue.front();
+            alert(frontElement === 'Queue is empty' ? frontElement : `Front Element: ${frontElement}`);
+        }
+    </script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>

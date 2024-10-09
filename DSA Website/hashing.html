@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Hashing and Hash Maps</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="dsa.html" class="dsa-button">DSA</a>
+                    <ul class="dropdown">
+                        
+                        <li><a href="queues.html">Queues</a></li>
+                        <li><a href="stacks.html">Stacks</a></li>
+                        <li><a href="linked-lists.html">Linked List</a></li>
+                        <li><a href="arrays.html">Array</a></li>
+                        <li><a href="heaps.html">Heaps</a></li>
+                        <li><a href="trees.html">Trees</a></li>
+                        <li><a href="graphs.html">Graphs</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Understanding Hashing and Hash Maps</h1>
+
+    <h2>What is Hashing?</h2>
+    <p>Hashing is a technique used to uniquely identify a specific object from a group of similar objects. It converts input data (key) into a fixed-size string of characters, which is typically a hash code. Hash functions map data of arbitrary size to data of fixed size.</p>
+
+    <h2>What is a Hash Map?</h2>
+    <p>A hash map is a data structure that implements an associative array, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.</p>
+
+    <h2>Benefits of Hash Maps</h2>
+    <ul>
+        <li>Fast lookups: Average time complexity is O(1).</li>
+        <li>Efficient insertion and deletion operations.</li>
+        <li>Flexible keys: Can use different data types as keys.</li>
+    </ul>
+
+    <h2>How Hashing Works</h2>
+    <p>Hashing works by using a hash function that takes an input (or 'key') and returns a fixed-size string of bytes. The output is typically a number that corresponds to an index in an array where the value will be stored.</p>
+    
+    <h2>Hash Function Example</h2>
+    <div class="example">
+        <code>
+            function simpleHash(key) {<br>
+                return key.length % 10;<br>
+            }
+        </code>
+        <p>This simple hash function returns the length of the key modulo 10, providing an index from 0 to 9.</p>
+    </div>
+
+    <h2>Hash Map Example</h2>
+    <div class="hashmap" id="hashmap">
+        <h3>Current Hash Map:</h3>
+        <pre id="hashMapOutput">{}</pre>
+    </div>
+
+    <h3>Add Key-Value Pair</h3>
+    <input type="text" id="key" placeholder="Enter key">
+    <input type="text" id="value" placeholder="Enter value">
+    <button onclick="addToHashMap()">Add to Hash Map</button>
+
+    <script>
+        let hashMap = {};
+
+        function simpleHash(key) {
+            return key.length % 10;
+        }
+
+        function addToHashMap() {
+            const key = document.getElementById('key').value;
+            const value = document.getElementById('value').value;
+            if (key && value) {
+                const index = simpleHash(key);
+                hashMap[key] = value;  // Add key-value pair to hash map
+                document.getElementById('hashMapOutput').innerText = JSON.stringify(hashMap, null, 2);
+                document.getElementById('key').value = ''; // Clear input
+                document.getElementById('value').value = ''; // Clear input
+            } else {
+                alert('Please enter a valid key and value!');
+            }
+        }
+    </script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+    
+</body>
+</html>

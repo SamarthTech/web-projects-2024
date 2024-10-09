@@ -1,0 +1,198 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Enhanced Header */
+header {
+    background: linear-gradient(135deg, #0e151c, #4B79A1);
+    padding: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 14px 30px; /* Increased padding for larger button size */
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Topics Section */
+.topics {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #ECE9E6, #FFFFFF);
+    max-width: 1000px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1s ease-out;
+    transform-origin: center bottom;
+}
+
+.topics h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #333;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: linear-gradient(to right, #4B79A1, #283E51);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulseText 2s infinite;
+}
+
+.topics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.topics ul li {
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topics ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.topics ul li a {
+    text-decoration: none;
+    display: block;
+    background: linear-gradient(135deg, #283E51, #4B79A1);
+    color: white;
+    font-size: 22px;
+    padding: 15px 45px;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease; /* Smooth transition */
+    position: relative;
+}
+
+.topics ul li a:hover {
+    background: linear-gradient(135deg, #4B79A1, #283E51);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #283E51;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    width: 100%;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseText {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+        padding-left: 10px;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    .topics ul {
+        flex-direction: column;
+    }
+
+    .topics ul li a {
+        font-size: 20px;
+        padding: 12px 35px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+}
