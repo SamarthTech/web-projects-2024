@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href ="styles.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="palette">
+            <div class="color-box" id="color1"></div>
+            <div class="color-box" id="color2"></div>
+            <div class="color-box" id="color3"></div>
+            <div class="color-box" id="color4"></div>
+        </div>
+        <button class="generate-btn" onclick="generateColors()">Generate palette</button>
+    </div>
+    
+<script>
+    function generateColors(){
+        for(let i=1; i<= 4; i++){
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById(`color${i}`).style.backgroundColor= randomColor;
+            document.getElementById(`color${i}`).innerHTML = randomColor;
+            
+        }
+    }
+</script>
+
+
+</body>
+</html>
