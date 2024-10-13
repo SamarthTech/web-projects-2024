@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Graphs</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="dsa.html" class="dsa-button">DSA</a>
+                    <ul class="dropdown">
+                        
+                        <li><a href="queues.html">Queues</a></li>
+                        <li><a href="stacks.html">Stacks</a></li>
+                        <li><a href="linked-lists.html">Linked List</a></li>
+                        <li><a href="hashing.html">Hashing</a></li>
+                        <li><a href="heaps.html">Heaps</a></li>
+                        <li><a href="trees.html">Trees</a></li>
+                        <li><a href="arrays.html">Array</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Understanding Graphs</h1>
+
+    <h2>What is a Graph?</h2>
+    <p>A graph is a data structure that consists of a set of vertices (or nodes) connected by edges. Graphs can represent various relationships and structures, such as networks, trees, and more.</p>
+
+    <h2>Types of Graphs</h2>
+    <ul>
+        <li><strong>Directed Graph (Digraph):</strong> A graph where edges have a direction, indicating a one-way relationship between vertices.</li>
+        <li><strong>Undirected Graph:</strong> A graph where edges do not have a direction, indicating a two-way relationship.</li>
+        <li><strong>Weighted Graph:</strong> A graph where edges have weights or costs associated with them.</li>
+        <li><strong>Unweighted Graph:</strong> A graph where all edges are considered equal.</li>
+        <li><strong>Cyclic Graph:</strong> A graph that contains at least one cycle.</li>
+        <li><strong>Acyclic Graph:</strong> A graph that does not contain any cycles.</li>
+    </ul>
+
+    <h2>Basic Operations on Graphs</h2>
+    <div class="example">
+        <h3>Common Operations:</h3>
+        <ul>
+            <li><strong>Add Vertex:</strong> Adds a new vertex to the graph.</li>
+            <li><strong>Add Edge:</strong> Connects two vertices with an edge.</li>
+            <li><strong>Remove Vertex:</strong> Removes a vertex and its associated edges.</li>
+            <li><strong>Remove Edge:</strong> Disconnects two vertices.</li>
+            <li><strong>Search:</strong> Traverses the graph using algorithms like Depth-First Search (DFS) or Breadth-First Search (BFS).</li>
+        </ul>
+    </div>
+
+    <h2>Graph Example</h2>
+    <div class="example">
+        <code>
+            class Graph {<br>
+                constructor() {<br>
+                    this.adjacencyList = {};<br>
+                }<br>
+                addVertex(vertex) {<br>
+                    // Logic to add a vertex<br>
+                }<br>
+                addEdge(vertex1, vertex2) {<br>
+                    // Logic to add an edge<br>
+                }<br>
+                // Other methods<br>
+            }
+        </code>
+    </div>
+
+    <h2>Interactive Graph Example</h2>
+    <p>Add vertices and edges to the graph!</p>
+    <input type="text" id="vertex" placeholder="Enter vertex">
+    <button onclick="addVertex()">Add Vertex</button>
+    
+    <input type="text" id="edge" placeholder="Enter edge (e.g. A,B)">
+    <button onclick="addEdge()">Add Edge</button>
+    
+    <div class="graph-container" id="graphDisplay">
+        <h3>Current Graph:</h3>
+        <pre id="graphOutput">{}</pre>
+    </div>
+
+    <script>
+        class Graph {
+            constructor() {
+                this.adjacencyList = {};
+            }
+
+            addVertex(vertex) {
+                if (!this.adjacencyList[vertex]) {
+                    this.adjacencyList[vertex] = [];
+                }
+            }
+
+            addEdge(vertex1, vertex2) {
+                if (!this.adjacencyList[vertex1]) {
+                    this.addVertex(vertex1);
+                }
+                if (!this.adjacencyList[vertex2]) {
+                    this.addVertex(vertex2);
+                }
+                this.adjacencyList[vertex1].push(vertex2);
+                this.adjacencyList[vertex2].push(vertex1); // Comment this line for a directed graph
+            }
+
+            display() {
+                return JSON.stringify(this.adjacencyList, null, 2);
+            }
+        }
+
+        const graph = new Graph();
+
+        function addVertex() {
+            const vertex = document.getElementById('vertex').value;
+            if (vertex) {
+                graph.addVertex(vertex);
+                document.getElementById('graphOutput').innerText = graph.display();
+                document.getElementById('vertex').value = ''; // Clear input
+            } else {
+                alert('Please enter a valid vertex!');
+            }
+        }
+
+        function addEdge() {
+            const edge = document.getElementById('edge').value.split(',');
+            if (edge.length === 2) {
+                graph.addEdge(edge[0].trim(), edge[1].trim());
+                document.getElementById('graphOutput').innerText = graph.display();
+                document.getElementById('edge').value = ''; // Clear input
+            } else {
+                alert('Please enter a valid edge in the format A,B!');
+            }
+        }
+    </script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+    
+</body>
+</html>

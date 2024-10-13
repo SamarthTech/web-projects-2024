@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Heaps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="dsa.html" class="dsa-button">DSA</a>
+                    <ul class="dropdown">
+                        
+                        <li><a href="queues.html">Queues</a></li>
+                        <li><a href="stacks.html">Stacks</a></li>
+                        <li><a href="linked-lists.html">Linked List</a></li>
+                        <li><a href="hashing.html">Hashing</a></li>
+                        <li><a href="arrays.html">Array</a></li>
+                        <li><a href="trees.html">Trees</a></li>
+                        <li><a href="graphs.html">Graphs</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Understanding Heaps</h1>
+
+    <h2>What is a Heap?</h2>
+    <p>A heap is a specialized tree-based data structure that satisfies the heap property...</p>
+
+    <h2>Types of Heaps</h2>
+    <ul>
+        <li><strong>Max Heap:</strong> The value of each node is greater than or equal to its children's values.</li>
+        <li><strong>Min Heap:</strong> The value of each node is less than or equal to its children's values.</li>
+        <li><strong>Binary Heap:</strong> A complete binary tree that maintains the heap property.</li>
+    </ul>
+
+    <h2>Basic Operations on Heaps</h2>
+    <div class="example">
+        <h3>Common Operations:</h3>
+        <ul>
+            <li><strong>Insert:</strong> Adds a new element to the heap...</li>
+            <li><strong>Extract Max/Min:</strong> Removes the root element...</li>
+            <li><strong>Peek:</strong> Returns the root element without removing it.</li>
+        </ul>
+    </div>
+
+    <h2>Interactive Heap Example</h2>
+    <p>Add elements to the heap and extract the minimum element!</p>
+    
+    <div class="input-container">
+        <input type="number" id="heapElement" placeholder="Enter heap element">
+        <button onclick="insertToHeap()">Insert</button>
+        <button onclick="extractMin()">Extract Min</button>
+        <button onclick="peekHeap()">Peek</button>
+    </div>
+    
+    <div class="heap-container" id="heapDisplay">
+        <h3>Current Heap:</h3>
+        <pre id="heapOutput">[]</pre>
+    </div>
+</body>
+</html>
+
+    <script>
+        class MinHeap {
+            constructor() {
+                this.heap = [];
+            }
+
+            insert(element) {
+                this.heap.push(element);
+                this.bubbleUp();
+            }
+
+            bubbleUp() {
+                let index = this.heap.length - 1;
+                while (index > 0) {
+                    let parentIndex = Math.floor((index - 1) / 2);
+                    if (this.heap[parentIndex] <= this.heap[index]) break;
+                    [this.heap[parentIndex], this.heap[index]] = [this.heap[index], this.heap[parentIndex]];
+                    index = parentIndex;
+                }
+            }
+
+            extractMin() {
+                if (this.isEmpty()) {
+                    return 'Heap is empty';
+                }
+                const min = this.heap[0];
+                const end = this.heap.pop();
+                if (!this.isEmpty()) {
+                    this.heap[0] = end;
+                    this.bubbleDown();
+                }
+                return min;
+            }
+
+            bubbleDown() {
+                let index = 0;
+                const length = this.heap.length;
+                const element = this.heap[0];
+
+                while (true) {
+                    let leftChildIndex = 2 * index + 1;
+                    let rightChildIndex = 2 * index + 2;
+                    let leftChild, rightChild;
+                    let swap = null;
+
+                    if (leftChildIndex < length) {
+                        leftChild = this.heap[leftChildIndex];
+                        if (leftChild < element) {
+                            swap = leftChildIndex;
+                        }
+                    }
+
+                    if (rightChildIndex < length) {
+                        rightChild = this.heap[rightChildIndex];
+                        if (
+                            (swap === null && rightChild < element) ||
+                            (swap !== null && rightChild < leftChild)
+                        ) {
+                            swap = rightChildIndex;
+                        }
+                    }
+
+                    if (swap === null) break;
+                    this.heap[index] = this.heap[swap];
+                    index = swap;
+                }
+            }
+
+            peek() {
+                return this.isEmpty() ? 'Heap is empty' : this.heap[0];
+            }
+
+            isEmpty() {
+                return this.heap.length === 0;
+            }
+
+            display() {
+                return JSON.stringify(this.heap, null, 2);
+            }
+        }
+
+        const minHeap = new MinHeap();
+
+        function insertToHeap() {
+            const element = document.getElementById('heapElement').value;
+            if (element) {
+                minHeap.insert(Number(element));
+                document.getElementById('heapOutput').innerText = minHeap.display();
+                document.getElementById('heapElement').value = ''; // Clear input
+            } else {
+                alert('Please enter a valid element to insert!');
+            }
+        }
+
+        function extractMin() {
+            const minElement = minHeap.extractMin();
+            document.getElementById('heapOutput').innerText = minHeap.display();
+            alert(minElement === 'Heap is empty' ? minElement : `Extracted Min: ${minElement}`);
+        }
+
+        function peekHeap() {
+            const topElement = minHeap.peek();
+            alert(topElement === 'Heap is empty' ? topElement : `Min Element: ${topElement}`);
+        }
+    </script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+    
+</body>
+</html>

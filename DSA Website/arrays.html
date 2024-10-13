@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Arrays</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="dsa.html" class="dsa-button">DSA</a>
+                    <ul class="dropdown">
+                        
+                        <li><a href="queues.html">Queues</a></li>
+                        <li><a href="stacks.html">Stacks</a></li>
+                        <li><a href="linked-lists.html">Linked List</a></li>
+                        <li><a href="hashing.html">Hashing</a></li>
+                        <li><a href="heaps.html">Heaps</a></li>
+                        <li><a href="trees.html">Trees</a></li>
+                        <li><a href="graphs.html">Graphs</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+  
+    <h1>Understanding Arrays</h1>
+
+    <h2>What is an Array?</h2>
+    <p>An array is a collection of items stored at contiguous memory locations. It is a data structure that can hold multiple values of the same type.</p>
+
+    <h2>Types of Arrays</h2>
+    <ul>
+        <li><strong>1D Arrays:</strong> A single row of elements.</li>
+        <li><strong>2D Arrays:</strong> An array of arrays, often used to represent matrices.</li>
+        <li><strong>Multidimensional Arrays:</strong> Arrays with more than two dimensions.</li>
+    </ul>
+
+    <h2>Basic Operations on Arrays</h2>
+    <div class="array-operations">
+        <div class="operation">
+            <h3>Insertion</h3>
+            <p>Adds an element to the array.</p>
+            <div class="example">
+                <code>array.push(value);</code>
+            </div>
+        </div>
+        <div class="operation">
+            <h3>Deletion</h3>
+            <p>Removes an element from the array.</p>
+            <div class="example">
+                <code>array.splice(index, 1);</code>
+            </div>
+        </div>
+        <div class="operation">
+            <h3>Traversal</h3>
+            <p>Accesses each element in the array.</p>
+            <div class="example">
+                <code>for (let i = 0; i < array.length; i++) { console.log(array[i]); }</code>
+            </div>
+        </div>
+        <div class="operation">
+            <h3>Searching</h3>
+            <p>Finds an element in the array.</p>
+            <div class="example">
+                <code>let index = array.indexOf(value);</code>
+            </div>
+        </div>
+        <div class="operation">
+            <h3>Sorting</h3>
+            <p>Arranges the elements in a specific order.</p>
+            <div class="example">
+                <code>array.sort();</code>
+            </div>
+        </div>
+    </div>
+
+    <h2>Example of a 1D Array</h2>
+    <div class="example">
+        <code>
+            let fruits = ['Apple', 'Banana', 'Cherry'];<br>
+            console.log(fruits[0]); // Output: Apple
+        </code>
+    </div>
+
+    <h2>Example of a 2D Array</h2>
+    <div class="example">
+        <code>
+            let matrix = [<br>
+                [1, 2, 3],<br>
+                [4, 5, 6],<br>
+                [7, 8, 9]<br>
+            ];<br>
+            console.log(matrix[1][2]); // Output: 6
+        </code>
+    </div>
+
+    <h2>Interactive Array Example</h2>
+    <p>Try adding elements to the array!</p>
+    <input type="text" id="element" placeholder="Enter an element">
+    <button onclick="addElement()">Add Element</button>
+    <div>
+        <h3>Current Array:</h3>
+        <pre id="currentArray">[]</pre>
+    </div>
+
+    <script>
+        let array = [];
+
+        function addElement() {
+            const element = document.getElementById('element').value;
+            if (element) {
+                array.push(element);
+                document.getElementById('currentArray').innerText = JSON.stringify(array);
+                document.getElementById('element').value = ''; // Clear input
+            } else {
+                alert('Please enter a valid element!');
+            }
+        }
+    </script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+  
+</body>
+</html>

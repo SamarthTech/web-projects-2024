@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Trees</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="dsa.html" class="dsa-button">DSA</a>
+                    <ul class="dropdown">
+                        
+                        <li><a href="queues.html">Queues</a></li>
+                        <li><a href="stacks.html">Stacks</a></li>
+                        <li><a href="linked-lists.html">Linked List</a></li>
+                        <li><a href="hashing.html">Hashing</a></li>
+                        <li><a href="heaps.html">Heaps</a></li>
+                        <li><a href="arrays.html">Array</a></li>
+                        <li><a href="graphs.html">Graphs</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Understanding Trees</h1>
+
+    <h2>What is a Tree?</h2>
+    <p>A tree is a hierarchical data structure consisting of nodes, with a root node at the top and sub-nodes as children. Each node contains a value and links to its children. Trees are used to represent hierarchical data.</p>
+
+    <h2>Types of Trees</h2>
+    <ul>
+        <li><strong>Binary Tree:</strong> Each node has at most two children, referred to as the left and right child.</li>
+        <li><strong>Binary Search Tree (BST):</strong> A binary tree where the left child's value is less than the parent's value, and the right child's value is greater.</li>
+        <li><strong>AVL Tree:</strong> A self-balancing binary search tree where the difference in heights between left and right subtrees is at most one.</li>
+        <li><strong>Red-Black Tree:</strong> A balanced binary search tree with properties that ensure the tree remains balanced during insertions and deletions.</li>
+        <li><strong>Heap:</strong> A special tree-based structure that satisfies the heap property (max heap or min heap).</li>
+    </ul>
+
+    <h2>Basic Operations on Trees</h2>
+    <div class="example">
+        <h3>Common Operations:</h3>
+        <ul>
+            <li><strong>Insert:</strong> Adds a new node to the tree.</li>
+            <li><strong>Delete:</strong> Removes a node from the tree.</li>
+            <li><strong>Search:</strong> Finds a node in the tree.</li>
+            <li><strong>Traversal:</strong> Visits all nodes in a specific order (in-order, pre-order, post-order).</li>
+        </ul>
+    </div>
+
+    <h2>Tree Example</h2>
+    <div class="example">
+        <code>
+            class TreeNode {<br>
+                constructor(value) {<br>
+                    this.value = value;<br>
+                    this.left = null;<br>
+                    this.right = null;<br>
+                }<br>
+            }<br>
+            <br>
+            class BinaryTree {<br>
+                constructor() {<br>
+                    this.root = null;<br>
+                }<br>
+                insert(value) {<br>
+                    // Logic to insert value<br>
+                }<br>
+                search(value) {<br>
+                    // Logic to search for value<br>
+                }<br>
+                traverse() {<br>
+                    // Logic to traverse the tree<br>
+                }<br>
+            }
+        </code>
+    </div>
+
+    <h2>Interactive Binary Tree Example</h2>
+    <p>Add and search for elements in the binary tree!</p>
+    <input type="number" id="treeElement" placeholder="Enter tree element">
+    <button onclick="insertToTree()">Insert</button>
+    <button onclick="searchInTree()">Search</button>
+    
+    <div class="tree-container" id="treeDisplay">
+        <h3>Current Tree (In-order Traversal):</h3>
+        <pre id="treeOutput">[]</pre>
+    </div>
+
+    <script>
+        class TreeNode {
+            constructor(value) {
+                this.value = value;
+                this.left = null;
+                this.right = null;
+            }
+        }
+
+        class BinaryTree {
+            constructor() {
+                this.root = null;
+            }
+
+            insert(value) {
+                const newNode = new TreeNode(value);
+                if (this.root === null) {
+                    this.root = newNode;
+                } else {
+                    this.insertNode(this.root, newNode);
+                }
+            }
+
+            insertNode(node, newNode) {
+                if (newNode.value < node.value) {
+                    if (node.left === null) {
+                        node.left = newNode;
+                    } else {
+                        this.insertNode(node.left, newNode);
+                    }
+                } else {
+                    if (node.right === null) {
+                        node.right = newNode;
+                    } else {
+                        this.insertNode(node.right, newNode);
+                    }
+                }
+            }
+
+            search(value) {
+                return this.searchNode(this.root, value);
+            }
+
+            searchNode(node, value) {
+                if (node === null) return false;
+                if (value === node.value) return true;
+                return value < node.value
+                    ? this.searchNode(node.left, value)
+                    : this.searchNode(node.right, value);
+            }
+
+            inOrderTraversal(node, result = []) {
+                if (node) {
+                    this.inOrderTraversal(node.left, result);
+                    result.push(node.value);
+                    this.inOrderTraversal(node.right, result);
+                }
+                return result;
+            }
+
+            display() {
+                return JSON.stringify(this.inOrderTraversal(this.root), null, 2);
+            }
+        }
+
+        const binaryTree = new BinaryTree();
+
+        function insertToTree() {
+            const element = document.getElementById('treeElement').value;
+            if (element) {
+                binaryTree.insert(Number(element));
+                document.getElementById('treeOutput').innerText = binaryTree.display();
+                document.getElementById('treeElement').value = ''; // Clear input
+            } else {
+                alert('Please enter a valid element to insert!');
+            }
+        }
+
+        function searchInTree() {
+            const element = document.getElementById('treeElement').value;
+            const found = binaryTree.search(Number(element));
+            alert(found ? `Element ${element} found in the tree.` : `Element ${element} not found in the tree.`);
+        }
+    </script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+    
+</body>
+</html>
