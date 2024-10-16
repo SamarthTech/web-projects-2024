@@ -1,0 +1,23 @@
+
+{
+    "name": "my-opensource-project",
+    "version": "1.0.0",
+    "description": "A project using Three.js",
+    "main": "index.js",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "keywords": [],
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+      "three": "^0.153.0"
+    },
+    "devDependencies": {
+      "vite": "^5.4.8"
+    }
+  }
+  
+
