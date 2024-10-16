@@ -1,11 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f5;
 }
 
 .container {
@@ -14,45 +14,109 @@ body {
     width: 100%;
     padding: 20px;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 input {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 80%;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    width: 70%;
+    margin-right: 10px;
 }
 
 button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
     padding: 10px;
     font-size: 16px;
     border: none;
-    background: #007bff;
-    color: #fff;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background: #0056b3;
+    background: linear-gradient(135deg, #0056b3, #004494);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
 }
+
 
 #recipe-results {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-.recipe {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
 }
 
-.recipe:last-child {
-    border-bottom: none;
+.recipe-card img {
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.recipe-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.recipe-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+#loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
 }
