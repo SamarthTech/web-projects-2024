@@ -2,71 +2,59 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-// Set up the scene, camera, and renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({
+const renderer = new THREE.WebGL1Renderer({
     canvas: document.querySelector('#bg'),
-    antialias: true, // Enable antialiasing
+    alpha: true,
 });
 
-// Set the pixel ratio and size of the renderer
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.set(30, 30, 30); // Adjust camera to ensure visibility
-camera.lookAt(0, 0, 0);
 
-// Create the geometry, material, and mesh for the torus
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xFF6347 });
-const torus = new THREE.Mesh(geometry, material);
-scene.add(torus);
+const textureLoader = new THREE.TextureLoader();
+const backgroundTexture = textureLoader.load('space.jpg');
 
-// Add lights
+const geometry = new THREE.PlaneGeometry(100, 100);
+const material = new THREE.MeshBasicMaterial({ map: backgroundTexture });
+const plane = new THREE.Mesh(geometry, material);
+scene.add(plane);
+
+plane.rotation.x = -Math.PI / 2;
+plane.position.y = -10;
+
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(20, 20, 20);
-const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight);
+scene.add(pointLight);
 
-// Add light and grid helpers
-const lightHelper = new THREE.PointLightHelper(pointLight);
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(lightHelper, gridHelper);
-
-// Set up orbit controls
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableZoom = false;
 
-// Set the background texture
-const spaceTexture = new THREE.TextureLoader().load('background.jpg', 
-    () => { console.log("Background texture loaded successfully."); },
-    undefined,
-    err => { console.error("An error occurred while loading the texture", err); }
-);
-scene.background = spaceTexture;
-
-// Function to move the camera and rotate the torus
 function moveCamera() {
-    const t = document.body.getBoundingClientRect().top;
+    const scrollY = window.scrollY;
+    camera.position.z = 50 - scrollY * 0.1;
+    camera.position.x = scrollY * 0.0002;
 
-    torus.rotation.x += 0.05;
-    torus.rotation.y += 0.05;
-
-    // Adjust camera position based on scroll
-    camera.position.z = t * -0.01;
-    camera.position.x = t * -0.0002;
-    camera.position.y = t * -0.0002;
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            section.classList.add('visible');
+        }
+    });
 }
 
-// Correctly set the scroll event handler
 document.body.onscroll = moveCamera;
 
-// Rendering loop
 function animate() {
-    requestAnimationFrame(animate); // Create an animation loop
-    
-    moveCamera(); // Update camera position and torus rotation on every frame
-    controls.update(); // Update controls
-    renderer.render(scene, camera); // Render the scene
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
 }
 
-animate(); // Start the animation
+moveCamera();
+animate();
+
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+    link.classList.add('visible');
+});
