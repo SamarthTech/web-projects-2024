@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>First Person Shooter</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../libs/three.js"></script>
+    <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="../libs/stats.js"></script>
+    <script type="text/javascript" src="../libs/dat.gui.js"></script>
+    <script type="text/javascript" src="../libs/PointerLockControls.js"></script>
+    <script type="text/javascript" src="../libs/OBJLoader.js"></script>
+    <script type="text/javascript" src="../libs/MTLLoader.js"></script>
+    <script type="text/javascript" src="../libs/physi.js"></script>
+    <script type="text/javascript" src="../libs/howler.js"></script>
+    <script type="text/javascript" src="Map.js"></script>
+    <script type="text/javascript" src="Enemies.js"></script>
+    <script type="text/javascript" src="Skybox.js"></script>
+    <script type="text/javascript" src="Crosshair.js"></script>
+    <script type="text/javascript" src="avatar.js"></script> 
+    <script type="text/javascript" src="Bullets.js"></script> 
+    <script type="text/javascript" src="TheScene.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <div id="blocker">
+        <div id="instructions">
+            <span id="title" style="font-size:50px">Click to start</span>
+            <br />
+            If you run out of bullets, the game ends
+            <br />
+            W, A, S, D = Move
+            <br />
+            Space = Skip
+            <br />
+			Wheel / Q = Change Weapon
+            <br />
+            Click Left = Shoot
+            <br />
+            Move Mouse = Look
+            <br />
+            Esc = Pause
+        </div>
+    </div>
+
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden; 
+            cursor: none;
+        }
+
+        #blocker {
+
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        #instructions {
+
+            width: 100%;
+            height: 100%;
+
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+
+            -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+            box-orient: horizontal;
+
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            box-pack: center;
+
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            box-align: center;
+
+            color: #ffffff;
+            text-align: center;
+
+             cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Div which will show statistical information -->
+<div id="Stats-output">
+</div>
+
+<!-- Div which will show several messages -->
+<div style="position:absolute; left:100px; top:10px" id="Messages">
+</div>
+
+<!-- Div which will hold the Output -->
+<div id="WebGL-output">
+</div>
+</body>
+</html>
