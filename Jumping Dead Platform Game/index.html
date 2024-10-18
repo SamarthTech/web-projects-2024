@@ -1,0 +1,285 @@
+<!---
+Description: Home page for game. Calls initialize_game() function in JS_Game.js file on page load and
+contains code for game over and game complete modals.
+Author: Open Source - Contributor list can be seen in GitHub
+-->
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>The Jumping Dead</title>
+
+	<link rel="stylesheet" type="text/css" href="Style-Sheets/JS_game.css">
+	<link rel="stylesheet" type="text/css" href="Style-Sheets/InstructionsModal.css">
+	<link rel="stylesheet" type="text/css" href="Style-Sheets/GameOverModal.css">
+	<link rel="stylesheet" type="text/css" href="Style-Sheets/GameCompleteModal.css">
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
+	<!--Main game script-->
+	<script type="text/javascript" src="Game.js"></script>
+
+</head>
+
+<!--On page load call showInstructions method-->
+<body onload="showInstructions()" onkeydown="KeyDown(event)" onkeyup="KeyUp(event)" ondragend="onMouseUp()">
+	<!-- Banner -->
+	<img id="banner" src="Pictures/banner.png">
+
+	<!--Audio elements-->
+	<audio id="bgm" style="display: none" controls>
+		<source src="Audio/bgnd_mus.flac" type="audio/flac">
+		Your browser does not support the audio element.
+	</audio>
+
+	<audio id="jump" style="display: none" controls>
+		<source src="Audio/jump_04.wav" type="audio/wav">
+			Your browser does not support the audio element.
+	</audio>
+
+	<audio id="coinpickup" style="display: none" controls>
+		<source src="Audio/coin_pickup.wav" type="audio/wav">
+			Your browser does not support the audio element.
+	</audio>
+
+	<audio id="gameover" style="display: none" controls>
+		<source src="Audio/gameover.wav" type="audio/wav">
+			Your browser does not support the audio element.
+	</audio>
+
+	<audio id="gamewon" style="display: none" controls>
+		<source src="Audio/win_sound.wav" type="audio/wav">
+			Your browser does not support the audio element.
+	</audio>
+
+	<audio id="enemykilled" style="display: none" controls>
+		<source src="Audio/enemy_killed.wav" type="audio/wav">
+			Your browser does not support the audio element.
+	</audio>
+
+
+
+	<!--Restart button on game page-->
+	<canvas id="canvas" width=300 height=300></canvas>
+
+	<!--button id="restartButtonNearScore" class="button" onClick="restartGame()">
+		<img class="buttonImages" src="Pictures/restart.png" alt="RestartButton" />
+	</button-->
+
+
+	<div id="instructionsModal" class="modal">
+
+		<div class="modal-content">
+
+			<h3>Instructions</h3>
+
+			<p>How to play:</p>
+			<ul>
+				<li>Complete each level by avoiding the enemy characters</li>
+				<li>Kill enemies by jumping on them</li>
+				<li>Killing an enemy grants you bonus score</li>
+			</ul>
+
+			<p>Controls:</p>
+			<ul>
+				<li>On-screen buttons</li>
+				<li>Keyboard arrows and WASD: Move left and right, jump, and duck</li>
+				<li>Press 'p' to pause the game</li>
+				<li>Press 'm' to toggle music</li>
+                <li>Press Space to restart the game</li>
+			</ul>
+
+			<!--Play button-->
+			<div class="startButton">
+				<img class="buttonImages" src="Pictures/play.png" width="100%" onClick="initialize_game()" alt="PlayButton" />
+			</div>
+
+		</div>
+	</div>
+
+	<div id="gameOverModal" class="modal">
+		<div class="modal-content">
+
+			<img class="gameOverLabel" src="Pictures/game_over.png" alt="GAME OVER">
+			<p class="gameOverDesc">Press RESTART button or Space to restart the game.</p>
+
+			<div class="restartButton">
+				<img class="buttonImages" src="Pictures/restart.png" width="100%" onClick="initialize_game()" alt="RestartButton" />
+			</div>
+		</div>
+	</div>
+
+	<div id="gameCompleteModal" class="modal">
+		<div class="modal-content">
+			<img class="gameOverLabel" src="Pictures/victory.png" alt="VICTORY">
+			<p class="gameOverDesc">You completed the game! Awesome Work!</p>
+			<div class="restartButton">
+				<img src="Pictures/restart.png" width="100%" onClick="initialize_game()" alt="RestartButton" />
+			</div>
+		</div>
+	</div>
+
+	<div id="gamePauseModal" class="modal">
+		<p class="gamePause">You paused the game!</p>
+		<p class="gamePlayPause">Press p to play</p>
+		<div class="resumeButton">
+			<img class="button" src="Pictures/resume.png" width="100%" onClick="pauseGame()" alt="ResumeGame" />
+		</div>
+	</div>
+
+	<div id="optionsModal" class="modal">
+		<div class="modal-content">
+				<div class="gameOptions"><h2>OPTIONS</h2></div>
+				<div class="mess">
+					<label id="mess"></label>
+				</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Up1">Up</label>
+					</div>
+					<div class="col-75">
+        		<input type="text" id="UP" name="up1Key" value="Up" onclick="dispMess('UP','UP')" readonly>
+					</div>
+			</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Down1">Down</label>
+					</div>
+					<div class="col-75">
+        		<input type="text" id="DOWN" name="down1Key" value="Down" onclick="dispMess('DOWN','DOWN')" readonly>
+					</div>
+			</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Left1">Left</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="LEFT" name="left1Key" value="Left" onclick="dispMess('LEFT','LEFT')" readonly>
+					</div>
+    		</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Right1">Right</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="RIGHT" name="Right1Key" value="Right" onclick="dispMess('RIGHT','RIGHT')" readonly>
+					</div>
+    		</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Up2">Up (Alt.)</label>
+					</div>
+					<div class="col-75">
+        		<input type="text" id="W" name="wKey" value="W" onclick="dispMess('W','UP')" readonly>
+					</div>
+			</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Down2">Down (Alt.)</label>
+					</div>
+					<div class="col-75">
+        		<input type="text" id="S" name="sKey" value="S" onclick="dispMess('S','DOWN')" readonly>
+					</div>
+			</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Left2">Left (Alt.)</label>
+					</div>
+					<div class="col-75">
+        		<input type="text" id="A" name="left2Key" value="A" onclick="dispMess('A','LEFT')" readonly>
+					</div>
+    		</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Right2">Right (Alt.)</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="D" name="Right2Key" value="D" onclick="dispMess('D','RIGHT')" readonly>
+					</div>
+    		</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Restart">Restart</label>
+					</div>
+					<div class="col-75">
+        		<input type="text" id="SPACE" name="SpaceKey" value="Space" onclick="dispMess('SPACE','SPACE')" readonly>
+					</div>
+    		</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Pause">Pause</label>
+					</div>
+					<div class="col-75">
+        		<input type="text" id="P" name="PauseKey" value="P" onclick="dispMess('P','PAUSE')" readonly>
+					</div>
+    		</div>
+				<div class="row">
+					<div class="col-25">
+        		<label for="Sound">Sound</label>
+					</div>
+					<div class="col-75">
+        		<input type="text" id="M" name="SoundKey" value="M" onclick="dispMess('M','SND')" readonly>
+					</div>
+    		</div>
+				<div class="row">
+					<div class="col-25">
+        		<label ><img class="Sound" src="Pictures/audioOn.png" alt="OptionGame" onclick="dispMess('M','SOUND')" id="MImg"></label>
+					</div>
+					<div class="col-75">
+						<button class="button" id="buttonOptions" onClick="gameOptions()">
+							<img class="back" src="Pictures/Backbtn.png" alt="OptionGame">
+						</button>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<div id="levelTransitionModal" class="modal">
+		<div id="levelTransitionModalContent" class="modal-content">
+			<img class="gameOverLabel" src="Pictures/victory.png" alt="VICTORY">
+			<p class="levelTransitionMessage">Level complete!</p>
+			<p class="levelTransitionMessage">Press c to continue</p>
+			<div class="resumeButton">
+				<img class="button" src="Pictures/resume.png" width="100%" onClick="resumeGame()" alt="ResumeGame" />
+			</div>
+		</div>
+	</div>
+
+	<!--Game play buttons-->
+	<div id="buttonWrapper">
+		<div id="buttonRestart">
+			<button id="restartButtonLeft" class="button" onClick="restartGame()">
+				<img class="buttonImages" src="Pictures/restart.png" alt="RestartButton" />
+			</button>
+		</div>
+		<div id="buttonController">
+		<button class="button" onmousedown="moveLeftMouse()" onmouseup="onMouseUp()" ontouchstart="moveLeftMouse()" ontouchend="onMouseUp()">
+			<img class="buttonImages" src="Pictures/left.png" alt="LEFT">
+		</button>
+		<button class="button" onmousedown="moveUp()" ontouchstart="moveUp()">
+			<img class="buttonImages" src="Pictures/jump.png" alt="JUMP">
+		</button>
+		<button class="button" onmousedown="duck()" onmouseup="duckMouseUp()" ontouchstart="duck()" ontouchend="duckMouseUp()">
+			<img class="buttonImages" src="Pictures/duck.png" alt="DUCK">
+		</button>
+		<button class="button" onmousedown="moveRightMouse()" onmouseup="onMouseUp()" ontouchstart="moveRightMouse()" ontouchend="onMouseUp()">
+			<img class="buttonImages" src="Pictures/right.png" alt="RIGHT">
+		</button>
+		</div>
+		<div id="buttonPauseAudio">
+		<button class="button" id="buttonAudio" onClick="muteMusic()" >
+			<img class="buttonImages" id="audioButton" src="Pictures/audioOn.png" alt="MuteMusic">
+		</button>
+		<button class="button" id="buttonPause" onClick="pauseGame()">
+			<img class="buttonImages" src="Pictures/pause.png" alt="PauseGame">
+		</button>
+		<button class="button" id="buttonOptions" onClick="gameOptions()">
+			<img class="buttonImages" src="Pictures/Settingsbtn.png" alt="OptionGame">
+		</button>
+		</div>
+	</div>
+
+</body>
+
+</html>
