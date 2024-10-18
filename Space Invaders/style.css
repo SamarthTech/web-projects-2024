@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Play";
+    src: url("Play-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 10x;
+}
+
+html{
+    width: 100%;
+    font-family: "Play";
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color:  #2f3640;
+}
+
+canvas{
+    display: block;
+    margin: 10vh auto;
+    background-color: #000;
+}
+
+
+/*  media queries */
+
+/* @media only screen and (max-width: 600px) {
+    canvas{
+        display: block;
+        margin: 2vh auto;
+        background-color: #000;
+    }
+
+  } */
+
+/*  media queries */
