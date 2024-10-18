@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+    body{
+        background-image: url("Image/Currencys photo.jpg");
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    
+    </style>
+    
+<body>
+    <div class="converter">
+        <h2> Convert any currency in just a second...</h2>
+        <div>
+            <input type="number" id="amount" placeholder="Amount">
+            <select id="from_currency">
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="ARS">ARS</option>
+                <option value="AED">AED</option>
+                </select>
+            <select id="to_currency">    
+                <option value="USD">USD</option>
+                <option value="INR">INR</option>
+                <option value="EUR">EUR</option>
+                <option value="ARS">ARS</option>
+                <option value="AED">AED</option>
+                </select>
+        </div>
+        <button onclick="convertCurrency()">Convert</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
