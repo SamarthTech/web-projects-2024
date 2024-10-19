@@ -1,0 +1,13 @@
+Difficulty Levels for Flag Guessing Game:
+
+1. Easy:
+   - Time: 20 seconds per flag
+   - Number of flags: 15
+
+2. Medium:
+   - Time: 12 seconds per flag
+   - Number of flags: 25
+
+3. Hard:
+   - Time: 8 seconds per flag
+   - Number of flags: 30
