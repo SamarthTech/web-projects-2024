@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <title>Word Guessing Game - National Parks Edition</title>
+</head>
+
+<body>
+    <div class="container mt-3 pt-4">
+        <div class="jumbotron mt-5 mb-5 pt-5">
+            <div class="row">
+                <div class="col-lg-12 pt-4">
+                    <div class="text-center">
+                        <h1>Word Guessing Game</h1>
+                        <h2>-National Parks Edition-</h2>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-lg-12 text-center pb-3">
+                    <p><h4 id="welcome" class="blink">Press Any Key To Get Started!</h5></p>
+                    <br>
+                    <div><h5>Word:  <span id="currentWord"></span></h5></div>
+                    <br>
+                    <div><h6>Wins:  <span id="totalWins" class="varColor"></span></h6></div>
+                    
+                    <div><h6>Guesses Left:  <span id="remainingGuesses" class="varColor"></span></h6></div>
+                    
+                    <div><h6>Already Guessed:  <span id="guessedLetters" class="varColor"></span></h6></div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+   
+
+</body>
+</html>
