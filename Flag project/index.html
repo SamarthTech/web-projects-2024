@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Flag</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/logo.png" type="image/x-icon">
+
+    <script src="script.js"></script>
+
+</head>
+    <body onload="setup()">
+        <div class="main-container">
+            <div class="start-container">
+                <div><img src="icons/flags-logo.png" alt="logo"></div>
+                <h1>Guess The Flag</h1>
+                <p>Guess the correct flag to win</p>
+    
+                <div class="buttons-container">
+                    <button class="difficult-button" id="easy">Easy</button>
+                    <button class="difficult-button" id="medium">Medium</button>
+                    <button class="difficult-button" id="hard">Hard</button>
+                </div>
+
+
+                <div class="difficult-container"><p>Difficult: none</p></div>
+                <div><button id="start-button">Start</button></div>
+                <br><br>
+            </div>
+    
+            <div class="game-container">
+                <div class="info-container">
+                    <p></p>
+                    <p id="score-label"></p>
+                </div>
+                <div class="title-container"><h1>What flag is it?</h1></div>
+
+                <div class="flag-container">
+                    <!-- FLAG IMAGE -->
+                    <img src="https://flagcdn.com/w320/ua.png" id="flag">
+                </div>
+                <div class="flag-options">
+                    <button class="flag-button" id="1">Flag 1</button>
+                    <button class="flag-button" id="2">Flag 2</button>
+                    <button class="flag-button" id="3">Flag 3</button>
+                    <button class="flag-button" id="4">Flag 4</button>
+                </div>
+            </div>
+
+            <div class="result-container">
+                <div><img src="icons/flags-logo.png" alt="logo"></div>
+                <h1 id="resultsArea">Results: </h1>
+                <div><button id="restart-button">Restart</button></div>
+            </div>
+            
+        </div>
+    </body>
+</html>
