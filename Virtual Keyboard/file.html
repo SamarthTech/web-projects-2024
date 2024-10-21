@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+    <style>
+        /* Base styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Text area */
+        .input-area {
+            width: 80%;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Keyboard wrapper */
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 10px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+
+        /* Key styling */
+        .key {
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .key:active {
+            transform: translateY(3px);
+            background-color: #555;
+        }
+
+        /* Special key styles */
+        .special {
+            background-color: #222;
+            color: #ff8800;
+        }
+
+        /* Layout switch button */
+        .layout-switch {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .keyboard {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Input area -->
+    <textarea class="input-area" rows="4" placeholder="Type here..."></textarea>
+
+    <!-- Layout switcher button -->
+    <button class="layout-switch">Switch Layout (QWERTY)</button>
+
+    <!-- Virtual Keyboard -->
+    <div class="keyboard" id="keyboard"></div>
+
+    <script>
+        const layouts = {
+            'QWERTY': [
+                ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Backspace'],
+                ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+                ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Enter'],
+                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '?', 'Shift']
+            ],
+            'AZERTY': [
+                ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Backspace'],
+                ['A', 'Z', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+                ['Q', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Enter'],
+                ['W', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '?', 'Shift']
+            ],
+            'Dvorak': [
+                ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Backspace'],
+                ['\'', ',', '.', 'P', 'Y', 'F', 'G', 'C', 'R', 'L'],
+                ['A', 'O', 'E', 'U', 'I', 'D', 'H', 'T', 'N', 'S', 'Enter'],
+                [';', 'Q', 'J', 'K', 'X', 'B', 'M', 'W', 'V', 'Z', 'Shift']
+            ]
+        };
+
+        let currentLayout = 'QWERTY';
+        const inputArea = document.querySelector('.input-area');
+        const keyboardContainer = document.getElementById('keyboard');
+        const switchButton = document.querySelector('.layout-switch');
+
+        // Sound effect for keypress (base64 encoded audio)
+        const keyPressSound = new Audio("data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=");
+
+        // Render keyboard layout
+        function renderKeyboard(layout) {
+            keyboardContainer.innerHTML = '';
+            layout.forEach(row => {
+                row.forEach(key => {
+                    const keyElement = document.createElement('div');
+                    keyElement.textContent = key;
+                    keyElement.classList.add('key');
+                    if (['Backspace', 'Enter', 'Shift'].includes(key)) {
+                        keyElement.classList.add('special');
+                    }
+                    keyElement.addEventListener('click', () => handleKeyPress(key));
+                    keyboardContainer.appendChild(keyElement);
+                });
+            });
+        }
+
+        // Handle keypress
+        function handleKeyPress(key) {
+            keyPressSound.play(); // Play sound
+            if (key === 'Backspace') {
+                inputArea.value = inputArea.value.slice(0, -1);
+            } else if (key === 'Enter') {
+                inputArea.value += '\n';
+            } else if (key === 'Shift') {
+                toggleCapsLock();
+            } else {
+                inputArea.value += key;
+            }
+        }
+
+        // Toggle between layouts
+        switchButton.addEventListener('click', () => {
+            if (currentLayout === 'QWERTY') {
+                currentLayout = 'AZERTY';
+                switchButton.textContent = 'Switch Layout (AZERTY)';
+            } else if (currentLayout === 'AZERTY') {
+                currentLayout = 'Dvorak';
+                switchButton.textContent = 'Switch Layout (Dvorak)';
+            } else {
+                currentLayout = 'QWERTY';
+                switchButton.textContent = 'Switch Layout (QWERTY)';
+            }
+            renderKeyboard(layouts[currentLayout]);
+        });
+
+        // Initial render
+        renderKeyboard(layouts[currentLayout]);
+
+        // Toggle caps lock
+        function toggleCapsLock() {
+            const isUpperCase = inputArea.value === inputArea.value.toUpperCase();
+            inputArea.value = isUpperCase ? inputArea.value.toLowerCase() : inputArea.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>
