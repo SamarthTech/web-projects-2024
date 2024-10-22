@@ -1,0 +1,196 @@
+@font-face {
+    font-family: "Pixel Acer Mono";
+    src: url("./assets/fonts/Px437_Acer710_Mono.ttf");
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(20, 20, 20);
+    margin: 0;
+    font-family: "Pixel Acer Mono", monospace;
+    color: white;
+}
+
+.container-game {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.container-controls {
+    background-color: rgb(10, 10, 10);
+    width: 60rem;
+    height: 10rem;
+    border: 8px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+#dotButton,
+#dashButton,
+#submitButton,
+#deleteButton {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border: none;
+    color: white;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#dotButton,
+#dashButton {
+    background: linear-gradient(145deg, #2a2a2a, #191919);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#submitButton {
+    padding: 2rem 4rem;
+    background: linear-gradient(145deg, #007200, #005a00);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#deleteButton {
+    padding: 2rem 4rem;
+    background: linear-gradient(145deg, #990000, #7a0000);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    transform: translateY(-10%);
+}
+
+button:active {
+    transition: 0.1s;
+    transform: translateY(0);
+}
+
+.container-wordDisplay {
+    width: 50rem;
+    height: 25rem;
+    border: 8px solid white;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+    flex-wrap: wrap;
+    transition: background-color 0.3s;
+}
+
+.container-wordDisplay:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+#inputMorse {
+    width: 15rem;
+    height: 5rem;
+    background-color: black;
+    color: white;
+    border: 5px solid white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.container-stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25rem;
+    height: 5rem;
+    background-color: black;
+    color: white;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+#liveLeft {
+    color: red;
+}
+
+#corrects {
+    color: limegreen;
+}
+
+.guess {
+    background: url("./assets/videos/757C.gif") !important;
+    color: transparent !important;
+}
+
+#loser {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(41, 0, 0, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 30px rgba(255, 0, 0, 0.8);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#retry {
+    font-size: xx-large;
+    padding: 2rem 4rem;
+    background-color: black;
+    color: white;
+    font-family: "Pixel Acer Mono";
+    border: 5px solid white;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#retry:hover {
+    background-color: #1a1a1a;
+    filter: blur(0.5px);
+    cursor: pointer;
+}
+
+#damaged {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 2s;
+    background-color: rgba(124, 0, 0, 0.7);
+    border-radius: 15px;
+}

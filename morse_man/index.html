@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MorseMan</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    </head>
+    <body>
+        <div id="damaged"></div>
+        <div id="loser">
+            <p>Actual morse: <span id="actualMorse"></span></p>
+            <p>Actual word: <span id="actualWord"></span></p>
+            <button id="retry">Retry?</button>
+        </div>
+        <section class="container-game">
+            <div class="container-wordDisplay"></div>
+            <p id="inputMorse"></p>
+            <div class="container-controls">
+                <button id="dotButton">.</button>
+                <button id="dashButton">-</button>
+                <button id="submitButton">&#9166;</button>
+                <button id="deleteButton">&#8592;</button>
+            </div>
+            <div class="container-stats">
+                <p id="liveLeft">&#9829; 5</p>
+
+                <p id="corrects">&#10003; 0</p>
+            </div>
+        </section>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
