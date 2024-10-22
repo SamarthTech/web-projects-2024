@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Generator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="formContainer" class="container">
+        <h1>Badge Generator</h1>
+        <form id="badgeForm">
+            <label for="eventname">Event Name:</label>
+            <input type="text" id="eventname" required>
+
+            <label for="name">Person Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" required>
+            
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" required>
+            
+            <label for="access">Access Level:</label>
+            <select id="access" required>
+                <option value="Attendee">Attendee</option>
+                <option value="VIP">VIP</option>
+            </select>
+            <button type="submit">Generate Badge</button>
+        </form>
+    </div>
+
+    <div id="badge" class="badge">
+        <div class="badge-header">
+            <h1 id="badgeEvent"></h1>
+        </div>
+        <div class="badge-body">
+            <h2 id="badgeName"></h2>
+            <p id="badgeDesignation"></p>
+            <h3 id="badgecontainer"></h3>
+        </div>
+        <div id="qrcode" class="badge-qr">
+        </div>
+        <div class="badge-footer">
+            <p id="badgeAccess">ATTENDEE</p>
+        </div>
+    </div>
+
+    <button id="dwnBadge" class="dwnBadge">Download Badge</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
