@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>8 Puzzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        border: rgb(255, 153, 0) solid 4px;
+      }
+      body {
+        background-color: lightblue;
+      }
+      header {
+        font-family: "Bangers", cursive;
+        font-weight: bolder;
+        text-decoration: underline;
+        color: #a949f7b6;
+        height: 10vh;
+        margin-top: 20vh;
+        margin-bottom: 5vh;
+        text-align: center;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 15vh 15vh 15vh;
+        grid-template-rows: 15vh 15vh 15vh;
+        grid-gap: 0.3vw 0.3vw;
+        justify-content: center;
+        margin-bottom: 20vh;
+      }
+      .box {
+        background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+        color: #ff1d58;
+        text-align: center;
+        padding: 50px 0;
+        font-size: xx-large;
+        font-family: "Comic Neue", cursive;
+        border: #8b4afc 2px solid;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      .box:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>8 Puzzle</h1>
+    </header>
+    <div class="container">
+      <div class="box" id="x1" onclick="moveTile(0)"></div>
+      <div class="box" id="x2" onclick="moveTile(1)"></div>
+      <div class="box" id="x3" onclick="moveTile(2)"></div>
+      <div class="box" id="x4" onclick="moveTile(3)"></div>
+      <div class="box" id="x5" onclick="moveTile(4)"></div>
+      <div class="box" id="x6" onclick="moveTile(5)"></div>
+      <div class="box" id="x7" onclick="moveTile(6)"></div>
+      <div class="box" id="x8" onclick="moveTile(7)"></div>
+      <div class="box" id="x9" onclick="moveTile(8)"></div>
+    </div>
+
+    <script>
+      let puzzle = [1, 2, 3, 4, 5, 6, 7, 8, null];
+      const boxElements = Array.from(document.getElementsByClassName('box'));
+
+      // Shuffle the puzzle array on load
+      function shuffle(array) {
+        let currentIndex = array.length, randomIndex;
+        while (currentIndex != 0) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex],
+          ];
+        }
+        return array;
+      }
+
+      function render() {
+        boxElements.forEach((box, index) => {
+          box.innerHTML = puzzle[index] ? puzzle[index] : "";
+        });
+      }
+
+      function moveTile(index) {
+        const emptyIndex = puzzle.indexOf(null);
+        const validMoves = [index - 1, index + 1, index - 3, index + 3];
+        
+        if (validMoves.includes(emptyIndex)) {
+          [puzzle[emptyIndex], puzzle[index]] = [puzzle[index], puzzle[emptyIndex]];
+          render();
+          checkWin();
+        }
+      }
+
+      function checkWin() {
+        const winCondition = [1, 2, 3, 4, 5, 6, 7, 8, null];
+        if (JSON.stringify(puzzle) === JSON.stringify(winCondition)) {
+          setTimeout(() => alert("Congrats! You Win!"), 100);
+        }
+      }
+
+      puzzle = shuffle(puzzle);
+      render();
+    </script>
+  </body>
+</html>
