@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <div class="calc-cont">
+        <div class="calculator">
+            <div class="display">
+                <input type="text" id="display" name="display">
+            </div>
+            <div>
+                <input type="button" value="AC" onclick="document.getElementById('display').value = ''">
+                <input type="button" value="DEL"
+                    onclick="document.getElementById('display').value = document.getElementById('display').value.slice(0, -1)">
+                <input type="button" value="%" onclick="document.getElementById('display').value += '%'">
+                <input type="button" value="/" onclick="document.getElementById('display').value += '/'">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="document.getElementById('display').value += '7'">
+                <input type="button" value="8" onclick="document.getElementById('display').value += '8'">
+                <input type="button" value="9" onclick="document.getElementById('display').value += '9'">
+                <input type="button" value="*" onclick="document.getElementById('display').value += '*'">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="document.getElementById('display').value += '4'">
+                <input type="button" value="5" onclick="document.getElementById('display').value += '5'">
+                <input type="button" value="6" onclick="document.getElementById('display').value += '6'">
+                <input type="button" value="-" onclick="document.getElementById('display').value += '-'">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="document.getElementById('display').value += '1'">
+                <input type="button" value="2" onclick="document.getElementById('display').value += '2'">
+                <input type="button" value="3" onclick="document.getElementById('display').value += '3'">
+                <input type="button" value="+" onclick="document.getElementById('display').value += '+'">
+            </div>
+            <div>
+                <input type="button" value="C" onclick="document.getElementById('display').value = ''">
+                <input type="button" value="0" onclick="document.getElementById('display').value += '0'">
+                <input type="button" value="." onclick="document.getElementById('display').value += '.'">
+                <input type="button" value="=" onclick="calculate()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            const display = document.getElementById('display');
+            try {
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
+
+</html>
