@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
+#ques {
+    font-size: 1.5em;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.timer {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px 0;
+    color: #ff4500; /* Orange color for timer */
+}
+
+.btn-cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.correct {
+    background-color: #28a745; /* Green for correct answers */
+}
+
+.incorrect {
+    background-color: #dc3545; /* Red for incorrect answers */
+}
+
+#nxt {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#nxt:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+#restart{
+    margin-top: 50px;
+    background-color: white;
+    height: 40px;
+    color: black;
+    width: 100px;
+    border-radius: 10px;
+    border:2px solid rgba(46, 46, 179, 0.678);
+    font-weight: bold;
+    padding: 10px;
+  cursor: pointer;
+}
+#restart {
+    display: block; /* Ensure it's a block element */
+    margin: 20px auto; /* Center it by auto margin */
+}
+#restart:hover {
+    background-color: white; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
