@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Mood Board Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mood Board Builder</h1>
+        <button id="save-board">Save Board</button>
+        <button id="load-board">Load Board</button>
+    </header>
+
+    <section id="mood-board-container">
+        <div id="mood-board" class="board">
+            <!-- Images and Texts will be added here -->
+        </div>
+    </section>
+
+    <section id="controls">
+        <h2>Controls</h2>
+        <div class="upload-section">
+            <input type="file" id="image-upload" accept="image/*">
+            <button id="add-image">Add Image</button>
+        </div>
+
+        <div class="text-section">
+            <input type="text" id="text-input" placeholder="Enter text">
+            <label>Font Size:</label>
+            <input type="number" id="font-size" min="8" max="72" value="16">
+            <label>Font Color:</label>
+            <input type="color" id="font-color">
+            <button id="add-text">Add Text</button>
+        </div>
+
+        <div class="color-picker">
+            <label>Background Color:</label>
+            <input type="color" id="background-color">
+        </div>
+    </section>
+
+    <footer>
+        <p>Share your mood board:</p>
+        <button id="share-board">Share</button>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
