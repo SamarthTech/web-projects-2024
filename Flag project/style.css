@@ -1,0 +1,193 @@
+/* Global Styles */
+:root {
+    --primary-color: #405cf5;
+    --secondary-color: rgba(255, 255, 255, 0.50);
+    --border-color: rgba(255, 255, 255, 0.4);
+    --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    font-family: var(--font-family);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("icons/background.webp");
+    background-size: cover;
+    height: 100%;
+}
+.difficult-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+/* Containers */
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.start-container,
+.result-container,
+.game-container {
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: var(--secondary-color);
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid var(--border-color);
+}
+
+.start-container {
+    width: 600px;
+    margin-top: 50px;
+    height: 500px;
+}
+
+.result-container {
+    width: 400px;
+    margin-top: 50px;
+    display: none;
+}
+
+.game-container {
+    z-index: -1;
+    width: 1000px;
+    margin: 100px 8% 0;
+    display: none;
+    align-items: center;
+}
+
+/* Buttons */
+#start-button,
+#restart-button,
+.difficult-button,
+.flag-button {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 30px;
+    height: 30px;
+    line-height: 1.15;
+    overflow: hidden;
+    position: relative;
+    touch-action: manipulation;
+    width: 150px;
+}
+
+#start-button {
+    width: 100px;
+    height: 44px;
+    font-size: 100%;
+}
+
+.difficult-button:nth-child(1) {
+    background-color: green;
+}
+
+.difficult-button:nth-child(2) {
+    background-color: orange;
+}
+
+.difficult-button:nth-child(3) {
+    background-color: red;
+}
+
+/* Containers within Containers */
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 50px;
+}
+
+.info-container {
+    margin-top: 25px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title-container h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.flag-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.flag-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0 50px;
+}
+
+.flag-button {
+    width: 320px;
+    height: 40px;
+    padding: 5px;
+    margin: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .start-container,
+    .result-container,
+    .game-container {
+        width: 330px;
+        margin-top: 70px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .difficult-button {
+        width: 90px;
+        background-color: var(--primary-color);
+        margin: 3px;
+    }
+
+    .game-container {
+        margin-top: 10px;
+        padding: 2px;
+    }
+
+    .flag-container img {
+        margin-top: -20px;
+        transform: scale(0.8);
+    }
+
+    .flag-options .flag-button {
+        width: 250px;
+    }
+}

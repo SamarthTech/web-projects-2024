@@ -1,0 +1,390 @@
+[
+  {
+    "Student Details": {
+      "Email": "200390116021@saffrony.ac.in",
+      "Name": "Devarsh",
+      "Surname": "Patel",
+      "Branch": "IT",
+      "Gender": "M"
+    },
+    "MBTI (out of 100)": {
+      "4-letter personality": "ENTJ",
+      "I or E": 89,
+      "S or N": 53,
+      "F or T": 53,
+      "J or P": 53
+    },
+    "Learning Style (out of 100)": {
+      "Auditory Learning": 82,
+      "Visual Learning": 90,
+      "Kinesthetic Learning": 79
+    },
+    "Brain Type (out of 100)": {
+      "Left Brain": 61,
+      "Right Brain": 39
+    },
+    "Intelligence Type": {
+      "Intelligence Type": "Logical",
+      "Intelligence Score": 16
+    },
+    "DISC (Total 100)": {
+      "Dominance (D)": 30,
+      "Influence (Inf)": 27,
+      "Steadiness (St)": 22,
+      "Compliance (C)": 20
+    },
+    "OCEAN (Out of 100)": {
+      "Openness (O)": 12,
+      "Conscientiousness (Cns)": 80,
+      "Extraversion (Ex)": 68,
+      "Agreeableness (A)": 63,
+      "Natural Reactions (NR)": 67
+    },
+    "RIASEC (Total 100)": {
+      "Realistic (Rl)": 8,
+      "Investigative (Inv)": 23,
+      "Artistic (Art)": 12,
+      "Social (Soc)": 20,
+      "Enterprising (Ent)": 15,
+      "Conventional (Cnv)": 22
+    },
+    "Emotional Intelligence (0 to 10)": {
+      "Self-Awareness": 6,
+      "Self-Management": 5,
+      "Social Awareness": 7,
+      "Relationship Management": 4
+    },
+    "Aptitude (0 to 9)": {
+      "Core": 4,
+      "Fundamentals": 6,
+      "Verbal": 4,
+      "Quantitative": 5,
+      "Logical": 7
+    },
+    "Team Work Qualities (0 to 10)": {
+      "Communication": 6,
+      "Affective Communication": 4,
+      "Assertiveness": 4.7,
+      "Desire to Lead": 6.2,
+      "Trust": 5,
+      "Diversity": 3.7,
+      "Social Relationships": 7.2,
+      "Relation Building": 6.9,
+      "Team Spirit": 6.3,
+      "Recognition": 6
+    },
+    "Work Orientation (0 to 10)": {
+      "Security": 5.2,
+      "Planning": 5.8,
+      "Achievement Orientation": 4.3,
+      "Process Orientation": 6.2,
+      "Service Orientation": 5.8
+    },
+    "Soft Skills (0 to 10)": {
+      "System Orientation": 6.4,
+      "Self Esteem": 4.4,
+      "Self Confidence": 5.6,
+      "Empathy": 4.3,
+      "Decision Making": 4.8,
+      "Creativity": 5.6,
+      "Innovation": 4.1,
+      "Problem Solving": 5,
+      "Inquisitiveness": 4.9,
+      "Adaptability/Flexibility": 6.1,
+      "Integrity": 5.9,
+      "Dutifulness": 5.8,
+      "Accountability": 5.7
+    }
+  },
+  {
+    "Student Details": {
+      "Email": "200390119007@saffrony.ac.in",
+      "Name": "Harsh",
+      "Surname": "Ghediya ",
+      "Branch": "ME",
+      "Gender": "M"
+    },
+    "MBTI (out of 100)": {
+      "4-letter personality": "INTP",
+      "I or E": 53,
+      "S or N": 68,
+      "F or T": 63,
+      "J or P": 58
+    },
+    "Learning Style (out of 100)": {
+      "Auditory Learning": 90,
+      "Visual Learning": 87,
+      "Kinesthetic Learning": 82
+    },
+    "Brain Type (out of 100)": {
+      "Left Brain": 51,
+      "Right Brain": 49
+    },
+    "Intelligence Type": {
+      "Intelligence Type": "Naturalist",
+      "Intelligence Score": 14
+    },
+    "DISC (Total 100)": {
+      "Dominance (D)": 23,
+      "Influence (Inf)": 26,
+      "Steadiness (St)": 42,
+      "Compliance (C)": 9
+    },
+    "OCEAN (Out of 100)": {
+      "Openness (O)": 43,
+      "Conscientiousness (Cns)": 71,
+      "Extraversion (Ex)": 63,
+      "Agreeableness (A)": 55,
+      "Natural Reactions (NR)": 47
+    },
+    "RIASEC (Total 100)": {
+      "Realistic (Rl)": 8,
+      "Investigative (Inv)": 20,
+      "Artistic (Art)": 13,
+      "Social (Soc)": 15,
+      "Enterprising (Ent)": 18,
+      "Conventional (Cnv)": 25
+    },
+    "Emotional Intelligence (0 to 10)": {
+      "Self-Awareness": 5,
+      "Self-Management": 5,
+      "Social Awareness": 9,
+      "Relationship Management": 9
+    },
+    "Aptitude (0 to 9)": {
+      "Core": 5,
+      "Fundamentals": 4,
+      "Verbal": 7,
+      "Quantitative": 3,
+      "Logical": 7
+    },
+    "Team Work Qualities (0 to 10)": {
+      "Communication": 4,
+      "Affective Communication": 5.3,
+      "Assertiveness": 7,
+      "Desire to Lead": 5.3,
+      "Trust": 5.7,
+      "Diversity": 4.5,
+      "Social Relationships": 4.1,
+      "Relation Building": 5.6,
+      "Team Spirit": 5.7,
+      "Recognition": 6
+    },
+    "Work Orientation (0 to 10)": {
+      "Security": 5.2,
+      "Planning": 6,
+      "Achievement Orientation": 4.7,
+      "Process Orientation": 6.8,
+      "Service Orientation": 5
+    },
+    "Soft Skills (0 to 10)": {
+      "System Orientation": 6,
+      "Self Esteem": 6.3,
+      "Self Confidence": 6.4,
+      "Empathy": 4.9,
+      "Decision Making": 6.8,
+      "Creativity": 5.6,
+      "Innovation": 4.6,
+      "Problem Solving": 5.2,
+      "Inquisitiveness": 6.4,
+      "Adaptability/Flexibility": 6.6,
+      "Integrity": 5.6,
+      "Dutifulness": 5.2,
+      "Accountability": 5
+    }
+  },
+  {
+    "Student Details": {
+      "Email": "200390107022@saffrony.ac.in",
+      "Name": "Janvi",
+      "Surname": "Patel",
+      "Branch": "CE",
+      "Gender": "F"
+    },
+    "MBTI (out of 100)": {
+      "4-letter personality": "ESFJ",
+      "I or E": 53,
+      "S or N": 58,
+      "F or T": 58,
+      "J or P": 58
+    },
+    "Learning Style (out of 100)": {
+      "Auditory Learning": 62,
+      "Visual Learning": 62,
+      "Kinesthetic Learning": 64
+    },
+    "Brain Type (out of 100)": {
+      "Left Brain": 59,
+      "Right Brain": 41
+    },
+    "Intelligence Type": {
+      "Intelligence Type": "Linguistic",
+      "Intelligence Score": 15
+    },
+    "DISC (Total 100)": {
+      "Dominance (D)": 45,
+      "Influence (Inf)": 18,
+      "Steadiness (St)": 9,
+      "Compliance (C)": 27
+    },
+    "OCEAN (Out of 100)": {
+      "Openness (O)": 27,
+      "Conscientiousness (Cns)": 84,
+      "Extraversion (Ex)": 31,
+      "Agreeableness (A)": 55,
+      "Natural Reactions (NR)": 17
+    },
+    "RIASEC (Total 100)": {
+      "Realistic (Rl)": 7,
+      "Investigative (Inv)": 22,
+      "Artistic (Art)": 13,
+      "Social (Soc)": 25,
+      "Enterprising (Ent)": 18,
+      "Conventional (Cnv)": 15
+    },
+    "Emotional Intelligence (0 to 10)": {
+      "Self-Awareness": 5,
+      "Self-Management": 8,
+      "Social Awareness": 8,
+      "Relationship Management": 5
+    },
+    "Aptitude (0 to 9)": {
+      "Core": 4,
+      "Fundamentals": 5,
+      "Verbal": 2,
+      "Quantitative": 7,
+      "Logical": 6
+    },
+    "Team Work Qualities (0 to 10)": {
+      "Communication": 5,
+      "Affective Communication": 5.8,
+      "Assertiveness": 6,
+      "Desire to Lead": 5.1,
+      "Trust": 5.4,
+      "Diversity": 4.9,
+      "Social Relationships": 4.7,
+      "Relation Building": 5.6,
+      "Team Spirit": 4.9,
+      "Recognition": 4.7
+    },
+    "Work Orientation (0 to 10)": {
+      "Security": 4.8,
+      "Planning": 5.7,
+      "Achievement Orientation": 5,
+      "Process Orientation": 5.3,
+      "Service Orientation": 4.3
+    },
+    "Soft Skills (0 to 10)": {
+      "System Orientation": 4.9,
+      "Self Esteem": 5.2,
+      "Self Confidence": 4.5,
+      "Empathy": 4.4,
+      "Decision Making": 5.4,
+      "Creativity": 5.8,
+      "Innovation": 4.9,
+      "Problem Solving": 6,
+      "Inquisitiveness": 7.2,
+      "Adaptability/Flexibility": 6.3,
+      "Integrity": 5.6,
+      "Dutifulness": 4.6,
+      "Accountability": 5.3
+    }
+  },
+  {
+    "Student Details": {
+      "Email": "200390116054@saffrony.ac.in",
+      "Name": "Kewal ",
+      "Surname": "Shah",
+      "Branch": "IT",
+      "Gender": "M"
+    },
+    "MBTI (out of 100)": {
+      "4-letter personality": "INFP",
+      "I or E": 95,
+      "S or N": 95,
+      "F or T": 58,
+      "J or P": 53
+    },
+    "Learning Style (out of 100)": {
+      "Auditory Learning": 54,
+      "Visual Learning": 69,
+      "Kinesthetic Learning": 69
+    },
+    "Brain Type (out of 100)": {
+      "Left Brain": 40,
+      "Right Brain": 60
+    },
+    "Intelligence Type": {
+      "Intelligence Type": "Linguistic",
+      "Intelligence Score": 16
+    },
+    "DISC (Total 100)": {
+      "Dominance (D)": 26,
+      "Influence (Inf)": 7,
+      "Steadiness (St)": 33,
+      "Compliance (C)": 34
+    },
+    "OCEAN (Out of 100)": {
+      "Openness (O)": 85,
+      "Conscientiousness (Cns)": 15,
+      "Extraversion (Ex)": 6,
+      "Agreeableness (A)": 63,
+      "Natural Reactions (NR)": 93
+    },
+    "RIASEC (Total 100)": {
+      "Realistic (Rl)": 13,
+      "Investigative (Inv)": 22,
+      "Artistic (Art)": 23,
+      "Social (Soc)": 23,
+      "Enterprising (Ent)": 7,
+      "Conventional (Cnv)": 12
+    },
+    "Emotional Intelligence (0 to 10)": {
+      "Self-Awareness": 6,
+      "Self-Management": 6,
+      "Social Awareness": 7,
+      "Relationship Management": 8
+    },
+    "Aptitude (0 to 9)": {
+      "Core": 5,
+      "Fundamentals": 3,
+      "Verbal": 8,
+      "Quantitative": 3,
+      "Logical": 8
+    },
+    "Team Work Qualities (0 to 10)": {
+      "Communication": 7,
+      "Affective Communication": 5.2,
+      "Assertiveness": 4.3,
+      "Desire to Lead": 5.2,
+      "Trust": 5.1,
+      "Diversity": 6.6,
+      "Social Relationships": 5.2,
+      "Relation Building": 4.8,
+      "Team Spirit": 5.4,
+      "Recognition": 6.6
+    },
+    "Work Orientation (0 to 10)": {
+      "Security": 5.1,
+      "Planning": 5.3,
+      "Achievement Orientation": 4.1,
+      "Process Orientation": 5.8,
+      "Service Orientation": 5.3
+    },
+    "Soft Skills (0 to 10)": {
+      "System Orientation": 7.2,
+      "Self Esteem": 3.7,
+      "Self Confidence": 4.1,
+      "Empathy": 4.4,
+      "Decision Making": 5.1,
+      "Creativity": 5.8,
+      "Innovation": 6,
+      "Problem Solving": 4.4,
+      "Inquisitiveness": 5.1,
+      "Adaptability/Flexibility": 5.3,
+      "Integrity": 6.3,
+      "Dutifulness": 5.8,
+      "Accountability": 6.6
+    }
+  }
+]

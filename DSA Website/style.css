@@ -1,0 +1,159 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(90deg, #0e151c,#4B79A1);
+    color: #fff;
+    padding: 10px 20px;
+    position: relative; /* Enable absolute positioning for dropdown */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative; /* Position for dropdown */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 15px; /* Adjusted padding */
+    display: inline-block;
+    transition: background 0.3s;
+    border-radius: 5px;
+    font-size: 16px; /* Smaller font size */
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Styles */
+nav ul .dropdown {
+    display: none;
+    position: absolute; 
+    top: 90%; 
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.856);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.186);
+    border-radius: 3px; 
+    z-index: 1000; 
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateY(-10px); 
+    transition: opacity 0.3s ease, visibility 0.3s, transform 0.3s ease; /* Transition effects */
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+    opacity: 1; /* Fade in effect */
+    visibility: visible; /* Make visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+nav ul .dropdown li {
+    padding: 5px 10px; /* Smaller padding for dropdown items */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+nav ul .dropdown li a {
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make full clickable area */
+    font-size: 14px; /* Smaller font size for dropdown items */
+}
+
+nav ul .dropdown li a:hover {
+    background-color: #74b6f8ab; /* Background color on hover */
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin: 20px 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    margin: 10px 0;
+    padding: 0 20px; /* Add padding for better readability */
+}
+
+.example {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.operation {
+    margin-bottom: 15px;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"],
+button {
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    width: calc(100% - 30px); /* Full width minus padding */
+    box-sizing: border-box; /* Prevent padding from increasing width */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #0056b3; /* Darker border on focus */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px; /* Margin for spacing */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Miscellaneous */
+pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Allow horizontal scrolling for long lines */
+}
+
+.heap-container {
+    margin: 20px;
+}

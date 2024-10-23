@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url("../OG-image-3.jpg");
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+body{
+    font-family: 'Arial', sans-serif;
+     background-color: #f4f4f4;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 115vh;
+}
+      
+
+.quiz-container {
+    background-color:lightcyan;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 200%;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 2rem;
+    color:#28a745;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+label {
+    margin-left: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #218838;
+    color:blanchedalmond;
+}
+.icons .button:hover{
+    cursor: pointer;
+    background: linear-gradient(#2d68ec,white);
+    -webkit-text-fill-color: transparent;
+  }
+  .btn-container button{
+    border: .1rem solid #7492f2;
+    font-size: 1.1rem;
+    padding: .8rem  1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .2s ease;
+    color:#59cd97;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Linked Lists</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="dsa.html" class="dsa-button">DSA</a>
+                    <ul class="dropdown">
+                        
+                        <li><a href="queues.html">Queues</a></li>
+                        <li><a href="stacks.html">Stacks</a></li>
+                        <li><a href="arrays.html">Array</a></li>
+                        <li><a href="hashing.html">Hashing</a></li>
+                        <li><a href="heaps.html">Heaps</a></li>
+                        <li><a href="trees.html">Trees</a></li>
+                        <li><a href="graphs.html">Graphs</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Understanding Linked Lists</h1>
+
+    <h2>What is a Linked List?</h2>
+    <p>A linked list is a linear data structure in which elements are not stored at contiguous memory locations. Instead, each element (node) contains a reference (link) to the next element in the sequence.</p>
+
+    <h2>Types of Linked Lists</h2>
+    <ul>
+        <li><strong>Singly Linked List:</strong> Each node contains data and a link to the next node.</li>
+        <li><strong>Doubly Linked List:</strong> Each node contains data and two links: one to the next node and one to the previous node.</li>
+        <li><strong>Circular Linked List:</strong> The last node points back to the first node, forming a circle.</li>
+    </ul>
+
+    <h2>Benefits of Linked Lists</h2>
+    <ul>
+        <li>Dynamic size: Can grow and shrink as needed.</li>
+        <li>Efficient insertions/deletions: Adding or removing nodes is faster than in arrays.</li>
+    </ul>
+
+    <h2>Basic Operations on Linked Lists</h2>
+    <div class="example">
+        <h3>Common Operations:</h3>
+        <ul>
+            <li><strong>Insertion:</strong> Adding a new node.</li>
+            <li><strong>Deletion:</strong> Removing an existing node.</li>
+            <li><strong>Traversal:</strong> Accessing each node in the list.</li>
+            <li><strong>Searching:</strong> Finding a node with a specific value.</li>
+        </ul>
+    </div>
+
+    <h2>Singly Linked List Example</h2>
+    <div class="example">
+        <code>
+            class Node {<br>
+                constructor(data) {<br>
+                    this.data = data;<br>
+                    this.next = null;<br>
+                }<br>
+            }<br>
+            <br>
+            class LinkedList {<br>
+                constructor() {<br>
+                    this.head = null;<br>
+                }<br>
+            }
+        </code>
+    </div>
+
+    <h2>Interactive Linked List Example</h2>
+    <p>Add nodes to the linked list!</p>
+    <input type="text" id="nodeData" placeholder="Enter node data">
+    <button onclick="addNode()">Add Node</button>
+
+    <div class="list-container" id="linkedList">
+        <h3>Current Linked List:</h3>
+        <pre id="linkedListOutput">Head -> null</pre>
+    </div>
+
+    <script>
+        class Node {
+            constructor(data) {
+                this.data = data;
+                this.next = null;
+            }
+        }
+
+        class LinkedList {
+            constructor() {
+                this.head = null;
+            }
+
+            addNode(data) {
+                const newNode = new Node(data);
+                if (!this.head) {
+                    this.head = newNode;
+                } else {
+                    let current = this.head;
+                    while (current.next) {
+                        current = current.next;
+                    }
+                    current.next = newNode;
+                }
+            }
+
+            display() {
+                let current = this.head;
+                let output = 'Head -> ';
+                while (current) {
+                    output += current.data + ' -> ';
+                    current = current.next;
+                }
+                output += 'null';
+                return output;
+            }
+        }
+
+        const linkedList = new LinkedList();
+
+        function addNode() {
+            const data = document.getElementById('nodeData').value;
+            if (data) {
+                linkedList.addNode(data);
+                document.getElementById('linkedListOutput').innerText = linkedList.display();
+                document.getElementById('nodeData').value = ''; // Clear input
+            } else {
+                alert('Please enter valid data for the node!');
+            }
+        }
+    </script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+     
+</body>
+</html>

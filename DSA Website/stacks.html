@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Stacks</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="dsa.html" class="dsa-button">DSA</a>
+                    <ul class="dropdown">
+                        
+                        <li><a href="queues.html">Queues</a></li>
+                        <li><a href="arrays.html">Array</a></li>
+                        <li><a href="linked-lists.html">Linked List</a></li>
+                        <li><a href="hashing.html">Hashing</a></li>
+                        <li><a href="heaps.html">Heaps</a></li>
+                        <li><a href="trees.html">Trees</a></li>
+                        <li><a href="graphs.html">Graphs</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Understanding Stacks</h1>
+
+    <h2>What is a Stack?</h2>
+    <p>A stack is a linear data structure that follows the Last In, First Out (LIFO) principle. The last element added to the stack is the first one to be removed.</p>
+
+    <h2>Basic Operations on Stacks</h2>
+    <ul>
+        <li><strong>Push:</strong> Adds an element to the top of the stack.</li>
+        <li><strong>Pop:</strong> Removes the element from the top of the stack.</li>
+        <li><strong>Peek (or Top):</strong> Returns the top element without removing it.</li>
+        <li><strong>isEmpty:</strong> Checks if the stack is empty.</li>
+    </ul>
+
+    <h2>Stack Example</h2>
+    <div class="example">
+        <code>
+            class Stack {<br>
+                constructor() {<br>
+                    this.items = [];<br>
+                }<br>
+                push(element) {<br>
+                    this.items.push(element);<br>
+                }<br>
+                pop() {<br>
+                    return this.items.pop();<br>
+                }<br>
+                peek() {<br>
+                    return this.items[this.items.length - 1];<br>
+                }<br>
+                isEmpty() {<br>
+                    return this.items.length === 0;<br>
+                }<br>
+            }
+        </code>
+    </div>
+
+    <h2>Interactive Stack Example</h2>
+    <p>Add and remove elements from the stack!</p>
+    <input type="text" id="stackElement" placeholder="Enter stack element">
+    <button onclick="pushToStack()">Push</button>
+    <button onclick="popFromStack()">Pop</button>
+    <button onclick="peekStack()">Peek</button>
+    
+    <div class="stack-container" id="stackDisplay">
+        <h3>Current Stack:</h3>
+        <pre id="stackOutput">[]</pre>
+    </div>
+
+    <script>
+        class Stack {
+            constructor() {
+                this.items = [];
+            }
+
+            push(element) {
+                this.items.push(element);
+            }
+
+            pop() {
+                if (this.isEmpty()) {
+                    return 'Stack is empty';
+                }
+                return this.items.pop();
+            }
+
+            peek() {
+                if (this.isEmpty()) {
+                    return 'Stack is empty';
+                }
+                return this.items[this.items.length - 1];
+            }
+
+            isEmpty() {
+                return this.items.length === 0;
+            }
+
+            display() {
+                return JSON.stringify(this.items, null, 2);
+            }
+        }
+
+        const stack = new Stack();
+
+        function pushToStack() {
+            const element = document.getElementById('stackElement').value;
+            if (element) {
+                stack.push(element);
+                document.getElementById('stackOutput').innerText = stack.display();
+                document.getElementById('stackElement').value = ''; // Clear input
+            } else {
+                alert('Please enter a valid element to push!');
+            }
+        }
+
+        function popFromStack() {
+            const poppedElement = stack.pop();
+            document.getElementById('stackOutput').innerText = stack.display();
+            alert(poppedElement === 'Stack is empty' ? poppedElement : `Popped: ${poppedElement}`);
+        }
+
+        function peekStack() {
+            const topElement = stack.peek();
+            alert(topElement === 'Stack is empty' ? topElement : `Top Element: ${topElement}`);
+        }
+    </script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+     
+</body>
+</html>

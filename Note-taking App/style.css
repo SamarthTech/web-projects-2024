@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* box-model*/
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #ebf2ff;
+  }
+  
+  .card-img-top {
+    padding: 15px;
+    height: 300px;
+    width: auto;
+  }
+  
+  .place__holder__image {
+    width: 100%;
+  }
+  
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(120deg, #6f42c1, #6610f2);
+    color: rgb(15, 15, 15);
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .btn {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #080606;
+    color: #6610f2;
+}
+
+/* Notes Grid */
+.note__container .card {
+    transition: transform 0.2s ease-in-out;
+    background-color: #e7e1e1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.note__container .card:hover {
+    transform: translateY(-10px);
+    background-color: black;
+    color: white;
+    
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features .col-md-4 {
+    margin-bottom: 20px;
+}
+
+.features i {
+    color: #6610f2;
+    transition: transform 0.3s ease;
+}
+
+.features i:hover {
+    transform: scale(1.2);
+}
+
+.features h3 {
+    margin-top: 15px;
+    font-weight: 600;
+}
