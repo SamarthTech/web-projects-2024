@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ToDo App</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				background-color: aquamarine;
+			}
+			body {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+			}
+			h1 {
+				font-size: 12vmin;
+			}
+			hr {
+				border: 2px dotted red;
+				width: 90%;
+			}
+
+			form {
+				/* width: 100%; */
+				height: 10%;
+			}
+			input {
+				height: 4vmin;
+				width: 30vmin;
+				padding-inline: 2vmin;
+			}
+			button {
+				height: 3vmin;
+				width: 6vmin;
+			}
+
+			ul {
+				width: 70%;
+				background-color: cornsilk;
+			}
+			li {
+				margin: 10px;
+				width: 96%;
+				height: 5vmin;
+				padding-left: 2vmin;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			li:hover {
+				border: 3px solid rgb(207, 207, 22);
+			}
+			a {
+				margin-inline: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Flask To-Do List</h1>
+		<br />
+		<hr />
+		<br />
+		<form method="POST" action="/add">
+			<input
+				type="text"
+				name="content"
+				placeholder="Add a new task"
+				required
+			/>
+			<button type="submit">Add</button>
+		</form>
+		<ul>
+			{% for todo in todos %}
+			<li>
+				<p>-> {{ todo.content }}</p>
+				{% if not todo.completed %}
+				<p>
+					<a href="/complete/{{ todo.id }}">Complete</a>
+					{% endif %}
+					<a href="/delete/{{ todo.id }}">Delete</a>
+				</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
