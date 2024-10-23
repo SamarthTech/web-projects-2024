@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0D0C0C;
+  color: #fff;
+  overflow-x: hidden;
+}
+html{
+  overflow-x: hidden;
+}
+.inputBox{
+  width: 100%;
+  background-color: #141414;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.inputBox input{
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btnBlue{
+  background-color: #00AEEF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btnBlue:hover{
+  background-color: #0086b3;
+}
+.grid{
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px;
+}
+
+.lightMode{
+  background-color: #fff !important;
+  color: #000 !important;
+};
+
+
+.lightMode .navbar{
+  background-color: #fff;
+}
+
+.lightMode .tabs{
+  background-color: #f7f7f7;
+}
+.lightMode .tabs .tab{
+  background-color: #c2c1c1;
+  color: #000;
+}
+
+.lightMode .btn{
+  background-color: #C2C1C1;
+  color: #000;
+}
+/* Base styles for mobile devices */
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+header, footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #f8f8f8;
+}
+main {
+  padding: 1em;
+}
+
+/* Styles for tablets */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Styles for desktops */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+  .container {
+    padding: 0 30px;
+  }
+}
