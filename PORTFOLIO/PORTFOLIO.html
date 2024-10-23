@@ -90,13 +90,18 @@
       <h1>Contact Me</h1>
       <form>
         <label for="name">Name:</label>
-        <input type="text" id="name" required />
+        <input type="text" id="name" required autocomplete="name" />
 
         <label for="email">Email:</label>
-        <input type="email" id="email" required />
+        <input type="email" id="email" required autocomplete="email" />
 
         <label for="message">Message:</label>
-        <textarea id="message" rows="4" required></textarea>
+        <textarea
+          id="message"
+          rows="4"
+          required
+          autocomplete="message"
+        ></textarea>
 
         <button type="submit">Submit</button>
       </form>
@@ -122,10 +127,19 @@
           >Facebook</a
         >
       </div>
-      <p>© 2050 Nachiket Jain. All Rights Reserved.</p>
+      <p>
+        © <span id="currentYear"></span> Nachiket Jain. All Rights Reserved.
+      </p>
     </footer>
 
     <!-- JavaScript File -->
     <script type="module" src="main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+      });
+    </script>
   </body>
 </html>
