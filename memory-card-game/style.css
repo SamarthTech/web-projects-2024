@@ -1,0 +1,16 @@
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin: 50px auto;
+}
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+}
