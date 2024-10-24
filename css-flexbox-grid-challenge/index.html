@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox/Grid Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Flexbox/Grid Challenge</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1: Flexbox Centering</h2>
+            <p id="levelDescription">Replicate the target layout using Flexbox properties to center the boxes both vertically and horizontally.</p>
+        </div>
+
+        <div class="battle-area">
+            <div class="target-section">
+                <h3>Target Layout:</h3>
+                <div id="target" class="design"></div>
+            </div>
+
+            <div class="preview-section">
+                <h3>Your Layout:</h3>
+                <iframe id="previewFrame"></iframe>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <h3>Write Your CSS:</h3>
+            <textarea id="cssEditor" placeholder="Write your CSS here..." spellcheck="false"></textarea>
+            <button id="submitButton">Submit</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Use only CSS Flexbox or Grid properties to replicate the target layout. Click "Submit" to see how close your design matches the target layout.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
