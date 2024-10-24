@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: funky;
+    src: url('./Pokemon-Solid.ttf');
+}
+
+.wrapper {
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    /* background: #1c99ad; */
+    /* background: linear-gradient(90deg, #1c99ad 0%, #178c57 0%); */
+    background: linear-gradient(to right, #e30f0f, #b81414);
+    /* background: linear-gradient(to bottom, #f07878, #cc2020); */
+}
+
+.box div {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+}
+
+.pokeball {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: invert(0.95);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: funky;
+}
+
+
+.box div:nth-child(1) {
+    top: 30%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 12s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+h1 {
+    letter-spacing: 4px;
+    -webkit-text-stroke: 2px rgb(7, 47, 141);
+    font-size: 3em;
+    color: gold;
+}
+
+.input-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.input-search>input {
+    width: 30%;
+    padding: 0.7%;
+    background: #070707c4;
+    color: #f7f7f7;
+    font-size: 100%;
+    border-radius: 10px;
+    font-family: Poppins;
+    border: 2px solid black;
+}
+
+.input-search>button {
+    padding: 0.7%;
+    background: #070707c4;
+    color: #f7f7f7;
+    font-size: 100%;
+    border-radius: 5px;
+}
+
+.input-search>button :hover {
+    cursor: pointer;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 5%;
+    width: 70%;
+    gap: 2%;
+}
+
+.pic {
+    height: 50vh;
+    width: 50vh;
+    background-color: rgba(246, 224, 215, 0.9);
+    border-radius: 8px;
+}
+
+.pic>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.others {
+    padding: 2%;
+    height: 50vh;
+    width: 60vh;
+    background-color: rgba(246, 224, 215, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Poppins;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.others>h1,
+.stat>div>div>h4,
+.stat>div>div>h1,
+.type,
+.physique,
+.about {
+    font-family: Poppins;
+    color: #070707;
+    -webkit-text-stroke: transparent;
+    letter-spacing: 0.1vw;
+}
+
+.others>h1 {
+    font-size: 2.5rem;
+}
+
+.pic img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.pic img:hover {
+    transform: scale(1.01);
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.5));
+}
+
+.cry {
+    height: 7vw;
+    width: 7vw;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cry>button {
+    height: 7vw;
+    width: 7vw;
+    font-size: 10vh;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    flex-direction: column;
+}
+
+.stats>.container {
+    padding: 2%;
+}
+
+.stat {
+    padding: 3%;
+    height: 40vh;
+    width: 70vh;
+    background-color: rgba(246, 224, 215, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+
+    transition: transform 0.8s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover,
+.others:hover {
+    transform: scale(1.01);
+    /* Increases size by 10% */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+    /* Adds a shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition */
+}
+
+.strengths-weaknesses {
+    padding: 2%;
+    height: 40vh;
+    width: 40vh;
+    background-color: rgba(246, 224, 215, 0.9);
+    display: flex;
+    flex-direction: column;
+    padding: 3% 2%;
+    gap: 3%;
+
+    transition: transform 0.8s ease, box-shadow 0.3s ease;
+}
+
+.strengths-weaknesses:hover,
+.others:hover {
+    transform: scale(1.01);
+    /* Increases size by 10% */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+    /* Adds a shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition */
+}
+
+.stats>.container div {
+    border-radius: 8px;
+}
+
+.stat>div {
+    height: 100%;
+    width: 50%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 6%;
+}
+
+.stat>div>div {
+    height: 33%;
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat>div>div>h1 {
+    font-size: 150%;
+}
+
+.type {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8%;
+
+}
+
+.physique {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    gap: 5%;
+    align-items: center;
+}
+
+.type>h3 {
+    background-color: #070707;
+    color: #f7f7f7;
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.physique>h2 {
+    font-size: large;
+}
+
+.about {
+    padding: 2%;
+    background-color: #070707;
+    width: 112vh;
+    color: #f7f7f7;
+    border: 2px solid #f7f7f7;
+    border-radius: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.about>h4 {
+    font-size: large;
+}
+
+.fire {
+    background-color: #ff4422 !important;
+}
+
+.water {
+    background-color: #3399ff !important;
+}
+
+.grass {
+    background-color: #77cc55 !important;
+}
+
+.electric {
+    background-color: #ffcc33 !important;
+}
+
+.normal {
+    background-color: #aaaa99 !important;
+}
+
+.rock {
+    background-color: #bbaa66 !important;
+}
+
+.steel {
+    background-color: #bfbfce !important;
+}
+
+.ground {
+    background-color: #e1c368 !important;
+}
+
+.bug {
+    background-color: #a8b822 !important;
+}
+
+.flying {
+    background-color: #8899ff !important;
+}
+
+.fighting {
+    background-color: #b85443 !important;
+}
+
+.poison {
+    background-color: #aa5599 !important;
+}
+
+.dragon {
+    background-color: #7766ee !important;
+}
+
+.ice {
+    background-color: #7dd4ff !important;
+}
+
+.ghost {
+    background-color: #6666ba !important;
+}
+
+.psychic {
+    background-color: #fa6da5 !important;
+}
+
+.dark {
+    background-color: #775544 !important;
+}
+
+.fairy {
+    background-color: #ee99ee !important;
+}
+
+
+
+/* back-to-button styling */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 48px;
+    background-color: #000000;
+    color: #e30f0f;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255); 
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+    z-index: 1000;
+  }
+  
+  #back-to-top:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque on hover */
+  }
+  
+  #back-to-top svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  
+
+@media (max-width:1025px) {
+
+    .pic {
+        height: 45vh;
+        width: 45vh;
+        background-color: rgba(246, 224, 215, 0.9);
+        border-radius: 8px;
+    }
+
+    .pic>img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .others {
+        height: 45vh;
+        width: 65vh;
+        justify-content: center;
+        gap: 10px;
+        padding: 0em;
+    }
+
+    .others>h1 {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .others>h2 {
+        font-size: 1em;
+    }
+
+
+    .type {
+        gap: 8%;
+    }
+}
+
+
+
+@media (max-width:770px) {
+
+    h1 {
+        font-size: 2em;
+        margin-top: 1em;
+    }
+
+    .input-search {
+        margin-top: 2em;
+    }
+
+    .input-search>input {
+        width: 40vw;
+    }
+
+    .input-search>button {
+        padding: 1.1%;
+    }
+
+    .pic {
+        height: 40vh;
+        width: 40vh;
+        background-color: rgba(246, 224, 215, 0.9);
+        border-radius: 8px;
+    }
+
+    .pic>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .others {
+        height: 40vh;
+        width: 35vh;
+        justify-content: center;
+        gap: 10px;
+        padding: 0em;
+    }
+
+    .others>h1 {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .others>h2 {
+        font-size: 1em;
+    }
+
+    .cry {
+        width: 2em;
+        height: 2em;
+    }
+
+    .cry>button {
+        height: 2em;
+        width: 2em;
+        font-size: 4vh;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .cry>h4 {
+        font-size: 0.8em;
+    }
+
+
+    .stats>.container {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .stat {
+        /* padding: 3%; */
+        height: 45vh;
+        width: 77vh;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    .stat>div {
+        gap: 0em;
+        /* width: 75vh; */
+    }
+
+    .stat>div>div {
+        padding: 0;
+        gap: 2px;
+
+    }
+
+    .stat>div>div>h4 {
+        font-size: 0.8em;
+    }
+
+    .stat>div>div>h1 {
+        font-size: 1.5em;
+    }
+
+    .strengths-weaknesses {
+        width: 77vh;
+    }
+
+}
+
+
+@media (max-width:430px) {
+    h1 {
+        font-size: 2em;
+        margin-top: 1em;
+    }
+
+    .input-search {
+        margin-top: 2em;
+    }
+
+    .input-search>input {
+        width: 60vw;
+    }
+
+    .input-search>button {
+        padding: 1.1%;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .pic {
+        height: 40vh;
+        width: 40vh;
+        border-radius: 8px;
+    }
+
+    .others {
+        height: 35vh;
+        width: 40vh;
+        justify-content: center;
+        gap: 5px;
+        padding: 0em;
+        margin-bottom: 5px;
+    }
+
+    .others>h1 {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .others>h2 {
+        font-size: 1em;
+    }
+
+    .cry {
+        width: 2em;
+        height: 2em;
+    }
+
+    .cry>button {
+        height: 2em;
+        width: 2em;
+        font-size: 4vh;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .cry>h4 {
+        font-size: 0.8em;
+    }
+
+    .stats>.container {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .stat {
+        /* padding: 3%; */
+        height: 35vh;
+        width: 40vh;
+        gap: 0;
+    }
+
+    .stat>div {
+        gap: 0em;
+    }
+
+    .stat>div>div {
+        padding: 0;
+        gap: 2px;
+    }
+
+    .stat>div>div>h4 {
+        font-size: 0.65em;
+    }
+
+    .stat>div>div>h1 {
+        font-size: 1em;
+    }
+
+    .strengths-weaknesses {
+        margin-top: 0.1em;
+        padding-top: 5%;
+        height: 35vh;
+        width: 40vh;
+    }
+
+    .physique>h2 {
+        font-size: 1em;
+    }
+
+    .about {
+        margin-top: 5px;
+        width: 40vh;
+    }
+
+    .about>h4 {
+        font-size: small;
+        padding: 1.2em;
+    }
+
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 22px;
+      }
+    
+      #back-to-top svg {
+        width: 20px;
+        height: 20px;
+      }
+}
