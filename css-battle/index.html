@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle: Themed Design Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Battle: Themed Design Challenge</h1>
+        
+        <div id="designPrompt">
+            <h2 id="themeTitle">Theme: Sunset</h2>
+            <p id="themeDescription">Create a simple sunset using only HTML and CSS.</p>
+        </div>
+
+        <div class="battle-area">
+            <div class="battle-box">
+                <h2>Your Code</h2>
+                <textarea id="cssEditor" placeholder="Write your CSS here..." spellcheck="false"></textarea>
+                <button id="submitButton">Submit</button>
+            </div>
+
+            <div class="battle-box">
+                <h2>Your Design</h2>
+                <iframe id="designPreview" class="preview"></iframe>
+            </div>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Write CSS to replicate the given theme. Your design will be displayed in the preview area. Try to match the theme as closely as possible!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
