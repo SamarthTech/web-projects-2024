@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Fetch Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>API Fetch Adventure</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1: Fetch User Data</h2>
+            <p id="levelDescription">Use the Fetch API to retrieve user data from a JSON API and display it on the page.</p>
+        </div>
+
+        <div class="api-area">
+            <div class="api-section">
+                <h3>API Response:</h3>
+                <div id="apiResponse" class="response"></div>
+            </div>
+
+            <div class="code-section">
+                <h3>Write Your Fetch Code:</h3>
+                <textarea id="jsEditor" placeholder="Write your JavaScript here..." spellcheck="false"></textarea>
+                <button id="submitButton">Run Fetch</button>
+            </div>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Write JavaScript code to fetch data from the API. Click "Run Fetch" to see the result and check if your code is correct.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
