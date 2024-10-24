@@ -1,0 +1,201 @@
+body {
+  background-color: #e0e7f1;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.container h1 {
+  margin: 0px;
+  font-size: 2em;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #666;
+  text-align: left;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #6A82FB;
+  box-shadow: 0 0 5px rgba(106, 130, 251, 0.5);
+}
+
+.container button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #FC5C7D;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.container button:hover {
+  background: #6A82FB;
+}
+
+.dwnBadge{
+  display: none;
+  margin-top: 20px;
+  padding: 12px;
+  background: #001f3f;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+@media (max-width: 600px) {
+  .container {
+      padding: 20px;
+      max-width: 90%;
+  }
+
+  h1 {
+      font-size: 1.5em;
+  }
+
+  button {
+      padding: 10px;
+      font-size: 0.9em;
+  }
+
+  input[type="text"],
+  select {
+      font-size: 0.9em;
+      padding: 8px;
+  }
+}
+
+.badge {
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  display: none;
+}
+
+.badge-header {
+background-color: #001f3f;
+background: linear-gradient(315deg, #313c47, #001f3f);
+padding: 20px;
+color: white;
+position: relative;
+overflow: hidden;
+}
+
+.badge-header::after {
+content: '';
+position: absolute;
+top: -4px;
+left: -20px;
+width: 40%;
+height: 180%;
+background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 30%, transparent 10.01%);
+background-size: 10px 10px;
+transform: rotate(52deg);
+opacity: 0.8;
+}
+
+.badge-header::before {
+content: '';
+position: absolute;
+background-color: #fff;
+width: 12px;
+height: 12px;
+border-radius: 20px;
+top: 5px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.badge-header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.badge-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-body h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.badge-body p {
+  font-size: 14px;
+  margin: 0;
+  color: #777;
+  font-weight: 600;
+}
+
+.badge-body h3 {
+  color: #1d72b8;
+  font-size: 11px;
+  margin: 0;
+}
+
+.badge-qr {
+  margin: 20px 0;
+}
+
+.badge-footer {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+}
+
+.badge-footer p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}

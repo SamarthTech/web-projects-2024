@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        /* Text area */
+        .input-area {
+            width: 80%;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .input-area:focus {
+            border-color: #007BFF;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Keyboard wrapper */
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 10px;
+            padding: 15px;
+            background-color: #333;
+            border-radius: 15px;
+            max-width: 900px;
+            position: relative;
+        }
+
+        /* Key styling */
+        .key {
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.1s, background-color 0.3s;
+        }
+
+        .key:hover {
+            background-color: #555;
+        }
+
+        .key:active {
+            transform: translateY(3px);
+            background-color: #666;
+        }
+
+        /* Special key styles for larger keys */
+        .backspace {
+            grid-column: span 2;
+            color: rgb(231, 134, 99);
+        }
+
+        .enter {
+            grid-column: span 2;
+            color: rgb(231, 134, 99);
+        }
+
+        .shift {
+            grid-column: span 2;
+            color: rgb(231, 134, 99);
+        }
+
+        .caps {
+            grid-column: span 2;
+            color: rgb(231, 134, 99);
+        }
+
+        /* Layout switch button */
+        .layout-switch {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .layout-switch:hover {
+            background-color: #0056b3;
+        }
+
+     
+        /* Responsive */
+        @media (max-width: 400px) {
+            .keyboard {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .key {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+
+            .layout-switch, .expand-keyboard {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>VIRTUAL KEYBOARD YAY!</h1>
+    <!-- Input area -->
+    <textarea class="input-area" rows="4" placeholder="Type here..."></textarea>
+
+    <!-- Layout switcher button -->
+    <button class="layout-switch">Switch Layout (QWERTY)</button>
+
+    <!-- Virtual Keyboard -->
+    <div class="keyboard" id="keyboard">
+        <button class="expand-keyboard">Expand Keyboard</button>
+    </div>
+
+    <script>
+        const layouts = {
+            'QWERTY': [
+                ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Backspace'],
+                ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+                ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Enter'],
+                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '?', 'Shift', 'CapsLk']
+            ],
+            'AZERTY': [
+                ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Backspace'],
+                ['A', 'Z', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+                ['Q', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Enter'],
+                ['W', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '?', 'Shift', 'CapsLk']
+            ],
+            'Dvorak': [
+                ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Backspace'],
+                ['\'', ',', '.', 'P', 'Y', 'F', 'G', 'C', 'R', 'L'],
+                ['A', 'O', 'E', 'U', 'I', 'D', 'H', 'T', 'N', 'S', 'Enter'],
+                [';', 'Q', 'J', 'K', 'X', 'B', 'M', 'W', 'V', 'Z', 'Shift', 'CapsLk']
+            ]
+        };
+
+        const shiftSymbolMap = {
+            '1': '!', '2': '@', '3': '#', '4': '$', '5': '%',
+            '6': '^', '7': '&', '8': '*', '9': '(', '0': ')', 
+            ',': '<', '.':'>', '?':'/',
+        };
+
+        let currentLayout = 'QWERTY';
+        let shiftActive = false;
+        let capsLockActive = false;
+        const inputArea = document.querySelector('.input-area');
+        const keyboardContainer = document.getElementById('keyboard');
+        const switchButton = document.querySelector('.layout-switch');
+        
+
+        const keyPressSound = new Audio("sounds/keypress-sound.mp3");
+
+        
+        function renderKeyboard(layout) {
+            keyboardContainer.innerHTML = '';
+            layout.forEach(row => {
+                row.forEach(key => {
+                    const keyElement = document.createElement('div');
+                    keyElement.textContent = shiftActive && shiftSymbolMap[key] ? shiftSymbolMap[key] : key;
+                    keyElement.classList.add('key');
+                    if (key === 'Backspace') keyElement.classList.add('backspace');
+                    if (key === 'Enter') keyElement.classList.add('enter');
+                    if (key === 'Shift') keyElement.classList.add('shift');
+                    if (key === 'CapsLk') keyElement.classList.add('caps');
+
+                    keyElement.addEventListener('click', () => handleKeyPress(key));
+                    keyboardContainer.appendChild(keyElement);
+                });
+            });
+           
+        }
+
+        
+        function handleKeyPress(key) {
+            keyPressSound.play(); 
+            if (key === 'Backspace') {
+                inputArea.value = inputArea.value.slice(0, -1);
+            } else if (key === 'Enter') {
+                inputArea.value += '\n';
+            } else if (key === 'CapsLk') {
+                toggleCapsLock();
+            } else if (key === 'Shift') {
+                shiftActive = !shiftActive;
+                renderKeyboard(layouts[currentLayout]); 
+            } else {
+                const outputKey = (shiftActive && shiftSymbolMap[key]) ? shiftSymbolMap[key] :
+                    (shiftActive || capsLockActive) ? key.toUpperCase() : key.toLowerCase();
+                inputArea.value += outputKey;
+                shiftActive = false;
+                renderKeyboard(layouts[currentLayout]); 
+            }
+        }
+
+        // Toggle Caps Lock
+        function toggleCapsLock() {
+            capsLockActive = !capsLockActive;
+        }
+
+        // Toggle between layouts
+        switchButton.addEventListener('click', () => {
+            if (currentLayout === 'QWERTY') {
+                currentLayout = 'AZERTY';
+                switchButton.textContent = 'Switch Layout (AZERTY)';
+            } else if (currentLayout === 'AZERTY') {
+                currentLayout = 'Dvorak';
+                switchButton.textContent = 'Switch Layout (Dvorak)';
+            } else {
+                currentLayout = 'QWERTY';
+                switchButton.textContent = 'Switch Layout (QWERTY)';
+            }
+            renderKeyboard(layouts[currentLayout]);
+        });
+
+
+        // Initial render
+        renderKeyboard(layouts[currentLayout]);
+    </script>
+
+</body>
+</html>

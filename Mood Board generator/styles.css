@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+#controls div {
+    margin-bottom: 15px;
+}
+
+#controls input[type="color"],
+#controls input[type="file"],
+#controls input[type="number"],
+#controls input[type="text"] {
+    margin: 5px;
+}
+
+#add-image, #add-text, #save-board, #load-board, #share-board {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#mood-board-container {
+    width: 80%;
+    margin: 20px 0;
+}
+
+#background-color {
+    width: 50px;
+    height: 30px;
+}
+
+.board {
+    border: 2px dashed #ccc;
+    min-height: 400px;
+    position: relative;
+    background-color: white;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    cursor: move;
+}
+
+.text-element {
+    position: absolute;
+    cursor: move;
+}
+
+@media only screen and (max-width: 768px) {
+    #mood-board-container {
+        width: 100%;
+    }
+}
