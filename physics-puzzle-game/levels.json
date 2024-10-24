@@ -1,0 +1,20 @@
+[
+    {
+        "objects": [
+            { "type": "rectangle", "x": 200, "y": 300, "width": 100, "height": 50, "restitution": 0.5 },
+            { "type": "circle", "x": 400, "y": 200, "radius": 50, "restitution": 0.8 }
+        ]
+    },
+    {
+        "objects": [
+            { "type": "rectangle", "x": 100, "y": 250, "width": 150, "height": 40, "restitution": 0.6 },
+            { "type": "circle", "x": 300, "y": 150, "radius": 60, "restitution": 0.7 }
+        ]
+    },
+    {
+        "objects": [
+            { "type": "rectangle", "x": 500, "y": 350, "width": 200, "height": 20, "restitution": 0.3 },
+            { "type": "circle", "x": 600, "y": 100, "radius": 40, "restitution": 0.9 }
+        ]
+    }
+]
