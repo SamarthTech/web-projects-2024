@@ -29,3 +29,12 @@ const countdownInterval = setInterval(() => {
     document.getElementById("timer").innerHTML = "Countdown expired";
   }
 }, 1000);
+
+// Dark mode toggle functionality
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.querySelector('.theme-icon');
+
+themeToggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  themeIcon.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+});
