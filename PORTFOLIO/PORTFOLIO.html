@@ -1,96 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <icon rel="icon" href="./favicon.ico" />
     <title>Nachiket Jain - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="/style.css" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+    <!-- 3D background canvas -->
 
-<body>
-    <body>
-        <canvas id="bg"></canvas> <!-- Add this line for the 3D background -->
-        <header id="header1">
-            ...
-        </header>
-        ...
-    </body>
-    
+    <!-- Header Section -->
     <header id="header">
-        <div class="header-container">
-            <div class="title">Nachiket Jain</div>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#achievements">Achievements</a>
-                <a href="#contact">Contact</a>
-            </nav>
+      <div class="header-container">
+        <div class="logo-name">
+          <img
+            src="./logo.png"
+            title="Nachiket Jain Logo"
+            alt="Nachiket Jain Logo"
+            class="logo"
+          />
+          <div class="title">Nachiket Jain</div>
         </div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
+    <!-- Home Section -->
     <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Nachiket Jain, a passionate software developer!</p>
-        <a href="#contact" class="cta-button">Contact Me</a>
+      <h1>Welcome to My Portfolio</h1>
+      <p>Hi, I'm Nachiket Jain, a passionate software developer!</p>
+      <a href="#contact" class="cta-button">Contact Me</a>
     </section>
 
+    <!-- About Section -->
     <section id="about">
-        <h2 style="color: yellow;">About Me</h2>
-        <div class="about-content">
-            <img src="https://img.freepik.com/free-vector/creative-gradient-code-logo_23-2148820572.jpg" alt="About Me">
-            <div style="color: aliceblue;">
-                <p >I'm a software engineer skilled in Java, Data Structures, and Web Development. I am passionate about problem-solving and creating efficient, scalable software solutions.</p>
-                <p>I built this website to showcase my work and skills. Feel free to explore!</p>
-            </div>
+      <h2 class="about-title">About Me</h2>
+      <div class="about-content">
+        <img
+          src="https://img.freepik.com/free-vector/creative-gradient-code-logo_23-2148820572.jpg"
+          alt="About Me"
+          class="about-image"
+        />
+        <div class="about-content-text">
+          <p>
+            I'm a software engineer skilled in Java, Data Structures, and Web
+            Development. I am passionate about problem-solving and creating
+            efficient, scalable software solutions.
+          </p>
+          <p>
+            I built this website to showcase my work and skills. Feel free to
+            explore!
+          </p>
         </div>
+      </div>
     </section>
 
+    <!-- Achievements Section -->
     <section id="achievements">
-        <h2>Achievements</h2>
-        <div class="achievements-content">
-            <div class="achievement-item">
-                <h3>🏅 Participation in School Coding Event</h3>
-                <p>Made team projects and learned collaboration and coding skills.</p>
-            </div>
-            <div class="achievement-item">
-                <h3>🌟 Winner of School Art Competition</h3>
-                <p>Recognized for creativity and innovative thinking.</p>
-            </div>
-            <div class="achievement-item">
-                <h3>🏆 School Debate Competition Finalist</h3>
-                <p>Developed public speaking and critical thinking skills.</p>
-            </div>
+      <h2>Achievements</h2>
+      <div class="achievements-content">
+        <div class="achievement-item">
+          <h3>🏅 Participation in School Coding Event</h3>
+          <p>Made team projects and learned collaboration and coding skills.</p>
         </div>
+        <div class="achievement-item">
+          <h3>🌟 Winner of School Art Competition</h3>
+          <p>Recognized for creativity and innovative thinking.</p>
+        </div>
+        <div class="achievement-item">
+          <h3>🏆 School Debate Competition Finalist</h3>
+          <p>Developed public speaking and critical thinking skills.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" style="color: aliceblue;">
-        <h1>Contact Me</h1>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h1>Contact Me</h1>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required autocomplete="name" />
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required autocomplete="email" />
 
-            <label for="message">Message:</label>
-            <textarea id="message" rows="4" required></textarea>
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          rows="4"
+          required
+          autocomplete="message"
+        ></textarea>
 
-            <button type="submit">Submit</button>
-        </form>
+        <button type="submit">Submit</button>
+      </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>Connect with me on:</p>
-        <div class="social-links">
-            <a href="https://images.app.goo.gl/6yxbAMdgo4uVgUG86" > <a href="https://github.com/nachiket388" target="_blank">GitHub</a>
-            <a href="https://www.instagram.com/_nachiketjain_" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com/naachiket.jain" target="_blank">Facebook</a>
-        </div>
-        <p>© 2050 Nachiket Jain. All Rights Reserved.</p>
+      <p>Connect with me on:</p>
+      <div class="social-links">
+        <a href="https://github.com/nachiket388" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+        <a
+          href="https://www.instagram.com/_nachiketjain_"
+          target="_blank"
+          rel="noopener"
+          >Instagram</a
+        >
+        <a
+          href="https://www.facebook.com/naachiket.jain"
+          target="_blank"
+          rel="noopener"
+          >Facebook</a
+        >
+      </div>
+      <p>
+        © <span id="currentYear"></span> Nachiket Jain. All Rights Reserved.
+      </p>
     </footer>
+
+    <!-- JavaScript File -->
     <script type="module" src="main.js"></script>
 
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+      });
+    </script>
+  </body>
 </html>
