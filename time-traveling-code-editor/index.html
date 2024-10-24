@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Traveling Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Time-Traveling Code Editor</h1>
+        <div class="time-period">
+            <button id="travelButton">Time Travel</button>
+            <span id="currentEra">Current Era: 1990s</span>
+        </div>
+        <div class="challenge">
+            <h2>Challenge:</h2>
+            <p id="challengeText">Fix the HTML code to make this heading visible!</p>
+        </div>
+        <textarea id="codeEditor" spellcheck="false"></textarea>
+        <button id="submitButton">Submit Code</button>
+        <div class="output">
+            <h2>Output:</h2>
+            <iframe id="outputFrame"></iframe>
+        </div>
+        <div id="feedback"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
