@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Battle Royale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Web Design Battle Royale</h1>
+
+        <div class="controls">
+            <button class="screen-button" data-width="375" data-height="667">Mobile</button>
+            <button class="screen-button" data-width="768" data-height="1024">Tablet</button>
+            <button class="screen-button" data-width="1024" data-height="768">Desktop</button>
+        </div>
+
+        <div class="code-editor">
+            <h2>Write your CSS:</h2>
+            <textarea id="cssEditor" placeholder="Write your CSS here..." spellcheck="false"></textarea>
+            <button id="applyStyles">Apply CSS</button>
+        </div>
+
+        <div class="preview">
+            <h2>Preview:</h2>
+            <iframe id="previewFrame"></iframe>
+        </div>
+
+        <div class="score">
+            <h2>Score: <span id="scoreValue">0</span>/100</h2>
+            <button id="checkResponsiveness">Check Responsiveness</button>
+            <p id="feedback"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
