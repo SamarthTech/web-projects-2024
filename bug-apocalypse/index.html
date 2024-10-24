@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Apocalypse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bug Apocalypse</h1>
+        <div class="game-status">
+            <p>City Status: <span id="cityStatus">Safe</span></p>
+            <p>Time Left: <span id="timeLeft">60</span>s</p>
+        </div>
+
+        <div id="bugAlert">
+            <h2 id="bugTitle">No Bugs Detected</h2>
+            <p id="bugDescription">The city is safe... for now.</p>
+        </div>
+
+        <div class="code-editor">
+            <h2>Fix the Bug:</h2>
+            <textarea id="codeEditor" placeholder="Write your code here..." spellcheck="false"></textarea>
+            <button id="submitButton">Submit Code</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Fix the bugs that appear before time runs out! If you fail to fix a bug in time, the city's status will deteriorate.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
