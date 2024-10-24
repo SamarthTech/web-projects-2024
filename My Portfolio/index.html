@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bcd465b6f4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!----------------header---------------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/icon.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Tech Enthusiast</p>
+                <h1>Hi, I'm <span>Priyojyoti</span><br>from Kolkata</h1>
+            </div>
+        </div>
+    </div>
+    <!----------------about---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey Guys, welcome to my portfolio😊</p> <p><i>I am Priyojyoti Naskar, my story isn't usual but it is not extra-ordinary. 
+                        It is just different.....</i></p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Language</span><br>C programming</li>
+                        <li><span>Web Development</span><br>HTML CSS</li>
+                        <li><span>Editing</span><br>Photo edit</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <i>Haven't done anything remarkable yet</i> :) 
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024-Present</span><br>Techno India Kolkata <br>(joined BCA course)</li>
+                        <li><span>2021-2024</span><br>Sir Nripendranath Institution <br>(Higher-Secondary)</li>
+                        <li><span>2009-2021</span><br>Swami Pranabananda Vidyapith <br>(studied upto Madhyamik)</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------services---------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-html5"></i>                    
+                    <h2>Web Development</h2>
+                    <p>Web development is the process of building and maintaining websites and web applications. 
+                        It involves a combination of technical skills, creativity, and problem solving. 
+                        Here are some key aspects of web development....</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-sharp-duotone fa-solid fa-code"></i>
+                    <h2>Programming</h2>
+                    <p>Programming is the process of designing, writing, testing, and maintaining the instructions 
+                        that a computer follows to perform a specific task. It involves a combination of technical skills, 
+                        problem solving, and creativity. Here are some key aspects of programming....</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-sharp-duotone fa-solid fa-crop-simple"></i>
+                    <h2>Photo edit</h2>
+                    <p>Photo editing is the process of enhancing and manipulating digital images to improve their quality, 
+                        aesthetic appeal, and overall impact. It involves a combination of technical skills, creativity, 
+                        and attention to detail. Here are some key aspects of photo editing....</p>
+                        <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------portfolio---------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/soon.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------contact---------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@gmail.com</p>
+                    <p><i class="fa-duotone fa-solid fa-phone"></i> 6095642301</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://discord.com/"><i class="fa-brands fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 My first website
+        </div>
+    </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+</body>
+</html>
