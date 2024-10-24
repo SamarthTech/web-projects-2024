@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: funky;
+    src: url('./Pokemon-Solid.ttf');
+}
+
+*{
+    font-family: Poppins;
+}
+
+body{
+    background: rgb(255, 81, 0);
+}
+
+.container{
+    height:40%;
+    width:100%;
+    display: flex;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorbox{
+    position:absolute;
+    height:70vh;
+    width:80vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 2, 2);
+    border-radius: 29px;
+
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.text,.link{
+    margin-left: 5%;
+    margin-right: 5%;
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    
+    align-items: center;
+    color: aliceblue;
+    font-size: 19px;
+}
+
+.link{
+    color: yellow;
+}
+.img{
+    position:relative;
+    height:40vh;
+    width:75vh; 
+}
+
+#btn{
+    margin-top: 17px;
+    height : 5vh;
+    width:29vh;
+    border-radius: 15px;
+    border: 1px;
+}
+
+#btn:hover{
+    background-color:yellow;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.text{
+    text-align: center;
+}
