@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+h1{
+    margin-bottom: 30px;
+}
+p{
+    width: 500px;
+    text-align: center;
+    position: relative;
+    left: 420px;
+    text-decoration: wavy;
+    margin-bottom: 20px;
+}
+.calc{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+input{
+    width: 150px;
+    padding: 10px;
+    margin: 20px;
+
+}
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: yellow;
+}
+.msg{
+    margin-top: 20px;
+}

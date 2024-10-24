@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>BMI CALCULATOR</h1>
+    <div class="info">
+        <h2>What is BMI?</h2>
+        <P>Body mass index (BMI) is a calculation that estimates body fat based on a person's weight and height. It's
+            used to categorize people as underweight, normal weight, overweight, or obese. BMI is a useful tool for
+            assessing health risk and is often used in public health policies.</P>
+        <h3>Calculate Your BMI Now</h3>
+    </div>
+    <div class="cal-cont">
+        <div class="calc">
+            <div class="d" id="formwgt">
+                <label for="">Enter Your Weight</label>
+                <input type="number" id="wgt" placeholder="(in kgs)">
+            </div>
+            <div class="d" id="formf">
+                <label for="">Enter Your Height</label>
+                <input type="number" id="hgtf" placeholder="(in feet)">
+            </div>
+            <div class="d" id="formin">
+                <label for="">Enter Your Height</label>
+                <input type="number" id="hgtin" placeholder="(in inches)">
+            </div>
+        </div>
+        <div class="button">
+            <button id="calculate" onclick="showMessage()">Calculate</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+        <div class="msg" id="msg">
+            <p></p>
+            <h4></h4>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
