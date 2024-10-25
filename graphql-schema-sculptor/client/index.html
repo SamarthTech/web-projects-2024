@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL Schema Sculptor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GraphQL Schema Sculptor</h1>
+        <p>Build your GraphQL schema and test your queries!</p>
+
+        <div class="editor">
+            <h3>Define Your Schema:</h3>
+            <textarea id="schemaEditor" placeholder="Type your GraphQL schema here..."></textarea>
+            <button id="submitSchema">Submit Schema</button>
+        </div>
+
+        <div class="query-area">
+            <h3>Test Your Queries:</h3>
+            <textarea id="queryEditor" placeholder="Type your GraphQL query here..."></textarea>
+            <button id="submitQuery">Submit Query</button>
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
