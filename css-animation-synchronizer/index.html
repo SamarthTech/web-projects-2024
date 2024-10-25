@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Synchronizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Animation Synchronizer</h1>
+        <p>Match the animations of the shapes on the right with the target animation on the left!</p>
+
+        <div class="game-area">
+            <div class="target-area">
+                <h2>Target Animation</h2>
+                <div class="target-shape" id="targetShape"></div>
+            </div>
+            
+            <div class="player-area">
+                <h2>Your Animation</h2>
+                <div class="player-shape" id="playerShape"></div>
+            </div>
+        </div>
+
+        <div class="editor">
+            <h3>Write Your CSS Animation:</h3>
+            <textarea id="cssEditor" placeholder="Enter CSS animation code here..."></textarea>
+            <button id="applyButton">Apply Animation</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Use CSS properties like <code>animation-name</code>, <code>animation-duration</code>, <code>animation-delay</code>, and <code>animation-iteration-count</code> to match the target animation as closely as possible.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
