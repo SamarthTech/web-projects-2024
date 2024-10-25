@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catching Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #04beed;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #gameArea {
+            width: 1500px;
+            height: 600px;
+            background: rgb(167, 55, 219);
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .basket {
+            width: 90px;  /* Set width */
+            height: 20px; /* Set height */
+            background: #ffcc00; /* Rectangle color */
+            position: absolute;
+            bottom: 10px;
+            left: 355px;  /* Adjusted position for centering */
+        }
+        .object {
+            width: 20px;  /* Size for smaller circles */
+            height: 20px; /* Size for smaller circles */
+            background: blue; /* Default color */
+            border-radius: 50%; /* Makes the objects circular */
+            position: absolute;
+            top: 0;
+        }
+        .red-object {
+            background: red; /* Color for red balls */
+        }
+        #score {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        #gameOver {
+            display: none;
+            font-size: 36px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catching Game</h1>
+    <div id="score">Score: 0</div>
+    <div id="gameOver">Game Over!</div>
+    <div id="gameArea">
+        <div class="basket" id="player"></div>
+    </div>
+    <script>
+        const gameArea = document.getElementById('gameArea');
+        const player = document.getElementById('player');
+        const scoreDisplay = document.getElementById('score');
+        const gameOverDisplay = document.getElementById('gameOver');
+        let score = 0;
+        let activeObjects = []; // To keep track of falling objects
+        let blueBallCount = 0;  // Count of blue balls dropped
+
+        function createFallingObject() {
+            if (activeObjects.length < 6) { // Limit to 6 objects
+                const obj = document.createElement('div');
+                obj.className = 'object';
+                obj.style.left = Math.random() * (gameArea.clientWidth - 20) + 'px'; // Adjusted for new width
+                gameArea.appendChild(obj);
+                activeObjects.push(obj); // Add object to activeObjects array
+
+                // Determine falling speed
+                let speed = 9; // Increased speed for blue balls
+                dropObject(obj, speed); // Normal speed for blue balls
+
+                blueBallCount++;
+                if (blueBallCount >= 20) {
+                    // Drop three red balls
+                    for (let i = 0; i < 3; i++) {
+                        const redObj = document.createElement('div');
+                        redObj.className = 'object red-object';
+                        redObj.style.left = Math.random() * (gameArea.clientWidth - 20) + 'px'; 
+                        gameArea.appendChild(redObj);
+                        activeObjects.push(redObj); // Add red object to activeObjects
+
+                        dropObject(redObj, 30); // Increased speed for red balls (previously 12)
+                    }
+                    blueBallCount = 0; // Reset blue ball count after dropping red balls
+                }
+            }
+        }
+
+        function dropObject(obj, speed) {
+            let fallingInterval = setInterval(() => {
+                let objTop = parseInt(window.getComputedStyle(obj).getPropertyValue('top'));
+                if (objTop >= gameArea.clientHeight - 20) { // Adjusted for new height
+                    clearInterval(fallingInterval);
+                    gameArea.removeChild(obj);
+                    activeObjects = activeObjects.filter(o => o !== obj); // Remove from activeObjects
+                } else {
+                    obj.style.top = objTop + speed + 'px';  // Falling speed
+                }
+                if (isCaught(player, obj, objTop)) {
+                    if (obj.classList.contains('red-object')) {
+                        gameOver(); // Game over if red ball is caught
+                    } else {
+                        score++;
+                        scoreDisplay.textContent = 'Score: ' + score;  // Update score display
+                        clearInterval(fallingInterval);
+                        gameArea.removeChild(obj);
+                        activeObjects = activeObjects.filter(o => o !== obj); // Remove from activeObjects
+                    }
+                }
+            }, 50);
+        }
+
+        function isCaught(player, obj, objTop) {
+            let playerLeft = parseInt(window.getComputedStyle(player).getPropertyValue('left'));
+            let objLeft = parseInt(window.getComputedStyle(obj).getPropertyValue('left'));
+            return objTop + 20 >= gameArea.clientHeight - 30 && // Object touches the basket
+                   objLeft > playerLeft && objLeft < playerLeft + 90; // Updated width check
+        }
+
+        function gameOver() {
+            gameOverDisplay.style.display = 'block';
+            clearInterval(gameInterval); // Stop creating new objects
+            activeObjects.forEach(obj => gameArea.removeChild(obj)); // Clear remaining objects
+            activeObjects = []; // Reset active objects
+        }
+
+        document.addEventListener('keydown', function(event) {
+            let playerLeft = parseInt(window.getComputedStyle(player).getPropertyValue('left'));
+            if (event.key === 'ArrowLeft' && playerLeft > 0) {
+                player.style.left = playerLeft - 10 + 'px';
+            }
+            if (event.key === 'ArrowRight' && playerLeft < gameArea.clientWidth - 90) { // Updated for new width
+                player.style.left = playerLeft + 10 + 'px';
+            }
+        });
+
+        let gameInterval = setInterval(() => {
+            createFallingObject();
+        }, 500); // Two objects per second
+    </script>
+</body>
+</html>
