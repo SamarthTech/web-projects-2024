@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <style>
+        *{
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body{
+            height: 100%;
+            width: 100%;
+            background: url("image1.png"); 
+        }
+
+        #form{
+            height: 100%;
+            width: 100%;
+        }
+
+        #cv{
+            height: 100%;
+            width: 100%;
+        }
+
+        #starter{
+            height: 100%;
+            width: 100%;
+        }
+
+        @keyframes fade-up {
+            0% {
+              opacity : 0;
+              transform: translateY(30px);
+            }
+
+            100% {
+              opacity: 1;
+              transform : translateY(0px);
+            }
+        }
+
+        @keyframes fade-down{
+            0% {
+              opacity : 0;
+              transform: translateY(-30px);
+            }
+
+            100% {
+              opacity: 1;
+              transform : translateY(0px);
+            }
+        }
+
+        @keyframes fade-right{
+            0% {
+              opacity : 0;
+              transform: translateX(-30px);
+            }
+
+            100% {
+              opacity: 1;
+              transform : translateX(0px);
+            }
+        }
+
+        @keyframes fade-left{
+            0% {
+              opacity : 0;
+              transform: translateX(30px);
+            }
+
+            100% {
+              opacity: 1;
+              transform : translateX(0px);
+            }
+        }
+
+        .card{
+            width: 100%; 
+            margin-top: 25px;
+        }
+
+        .card-header{
+            background-color: bisque;
+            border-bottom: solid black 1px;
+        }
+
+        .cli{
+            background-color: gray;
+            color: aliceblue;
+        }
+
+        .hobby , .skill, .project, .academy, .work{
+            width: 90%; 
+            margin-left: 2px;
+            padding: 5px; 
+            background-color: rgb(33, 34, 28); 
+            color: aliceblue;
+        }
+
+    </style>
+  </head>
+  <body>
+    <header 
+    style="background-color: darkslategray; color: aliceblue; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 10px;">
+      <h3 style="animation : fade-up 0.5s;">Welcome To</h3>
+      <h1 style="animation : fade-up 1s;">...Online Resume Builder...</h1>
+    </header>
+
+
+    <div id="form" class="container" style="display: block;">
+        <div class="row">
+
+            <!-- left col for perso detl -->
+            <h2 style="text-align:center; animation: fade-down 1.5s;">Fill The Form</h2>
+            <hr>
+
+            <div class="col-md-6 mt-10 mb-50" style="animation: fade-right 1.5s;">
+                <h4 style="text-align: center;">Personal Details</h4>
+
+                <div class="container" style="margin: 5px;">
+                    <Label for="name"> NAME: </Label>
+                    <br>
+                    <input 
+                    type="text" 
+                    id="fname"
+                    maxlength="20" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="First Name" 
+                    >
+                    <input 
+                    type="text" 
+                    id="lname"
+                    maxlength="20" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="Last Name" 
+                    >
+                </div>
+
+                <div class="container" style="margin: 5px;">
+                    <Label for="profile"> PROFILE-PHOTO </Label>
+                    <br>
+                    <input 
+                    type="file" 
+                    id="pp" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    >
+
+                </div>
+
+
+                <div class="container" style="margin: 5px;">
+                    <Label for="contact"> CONTACT DETAILS: </Label>
+                    <br>
+                    <input 
+                    type="tel"
+                    id="pno" 
+                    maxlength= 10
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;"  
+                    placeholder="Your Phone Number" 
+                    >
+
+                    <input 
+                    type="email" 
+                    id="email" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="Your Email Adress" 
+                    >
+
+                    <input 
+                    type="text" 
+                    id="hadd" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="Your Home Adress" 
+                    >
+                </div>
+
+                <div class="container" style="margin: 5px;">
+                    <Label for="links"> IMPORTANT LINKS: </Label>
+                    <br>
+                    <input 
+                    type="url" 
+                    id="pw" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="Your Portfolio-website Link"
+                    >
+
+                    <input 
+                    type="url" 
+                    id="fb" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="Your Facebook Link"
+                    >
+
+                    <input 
+                    type="url" 
+                    id="ld" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="Your LinkedIn-Profile Link"
+                    >
+
+                    <input 
+                    type="url" 
+                    id="tw" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="Your Twitter Link"
+                    >
+
+                    <input 
+                    type="url" 
+                    id="gh" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="Your GitHub Link">
+                </div>
+
+                
+                <div class="container" id="hobby_cont" style="margin: 5px;">
+                    <Label for="hobbies"> HOBBIES: </Label>
+                    <br>
+                    <textarea 
+                    class="hobby"
+                    rows="2">
+
+                    </textarea>
+                    <button type="button" id="hobby_add" class="btn btn-outline-primary">Add More</button>
+                </div>
+
+            </div>
+
+
+
+            <!-- right col for prof dtl -->
+            <div class="col-md-6 mt-10 mb-10" style="animation: fade-left 1.5s;">
+                <h4 style="text-align: center;">Proffesional Details</h4>
+
+                <div class="container" style="margin: 5px;">
+                    <Label for="proffesion"> YOUR PROFFESION: </Label>
+                    <br>
+                    <input 
+                    type="text" 
+                    id="pfn" 
+                    style="width: 90%; margin-left: 2px;padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;" 
+                    placeholder="Software Developer" 
+                    required>
+                </div>
+
+                <div class="container" style="margin: 5px;">
+                    <Label for="objective"> OBJECTIVE: </Label>
+                    <br>
+                    <textarea 
+                    id="obj" style="width: 90%; margin-left: 2px; padding: 5px; background-color: rgb(33, 34, 28); color: aliceblue;"  
+                    rows="5">
+
+                    </textarea>
+                </div>
+
+                <div class="container" id="skill_cont" style="margin: 5px;">
+                    <Label for="skills"> SKILLS: </Label>
+                    <br>
+                    <textarea 
+                    class="skill" 
+                    rows="2">
+
+                    </textarea>
+                    <button id="skill_add" type="button" style="position: center;" class="btn btn-outline-primary">Add More</button>
+                </div>
+
+                <div class="container" id="project_cont" style="margin: 5px;">
+                    <Label for="projects"> PROJECTS: </Label>
+                    <br>
+                    <textarea class="project" 
+                    rows="2">
+
+                    </textarea>
+                    <button id="project_add" type="button" style="position: center;" class="btn btn-outline-primary">Add More</button>
+                </div>
+
+                <div class="container" id="academy_cont" style="margin: 5px;">
+                    <Label for="academies"> ACADEMIC QUALIFICATIONS: </Label>
+                    <br>
+                    <textarea 
+                    class="academy" 
+                    rows="2">
+
+                    </textarea>
+                    <button id="academy_add" type="button" class="btn btn-outline-primary">Add More</button>
+                </div>
+
+                <div class="container" id="work_cont" style="margin: 5px;">
+                    <Label for="work and ach"> WORKING EXPERIENCES AND ACHIVEMENTS: </Label>
+                    <br>
+                    <textarea 
+                    class="work" 
+                    rows="2">
+
+                    </textarea>
+                    <button id="work_add" type="button" class="btn btn-outline-primary">Add More</button>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+        <div class="container text-center" style="margin-top: 50px; margin-bottom: 10px;">
+
+          <button type="button" id="generate" class="btn btn-success" 
+          style="margin-right: 10px; animation: fade-up 1.5s;">Build Now</button>
+          <button type="button" id="see" class="btn btn-primary"
+          style="animation: fade-up 1.5s;">See The Template</button>
+
+        </div>
+        
+    </div>
+
+    <div id="cv" class="container" style="display:none; animation: fade-up 1s">
+        <div class="row">
+            
+            <div class="col-md-4" 
+            style="background-color: grey; padding: 10px; display: flex; flex-direction: column;align-items: center; justify-content: center;">
+              <img src="image2.png" alt=""
+              class="img-fluid"
+              style="border-radius: 20px; height: 350px; width: 100%;"
+              id="p-p">
+
+              <div class="container">
+                <h1 id="f-name1" style="margin-top: 4px;">First Name</h1>
+                  <h3><span id="l-name1">Last Name</span>,</h3>
+                  <p id="p-f-n" style="margin-top: 5px; font-style: italic;">My Proffesion</p>
+                    
+              </div>
+
+              <div class="container" style="margin-top: 10px; margin-bottom: 10px;">
+                    <p><i class="ri-phone-line"></i> <span id="p-no">947745XXXX</span></p>
+                    <p><i class="ri-mail-line"></i> <span id="mail">myemail2024@gmail.com</span></p>
+                    <p><i class="ri-home-line"></i> <span id="h-add">My Home-Line Address, kol-7000##</span></p>
+              </div>
+
+              <div class="container" style="margin-top: 10px; background-color: cadetblue; color: wheat; padding: 10px;">
+                    <p><i class="ri-links-line"></i> <a href="#1" id="p-w">Portfolio-website<a></p>
+                    <p><i class="ri-facebook-line"></i> <a href="#2" id="f-b">Facebook</a></p>
+                    <p><i class="ri-linkedin-line"></i> <a href="#3" id="l-d">LinkedIn</a></p>
+                    <p><i class="ri-twitter-line"></i> <a href="#4" id="t-w">Twitter</a></p>
+                    <p><i class="ri-github-line"></i> <a href="#5" id="g-h">GitHub</a></p>
+              </div>
+                
+            </div>
+
+            <div class="col-md-8" 
+            style="background-color: rgb(250, 242, 242);"
+            >
+                <h2 style="margin-top: 4%; text-align: end; padding-right:10px; font-family:cursive;">
+                    <span id="f-name2">First</span> 
+                    <span id="l-name2" style="color: rgb(227, 131, 21);">Last</span>
+                </h2>
+
+                <div class="card">
+                    <div class="card-header">
+                      OBJECTIVE
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item cli" id="o-b-j">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, cum unde voluptas incidunt pariatur alias rem earum totam, voluptatum, inventore eveniet maxime magni distinctio voluptate aliquam magnam ab culpa minima!</li>
+                    </ul>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      ACADEMIC QUALIFICATIONS
+                    </div>
+                    <ul class="list-group list-group-flush" id="acq">
+        
+                    </ul>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      SKILLS
+                    </div>
+                    <ul class="list-group list-group-flush" id="skl">
+                      
+                    </ul>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      PROJECTS
+                    </div>
+                    <ul class="list-group list-group-flush" id="pjc">
+                      
+                    </ul>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      WORKING EXPERIENCES AND ACHIVEMENTS
+                    </div>
+                    <ul class="list-group list-group-flush" id="wrk">
+                      
+                    </ul>
+                  </div>
+
+                  <div class="card mb-10">
+                    <div class="card-header">
+                      HOBBIES
+                    </div>
+                    <ul class="list-group list-group-flush" id="hby">
+                    </ul>
+                    
+                  </div>
+
+            </div>
+        </div>
+        
+        <div class="container text-center" style="margin-top: 50px; margin-bottom: 10px;">
+          <button type="button" id="back" class="btn btn-danger"
+          style="margin-right: 10px; animation: fade-down 1.5s;">Back</button>
+          <button type="button" id="download" class="btn btn-success"
+          style="animation: fade-down 1.5s;">Download CV</button>
+        </div>
+    </div>
+
+    <footer 
+    style="text-align: center; margin-top: 20px;">
+        <p> ©️ Resume Builder 2024 ❤️ </p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
