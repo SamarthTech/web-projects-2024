@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.layout-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.target-layout, .user-layout {
+    width: 45%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.header, .nav, .main, .aside, .footer {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.header {
+    background-color: #3498db;
+    color: white;
+}
+
+.nav {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.main {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.aside {
+    background-color: #f39c12;
+    color: white;
+}
+
+.footer {
+    background-color: #8e44ad;
+    color: white;
+}
+
+/* Default Styles */
+.user-layout {
+    display: block;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .user-layout {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav, .aside {
+        display: none; /* Hide sidebar on small screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .user-layout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav {
+        width: 25%;
+    }
+    .main {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .user-layout {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav {
+        width: 20%;
+    }
+    .main {
+        width: 60%;
+    }
+    .aside {
+        width: 20%;
+    }
+}
