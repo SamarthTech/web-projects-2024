@@ -1,0 +1,22 @@
+{
+    "name": "webpack-config-wizard",
+    "version": "1.0.0",
+    "description": "A game to learn Webpack configuration.",
+    "main": "webpack.config.js",
+    "scripts": {
+      "build": "webpack --mode production",
+      "start": "webpack serve --mode development --open"
+    },
+    "devDependencies": {
+      "webpack": "^5.64.4",
+      "webpack-cli": "^4.9.1",
+      "webpack-dev-server": "^4.6.0",
+      "css-loader": "^6.5.1",
+      "style-loader": "^3.3.1",
+      "babel-loader": "^8.2.3",
+      "@babel/core": "^7.17.0",
+      "@babel/preset-env": "^7.17.0"
+    },
+    "dependencies": {}
+  }
+  
