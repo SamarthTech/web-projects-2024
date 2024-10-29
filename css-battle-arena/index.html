@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle Arena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Battle Arena</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1: Centered Square</h2>
+            <p id="levelDescription">Replicate the target design using only HTML and CSS. Your goal is to make the design as close as possible.</p>
+        </div>
+
+        <div class="battle-area">
+            <div class="target-section">
+                <h3>Target Design:</h3>
+                <div id="target" class="design"></div>
+            </div>
+
+            <div class="preview-section">
+                <h3>Your Design:</h3>
+                <iframe id="previewFrame"></iframe>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <h3>Write Your HTML and CSS:</h3>
+            <textarea id="htmlEditor" placeholder="Write your HTML here..." spellcheck="false"></textarea>
+            <textarea id="cssEditor" placeholder="Write your CSS here..." spellcheck="false"></textarea>
+            <button id="submitButton">Submit</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Write the HTML and CSS code in the editors. Click "Submit" to see your design and compare it with the target design.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
