@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Physics Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-ui">
+        <h1>Physics Puzzle Game</h1>
+        <div class="level-info">
+            <span id="level-indicator">Level 1</span>
+        </div>
+        <div class="controls">
+            <button id="restart-btn">Restart Level</button>
+            <button id="next-btn" style="display: none;">Next Level</button>
+        </div>
+        <div id="game-message"></div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Matter.js Physics Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
