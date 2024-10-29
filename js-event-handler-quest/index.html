@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handler Quest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Event Handler Quest</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1: Click to Change Text</h2>
+            <p id="levelDescription">Attach a <code>click</code> event handler to the button to change its text to "Clicked!" when clicked.</p>
+        </div>
+
+        <div class="playground">
+            <div class="preview-section">
+                <h3>Preview:</h3>
+                <div id="playArea">
+                    <button id="clickButton">Click Me</button>
+                </div>
+            </div>
+
+            <div class="code-section">
+                <h3>Write Your Event Handler Code:</h3>
+                <textarea id="jsEditor" placeholder="Write your JavaScript code here..." spellcheck="false"></textarea>
+                <button id="submitButton">Run Code</button>
+            </div>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Write JavaScript code to attach the appropriate event handler to solve the challenge. Click "Run Code" to test it.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
