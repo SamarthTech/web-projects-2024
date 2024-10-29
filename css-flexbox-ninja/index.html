@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Ninja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Flexbox Ninja</h1>
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1: Center the Box</h2>
+            <p id="levelDescription">Use Flexbox to center the blue box inside the container.</p>
+        </div>
+
+        <div class="layout-area">
+            <div class="target-section">
+                <h3>Target Layout:</h3>
+                <div id="target" class="layout-box">
+                    <div class="box">Box</div>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <h3>Your Layout:</h3>
+                <iframe id="previewFrame"></iframe>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <h3>Write Your CSS:</h3>
+            <textarea id="cssEditor" placeholder="Write your CSS here..." spellcheck="false"></textarea>
+            <button id="submitButton">Apply Flexbox</button>
+        </div>
+
+        <div id="feedback"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
