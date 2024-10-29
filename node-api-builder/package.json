@@ -1,0 +1,14 @@
+{
+    "name": "node-api-builder",
+    "version": "1.0.0",
+    "description": "A simple REST API for the Node.js API Builder game.",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "body-parser": "^1.20.1"
+    }
+  }
+  
