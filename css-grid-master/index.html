@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Grid Master</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1: Simple Grid</h2>
+            <p id="levelDescription">Create a 2x2 grid with two rows and two columns. Each box should have a background color.</p>
+        </div>
+
+        <div class="grid-area">
+            <h3>Target Grid:</h3>
+            <div id="targetGrid" class="grid"></div>
+        </div>
+
+        <div class="preview-section">
+            <h3>Your Grid:</h3>
+            <iframe id="previewFrame"></iframe>
+        </div>
+
+        <div class="input-area">
+            <h3>Write Your CSS:</h3>
+            <textarea id="cssEditor" placeholder="Write your CSS here..." spellcheck="false"></textarea>
+            <button id="submitButton">Run Grid</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Write the CSS needed to match the target grid layout. Click "Run Grid" to see your result.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

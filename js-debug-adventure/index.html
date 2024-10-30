@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Debugging Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Debugging Adventure</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1: Fix the Calculator</h2>
+            <p id="levelDescription">There is a bug in the calculator function. Your task is to fix the bug so that the function returns the correct result when adding two numbers.</p>
+        </div>
+
+        <div class="code-area">
+            <h3>Buggy Code:</h3>
+            <pre id="buggyCode">
+                function addNumbers(a, b) {
+                return a - b;  // This is wrong, it should add
+                }
+                console.log(addNumbers(3, 5));  // Expected output: 8
+            </pre>
+        </div>
+
+        <div class="input-area">
+            <h3>Fix the Code:</h3>
+            <textarea id="codeEditor" placeholder="Write your fixed code here..." spellcheck="false"></textarea>
+            <button id="submitButton">Submit</button>
+        </div>
+
+        <div id="outputArea">
+            <h3>Output:</h3>
+            <pre id="output"></pre>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Analyze the buggy code, fix it in the editor, and submit your solution to see the output. Your goal is to fix the bug so that the function works as expected.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

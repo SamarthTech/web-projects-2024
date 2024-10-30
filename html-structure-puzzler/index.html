@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Structure Puzzler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Structure Puzzler</h1>
+        <p>Drag and drop the elements below to create a valid HTML structure:</p>
+        
+        <div class="elements">
+            <div class="draggable" draggable="true" id="header">Header</div>
+            <div class="draggable" draggable="true" id="section">Section</div>
+            <div class="draggable" draggable="true" id="footer">Footer</div>
+            <div class="draggable" draggable="true" id="article">Article</div>
+            <div class="draggable" draggable="true" id="aside">Aside</div>
+        </div>
+
+        <h2>Your HTML Structure:</h2>
+        <div class="dropzone" id="dropzone">
+            <p>Drop elements here...</p>
+        </div>
+
+        <button id="checkButton">Check Structure</button>
+        <div id="feedback"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
