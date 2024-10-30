@@ -1,0 +1,453 @@
+* {
+    text-decoration: none;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    color: white;
+    background-color: #0f1111;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.gaming {
+    background-color: white;
+    width: 23%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 260px;
+    position: absolute;
+    left: 30px;
+    top: 394px;
+    border: 1px solid white;
+    border-top: none;
+}
+
+.subnavbar {
+    text-decoration-color: white;
+    color: white;
+    background-color: #232f3e;
+    height: 39px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0px 4px 0px 0px;
+    padding: 1px 1px 1px 1px;
+}
+
+#accountpage {
+    text-align: left;
+}
+
+#search {
+    position: relative;
+    padding: 0.2%;
+}
+
+#accountpage {
+    height: fit-content;
+    width: 60px;
+}
+
+#deliverto {
+    position: relative;
+    margin-left: 2px;
+    display: contents;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    color: white;
+}
+
+#homepage {
+    width: 112.6px;
+    position: relative;
+    margin: 1px 10px 1px 0px;
+    align-self: center;
+    left: 6px;
+    top: 2px;
+}
+
+#searchbutton:hover {
+    background-color: rgb(253, 151, 17);
+    transform: scale(0.9);
+}
+
+#pinicon {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    align-self: normal;
+}
+
+#carttext {
+    position: relative;
+    bottom: 8px;
+    font-size: large;
+    left: -10px;
+}
+
+#carticon {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    top: 10px;
+    left: 2px;
+    align-self: normal;
+}
+
+#searchicon {
+    height: 42px;
+    padding-top: 2px;
+    border: none;
+}
+
+#searchoptions {
+    position: relative;
+    top: -8px;
+    align-self: center;
+    height: 46px;
+    margin: 0px;
+    width: 50px;
+    border: 2px solid #0f1111;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: rgb(209, 207, 207);
+    color: rgb(92, 90, 90);
+    transition: all 0.1s ease-in-out 0s;
+}
+
+#searchoptions:hover {
+    background-color: rgb(145, 142, 142);
+    color: rgb(0, 0, 0);
+}
+
+#languageselect {
+    position: relative;
+    top: 0px;
+    align-self: center;
+    height: 46px;
+    width: 50px;
+    border: 2px solid rgba(15, 17, 17, 0.5);
+    background-color: rgba(15, 17, 17, 0.5);
+    border-radius: 4px 4px 4px 4px;
+    color: white;
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+#accountinfo {
+    position: relative;
+    top: 0px;
+    right: 10px;
+    align-self: center;
+    height: 26px;
+    width: 120px;
+    border: 2px solid rgba(15, 17, 17, 0.5);
+    background-color: rgba(15, 17, 17, 0.5);
+    border-radius: 4px 4px 4px 4px;
+    color: white;
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+#accountpage:hover {
+    width: 56px;
+    border: 2px solid white;
+}
+
+#homepage:hover {
+    width: 108.6px;
+    border: 2px solid white;
+}
+
+#searchbutton {
+    position: relative;
+    top: 11.2px;
+    align-self: center;
+    height: 46px;
+    width: 50px;
+    border: 2px solid #0f1111;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #f4b82b;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+#searchBox {
+    position: relative;
+    height: 41.2px;
+    width: 800px;
+    border: 2px solid #0f1111;
+    color: black;
+    top: -8px;
+}
+
+#flag {
+    height: 12px;
+    position: relative;
+    top: 1.7px;
+    left: 8px;
+}
+
+#menuicon {
+    width: 15px;
+    position: relative;
+    top: 2px;
+    margin-right: 1px;
+}
+
+#menubutton {
+    background: none;
+    color: white;
+    height: 39px;
+    width: 50px;
+    border: none;
+    margin-right: 20px;
+    font-size: 16px;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+}
+
+.subnavoptions {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    height: 29.85px;
+    align-content: center;
+    position: relative;
+    top: 5px;
+}
+
+.subnavoptions:hover {
+    border: 2px solid white;
+}
+
+#menubutton:hover {
+    border: 2px solid white;
+}
+
+#bgimage {
+    width: 100%;
+    z-index: -1;
+}
+
+#headsetsbox {
+    width: 50%;
+    height: 42%;
+}
+
+#keyboardsbox {
+    width: 50%;
+    height: 42%;
+}
+
+#mousebox {
+    width: 50%;
+    height: 42%;
+    position: relative;
+    top: 10px;
+}
+
+#chairsbox {
+    width: 45%;
+    height: 42%;
+    position: relative;
+    top: 10px;
+}
+
+h3 {
+    position: absolute;
+    left: 30px;
+    top: 370px;
+    font-size: 20px;
+    width: 23%;
+    border: 1px solid white;
+    border-bottom: none;
+    z-index: 1;
+    background-color: white;
+}
+
+.toys {
+    position: absolute;
+    left: 400px;
+    top: 370px;
+    font-size: 20px;
+    width: 23%;
+    border: 1px solid white;
+    border-bottom: none;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    height: 40%;
+}
+
+#toyheading {
+    position: absolute;
+    left: 400px;
+    top: 370px;
+    font-size: 20px;
+    width: 23%;
+    border: 1px solid white;
+    border-bottom: none;
+    display: flex;
+    z-index: 1;
+    background-color: white;
+}
+
+#kidwithatoy {
+    width: 90%;
+    position: relative;
+    align-self: center;
+}
+
+.electrical {
+    position: absolute;
+    left: 800px;
+    top: 370px;
+    font-size: 20px;
+    width: 23%;
+    border: 1px solid white;
+    border-bottom: none;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    height: 40%;
+}
+
+#elecheading {
+    padding: 2px;
+    position: absolute;
+    left: 800px;
+    top: 370px;
+    font-size: 20px;
+    width: 22%;
+    border: 1px solid white;
+    border-bottom: none;
+    display: flex;
+    z-index: 1;
+    background-color: white;
+}
+
+#electronics {
+    width: 90%;
+    position: relative;
+    align-self: center;
+}
+
+.signinbox {
+    position: absolute;
+    background-color: white;
+    height: 90px;
+    top: 370px;
+    left: 1165px;
+    width: 22%;
+    z-index: 1;
+}
+
+#signin {
+    position: relative;
+    left: 27%;
+    top: 8px;
+    background-color: #f4b82b;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+    transition: all 0.1s ease-in-out 0s;
+    border: none;
+}
+
+#signin:hover {
+    background-color: rgb(253, 151, 17);
+}
+
+#signindesc {
+    position: relative;
+    left: 2%;
+    font-weight: 800;
+    font-size: 19px;
+}
+
+#backtotopbox {
+    background-color: #004391;
+    text-align: center;
+    height: 40px;
+}
+
+#backtotop {
+    position: relative;
+    top: 27%;
+    color: white;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+#subfooter {
+    background-color: #232f3e;
+    height: 390px;
+    display: flex;
+}
+
+#footcol1 {
+    position: relative;
+    left: 240px;
+    top: 50px;
+    width: 180px;
+}
+
+#footcol2 {
+    position: relative;
+    left: 330px;
+    top: 50px;
+    width: 180px;
+}
+
+#footcol3 {
+    position: relative;
+    left: 420px;
+    top: 50px;
+    width: 180px;
+}
+
+#footcol4 {
+    position: relative;
+    left: 510px;
+    top: 50px;
+    width: 180px;
+}
+
+#shopwithusimg{
+    position: absolute;
+    height: 190px;
+    top: 464px;
+    left: 1165px;
+    width: 22%;
+    z-index: 1;    
+}
+
+.footcolhead {
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+}
+
+.footcolcontent{
+    font-size: 13px;
+    color: white
+}
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #232f3e;
+    border-top: 1px solid white;
+}
+
