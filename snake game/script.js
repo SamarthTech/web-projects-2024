@@ -21,9 +21,22 @@ const foodPosition = () => {
 // Function to handle game over
 const handleGameOver = () => {
     clearInterval(setIntervalId);
-    alert("Game Over! Press OK to replay...");
-    location.reload();
-}
+    
+    // Display the modal
+    document.getElementById("gameOverModal").style.display = "flex";
+
+    // Replay button to restart the game
+    document.getElementById("replayBtn").onclick = () => {
+        location.reload();
+    };
+
+    // Quit button to close the page
+    document.getElementById("quitBtn").onclick = () => {
+        window.close();
+    };
+};
+
+
 
 // Function to change the snake's direction based on arrow keys
 const changeDirection = (e) => {
