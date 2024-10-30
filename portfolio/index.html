@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rajrup Mukherjee - Developer Portfolio">
+    <meta name="keywords" content="Rajrup Mukherjee, Web Developer, Java, C++, IoT">
+    <meta name="author" content="Rajrup Mukherjee">
+    <title>Rajrup Mukherjee | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="#">Portfolio:</a>
+            </div>
+            <ul class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <span class="theme-icon">🌚</span>
+            </button>
+           
+        </nav>
+
+        <div class="hero hidden">
+            <div class="hero-content container">
+                <h1 id="typewriter">I am, </h1>
+                <p>Web Developer Beginner | B.Tech - 1st year in CSE IoT</p>
+                <p>Knows Java and C++</p>
+                <a href="#projects" class="btn-primary">See My Work</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="hidden">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text hidden">
+                        <p>Hi, I am <b>Rajrup Mukherjee</b>, currently pursuing <b>BTech</b> in CSE IoT. I have a background in programming with Java and C++, and have developed a keen interest in web development. My hobbies include painting and video editing.</p>
+                        <p>I scored <b>97.8%</b> in ICSE and <b>91%</b> in ISC.</p>
+                    </div>
+                    <div class="about-photo hidden">
+                        <img src="batman.jpg" alt="Rajrup Mukherjee">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2 class="hidden">Skills</h2>
+                <div class="skill-cards">
+                    <div class="skill-card hidden">
+                        <i class="fab fa-java"></i>
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-card hidden">
+                        <i class="fas fa-code"></i>
+                        <h3>C++</h3>
+                    </div>
+                    <div class="skill-card hidden">
+                        <i class="fab fa-js-square"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-card hidden">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="skill-card hidden">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="skill-card hidden">
+                        <i class="fa-brands fa-react"></i>
+                        <h3>React</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="hidden">Projects</h2>
+                <div class="project-list">
+                    <div class="project-card hidden">
+                        <img src="https://www.windowslatest.com/wp-content/uploads/2016/12/27071038630l.jpg" alt="Project 1">
+                        <h3>Project One</h3>
+                        <p>Coming in future.</p>
+                    </div>
+                    <div class="project-card hidden">
+                        <img src="https://www.developer-tech.com/wp-content/uploads/2022/06/kevin-ku-w7ZyuGYNpRQ-unsplash-scaled-e1654096896796-1024x627.jpg" alt="Project 2">
+                        <h3>Project Two</h3>
+                        <p>Coming in future.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="hidden">Contact</h2>
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-form hidden">
+                    <input type="hidden" name="access_key" value="32aec4e1-a693-4a9e-b724-4db8d2a26447">
+
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" >Send</button>
+                </form>
+                
+                <div class="social-links animate-up">
+                    <a href="mailto:rajrupmukherjee2005@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/rajrup-mukherjee-201836294/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/rajrup05" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/rajrup.mukherjee.1" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/7980670988" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Rajrup Mukherjee | All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const text = "Rajrup Mukherjee"; // Text to display
+        const typewriterElement = document.getElementById("typewriter");
+        let index = 0;
+    
+        function type() {
+            if (index < text.length) {
+                typewriterElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 70); // Adjust typing speed (100 ms per character)
+            }
+        }
+    
+        // Start typing effect after a short delay
+        setTimeout(type, 500);
+    </script>
+    
+</body>
+</html>
