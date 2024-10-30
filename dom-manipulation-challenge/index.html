@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript DOM Manipulation Challenge</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1</h2>
+            <p id="levelDescription">Your task is to add a new list item "Learn JavaScript" to the list below.</p>
+        </div>
+
+        <ul id="itemList">
+            <li>Learn HTML</li>
+            <li>Learn CSS</li>
+        </ul>
+
+        <div class="input-area">
+            <h3>Write Your JavaScript:</h3>
+            <textarea id="codeEditor" placeholder="Write your JavaScript here..." spellcheck="false"></textarea>
+            <button id="runButton">Run Code</button>
+            <button id="checkButton">Check Solution</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Write JavaScript code in the editor to manipulate the DOM as instructed. Click "Run Code" to see your changes and "Check Solution" to see if you completed the task correctly.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

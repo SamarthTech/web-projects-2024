@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes taking app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container my-3">
+        <h1><i><u>Record your notes here</u></i></h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add a note</h5>
+                <div class="form-group">
+                    <textarea class="form-control" id="addTxt" rows="8" cols="60"></textarea>
+                </div>
+                <button class="btn btn-primary" id="addBtn">Add Note</button>
+            </div>
+        </div>
+        <hr>
+        <h1>Your Notes</h1>
+        <hr>
+        <div id="notes" class="row container-fluid"></div>
+    </div>
+    <script src="index.js" defer data-deferred="1"></script>
+</body>
+</html>

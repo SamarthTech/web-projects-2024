@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.converter {
+    background-color: transparent;
+    padding: 100px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.converter h2 {
+    background-color:antiquewhite;
+    font-style:italic;
+    margin-bottom: 20px;
+}
+
+.converter div {
+    background-color: antiquewhite;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+

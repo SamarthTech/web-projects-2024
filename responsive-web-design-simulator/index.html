@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Web Design Simulator</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1: Basic Responsive Layout</h2>
+            <p id="levelDescription">Create a responsive layout that adjusts for mobile, tablet, and desktop views.</p>
+        </div>
+
+        <div class="layout-area">
+            <div id="targetLayout" class="target-layout">
+                <header class="header">Header</header>
+                <nav class="nav">Navigation</nav>
+                <main class="main">Main Content</main>
+                <aside class="aside">Sidebar</aside>
+                <footer class="footer">Footer</footer>
+            </div>
+
+            <div class="preview-area">
+                <h3>Your Responsive Layout:</h3>
+                <div id="userLayout" class="user-layout">
+                    <header class="header">Header</header>
+                    <nav class="nav">Navigation</nav>
+                    <main class="main">Main Content</main>
+                    <aside class="aside">Sidebar</aside>
+                    <footer class="footer">Footer</footer>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <h3>Write Your CSS:</h3>
+            <textarea id="cssEditor" placeholder="Write your CSS here..." spellcheck="false"></textarea>
+            <button id="submitButton">Run CSS</button>
+            <button id="resetButton">Reset CSS</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Write the CSS needed to make your layout responsive. Use media queries to adjust styles for different screen sizes. Click "Run CSS" to see your result.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

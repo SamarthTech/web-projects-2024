@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Houdini Effects Workshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Houdini Effects Workshop</h1>
+        <p>Create and apply custom CSS effects!</p>
+
+        <div class="game-area">
+            <div class="effect-box" id="effectBox"></div>
+        </div>
+
+        <div class="editor">
+            <h3>Write Your Paint Worklet:</h3>
+            <textarea id="workletEditor" placeholder="Enter your paint worklet code here..."></textarea>
+            <button id="applyButton">Apply Effect</button>
+            <button id="clearButton">Clear Effect</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Use CSS Houdini to write a paint worklet that creates a background effect on the box above. Try to replicate various effects!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

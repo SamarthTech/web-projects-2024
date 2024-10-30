@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Showdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Selector Showdown</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1</h2>
+            <p id="levelDescription">Select all the paragraphs and make them red.</p>
+        </div>
+
+        <div class="example-area">
+            <h3>Example HTML:</h3>
+            <div id="example">
+                <h2>Welcome to CSS Selector Showdown!</h2>
+                <p>This is the first paragraph.</p>
+                <p>This is the second paragraph.</p>
+                <p>This is the third paragraph.</p>
+                <div class="hidden-box">This should remain unchanged.</div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <h3>Write Your CSS Selector:</h3>
+            <input type="text" id="cssSelector" placeholder="e.g., p">
+            <button id="submitButton">Submit</button>
+        </div>
+
+        <div id="feedback"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
