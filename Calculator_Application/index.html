@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="Frame">
+        <p style="text-align: center;">
+            CALCULATOR
+        <p>
+        <div class="display">
+            <input type="text" id="display"  placeholder="0" disabled>
+        </div>
+
+        <div class="btns"  style="margin-top: 50px;">
+            <input class="button" type="button" value="7" onclick="display.value+=value">
+            <input class="button" type="button" value="8" onclick="display.value+=value">
+            <input class="button" type="button" value="9" onclick="display.value+=value">
+            <input class="button" style="background-color: red; color: white;" type="button" value="-" onclick="display.value+=value">
+        </div>
+        <div class="btns">
+            <input class="button" type="button" value="4" onclick="display.value+=value">
+            <input class="button" type="button" value="5" onclick="display.value+=value">
+            <input class="button" type="button" value="6" onclick="display.value+=value">
+            <input class="button" style="background-color: red; color: white;" type="button" value="+" onclick="display.value+=value">
+        </div>
+        <div class="btns">
+            <input class="button" type="button" value="1" onclick="display.value+=value">
+            <input class="button" type="button" value="2" onclick="display.value+=value">
+            <input class="button" type="button" value="3" onclick="display.value+=value">
+            <input class="button" style="background-color: red; color: white;" type="button" value="*" onclick="display.value+=value">
+        </div>
+        <div class="btns">
+            <input class="button" style="background-color:green;color: white;"type="button" value="C" onclick="display.value=''">
+            <input class="button" type="button" value="0" onclick="display.value+=value">
+            <input class="button" style="background-color:green; color: white;"type="button" value="/" onclick="display.value+=value">
+            <input class="button" style="background-color: red; color: white;" type="button" value="=" onclick="display.value=eval(display.value)">
+        </div>
+    </div>
+</body>
+</html>
