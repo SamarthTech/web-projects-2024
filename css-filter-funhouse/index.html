@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filter Funhouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Filter Funhouse</h1>
+        <p>Match your filtered image to the target by applying CSS filters!</p>
+
+        <div class="game-area">
+            <div class="image-section">
+                <h2>Target Image</h2>
+                <img src="images/target.jpg" alt="Target Image" id="targetImage">
+            </div>
+            
+            <div class="image-section">
+                <h2>Your Image</h2>
+                <img src="images/target.jpg" alt="Player Image" id="playerImage">
+            </div>
+        </div>
+
+        <div class="editor">
+            <h3>Write Your CSS:</h3>
+            <textarea id="cssEditor" placeholder="Enter CSS filter code here..."></textarea>
+            <button id="applyButton">Apply Filter</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Use CSS filters such as <code>blur</code>, <code>grayscale</code>, <code>contrast</code>, <code>brightness</code>, and <code>sepia</code> to match the target image. Try to get as close as possible!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

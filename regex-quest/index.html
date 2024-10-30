@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Quest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Regex Quest</h1>
+
+        <div id="levelInfo">
+            <h2 id="levelTitle">Level 1: Match Dates</h2>
+            <p id="levelDescription">Your goal is to match all the dates in the format DD/MM/YYYY.</p>
+        </div>
+
+        <div class="sample-text-area">
+            <h3>Text Sample:</h3>
+            <pre id="textSample">John's birthday is on 12/05/1994, and Mary's birthday is on 23/07/1988.</pre>
+        </div>
+
+        <div class="input-area">
+            <h3>Your Regex:</h3>
+            <input type="text" id="regexInput" placeholder="Write your regex here..." />
+            <button id="submitRegex">Submit</button>
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Write a regular expression that matches the specified pattern in the text sample. Press "Submit" to check your solution!</p>
+        </div>
+
+        <div id="scoreboard">
+            <h2>Your Score: <span id="scoreValue">0</span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

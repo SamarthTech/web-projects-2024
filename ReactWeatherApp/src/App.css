@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/public/images/bgImg.jpg");
+  background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.topCont {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.bodyCont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.initials {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  color: white;
+}
+.searchInput {
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px #000000;
+  outline: none;
+  border: none;
+  width: 57%;
+  padding: 1.1rem 0.8rem;
+  border-radius: 10px;
+  color: #fff;
+  &::placeholder {
+    color: #fff;
+  }
+}
+.searchBtn {
+  padding: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px #000000;
+  border-radius: 10px;
+  cursor: pointer;
+  .SearchIcon {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+}
+.searchBtn :hover {
+  transform: scale(1.5);
+}
+.box3 {
+  width: 80%;
+  height: 20vh;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.Box3Desc {
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 10px #000000;
+  border-radius: 10px;
+}
+.weatherhead {
+  font-size: 1rem;
+  color: #8b8b8b;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.weatherdesc {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-align: justify;
+}
+.Box3Img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000000;
+}
+.Box3Img img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Box2 {
+  width: 80%;
+  height: 30vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 10px #000000;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 0.8rem;
+}
+
+.Box2head {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Box2head h1 {
+  font-size: 1rem;
+  color: #8b8b8b;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.Box2cards {
+  width: 100%;
+  height: 85%;
+}
+.cardsCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+.cardsCont div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.cardsCont h1 {
+  color: #8b8b8b;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.cardsCont h2 {
+  color: #fff;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.Box1 {
+  width: 80%;
+  height: 28vh;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 10px #000000;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.Box1text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: #fff;
+}
+.Box1text div h1 {
+  font-size: 2.5rem;
+}
+.Box1text div p {
+  font-size: 1rem;
+  color: #8b8b8b;
+}
+.Box1text div h2 {
+  font-size: 3.5rem;
+}
+
+.Box1image {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.Box1image img {
+  height: 100%;
+  object-fit: cover;
+}
