@@ -1,0 +1,86 @@
+       
+body{
+    background-image: url("images/WhatsApp Image 2024-10-28 at 22.03.28_3940e039.jpg");
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d0cdcd;
+
+
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    background-color: #fff;
+}
+
+.login-box {
+    text-align: center;
+    
+}
+    
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3897f0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #307bdb;
+}
+.login-box a{
+    color: black;
+    text-decoration: none;
+}
+.login-box a:hover{
+    text-decoration: underline;
+}
+.signup {
+    margin-top: 20px;
+}
+
+.signup a {
+    color: #3897f0;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}

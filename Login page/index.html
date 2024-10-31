@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <style>
+        
+body{
+    background-image: url("images/WhatsApp Image 2024-10-28 at 22.03.28_3940e039.jpg");
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+    </style>
+    <div class="container">
+        <div class="login-box">
+            <img src="C:\Users\pc\OneDrive\Desktop\Login page\images\instagram-logo-png-transparent-background-red-8.png" alt="Instagram Logo" class="logo">
+            <form id="loginForm" onsubmit="return validateForm()">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit"><a href="https://www.instagram.com/?hl=en">Log In</button></a>
+            </form>
+            <div id="error" class="error-message"></div>
+            <p class="signup">Don't have an account? <a href="https://r.search.yahoo.com/_ylt=AwrKBTL9oR5n.gEAByu7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1731270398/RO=10/RU=https%3a%2f%2fwww.instagram.com%2faccounts%2femailsignup%2f/RK=2/RS=E7nO9VZj9X2RCvfApHK_cOtYcQo-">Sign up</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
