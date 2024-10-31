@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Idle Clicker Game</h1>
+        <p>Coins: <span id="coinCount">0</span></p>
+        
+        <button id="clickButton">Click Me!</button>
+        
+        <h2>Upgrades</h2>
+        <div id="upgrades">
+            <button id="autoClicker" class="upgrade" data-cost="10" disabled>
+                Auto Clicker Lv. <span id="autoClickerLevel">1</span> (Cost: <span id="autoClickerCost">10</span>)
+            </button>
+            <button id="clickMultiplier" class="upgrade" data-cost="25" disabled>
+                Double Coins per Click Lv. <span id="clickMultiplierLevel">1</span> (Cost: <span id="clickMultiplierCost">25</span>)
+            </button>
+            <button id="coinMagnet" class="upgrade" data-cost="50" disabled>
+                Coin Magnet (Cost: 50 coins)
+            </button>
+            <button id="superClicker" class="upgrade" data-cost="100" disabled>
+                Super Clicker (Cost: 100 coins)
+            </button>
+        </div>
+    </div>
+    <div id="bonusCoinsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
