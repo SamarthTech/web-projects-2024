@@ -38,3 +38,51 @@ body{
     display: block;
     font-size: 24px;
   }
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+}
+
+#theme-toggle .theme-icon {
+  font-size: 1.5rem;
+}
+
+#theme-toggle:hover {
+  background-color: #666;
+}
+
+/* Dark Theme */
+body.dark {
+  background: linear-gradient(135deg, #1c1c1c, #141414);
+  color: rgb(12, 12, 12);
+}
+
+body.dark h1, body.dark .time-number {
+  color: #575656d1;
+}
+
+body.dark .time-label {
+  color: #131212;
+}
+
+body.dark #countdown {
+  background: rgb(23, 23, 23);
+}
+
+body.dark #theme-toggle {
+  background-color: #636262;
+  color: #1d1d1d;
+}
