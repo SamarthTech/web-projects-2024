@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Gravity - Music Player</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script src="https://kit.fontawesome.com/b7b5f0f4f5.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="music-player">
+				<img src="Gravity.jpg" class="song-img">
+				<a href="https://open.spotify.com/track/1vMMwDCd1Hnb91a3x9MdfX?si=f061eb1a34424116"><h1>Gravity</h1></a>
+				<p>Martin Garrix, Sem Vox, Jaimes</p>
+
+				<audio id="song"> <source src="Gravity.mp3" type="audio/mpeg">
+				</audio>
+
+				<input type="range" value="0" id="progress">
+
+				<div class="controls">
+					<div> <i class="fa-solid fa-backward"></i> </div>
+					<div onclick="playPause()"> <i id="ctrlIcon" class="fa-solid fa-play"></i> </div>
+					<div> <i class="fa-solid fa-forward"></i> </div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			let progress = document.getElementById("progress");
+			let song = document.getElementById("song");
+			let ctrlIcon = document.getElementById("ctrlIcon");
+
+			song.onloadedmetadata = function() {
+				progress.max = song.duration;
+				progress.value = song.currentTime;
+			}
+
+			function playPause() {
+				if (ctrlIcon.classList.contains("fa-pause")) {
+					song.pause();
+					ctrlIcon.classList.remove("fa-pause");
+					ctrlIcon.classList.add("fa-play");
+				}
+				else {
+					song.play();
+					ctrlIcon.classList.remove("fa-play");
+					ctrlIcon.classList.add("fa-pause");
+				}
+			}
+
+			if (song.play()) {
+				setInterval(() => {
+					progress.value = song.currentTime;
+				}, 500);
+			}
+
+			progress.onchange = function() {
+				song.currentTime = progress.value;
+			}
+		</script>
+	</body>
+</html>
