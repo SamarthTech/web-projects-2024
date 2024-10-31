@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Drawing Room</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr 300px;
+            height: 100vh;
+            gap: 20px;
+            padding: 20px;
+        }
+        .tools {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .canvas-container {
+            position: relative;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .chat-container {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+        .tool-btn {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 4px;
+            background: #fff;
+            cursor: pointer;
+        }
+        .tool-btn.active {
+            background: #007bff;
+            color: white;
+        }
+        .color-picker {
+            width: 100%;
+            height: 40px;
+            margin: 5px 0;
+        }
+        #size-slider {
+            width: 100%;
+            margin: 10px 0;
+        }
+        .chat-input {
+            display: flex;
+            gap: 5px;
+        }
+        #message-input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .send-btn {
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tools">
+            <button class="tool-btn active" data-tool="pencil">✏️ Pencil</button>
+            <button class="tool-btn" data-tool="line">📏 Line</button>
+            <button class="tool-btn" data-tool="rectangle">⬜ Rectangle</button>
+            <button class="tool-btn" data-tool="circle">⭕ Circle</button>
+            <button class="tool-btn" data-tool="eraser">🧹 Eraser</button>
+            <input type="color" class="color-picker" id="color-picker" value="#000000">
+            <input type="range" id="size-slider" min="1" max="50" value="5">
+            <button class="tool-btn" id="clear-btn">🗑️ Clear Canvas</button>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button class="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        let currentTool = 'pencil';
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+        
+        // Canvas setup
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const container = document.querySelector('.canvas-container');
+        
+        function resizeCanvas() {
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+        }
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Tool selection
+        document.querySelectorAll('.tool-btn[data-tool]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelector('.tool-btn.active').classList.remove('active');
+                e.target.classList.add('active');
+                currentTool = e.target.dataset.tool;
+            });
+        });
+
+        // Drawing functions
+        const drawingFunctions = {
+            pencil: (e) => {
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+                
+                socket.emit('drawing', {
+                    type: 'pencil',
+                    x0: lastX,
+                    y0: lastY,
+                    x1: e.offsetX,
+                    y1: e.offsetY,
+                    color: ctx.strokeStyle,
+                    width: ctx.lineWidth
+                });
+                
+                lastX = e.offsetX;
+                lastY = e.offsetY;
+            },
+            
+            line: (e) => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+            },
+            
+            rectangle: (e) => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                const width = e.offsetX - lastX;
+                const height = e.offsetY - lastY;
+                ctx.strokeRect(lastX, lastY, width, height);
+            },
+            
+            circle: (e) => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                const radius = Math.sqrt(
+                    Math.pow(e.offsetX - lastX, 2) + 
+                    Math.pow(e.offsetY - lastY, 2)
+                );
+                ctx.beginPath();
+                ctx.arc(lastX, lastY, radius, 0, Math.PI * 2);
+                ctx.stroke();
+            },
+            
+            eraser: (e) => {
+                ctx.clearRect(e.offsetX - 10, e.offsetY - 10, 20, 20);
+                socket.emit('drawing', {
+                    type: 'eraser',
+                    x: e.offsetX,
+                    y: e.offsetY
+                });
+            }
+        };
+
+        // Drawing event listeners
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            lastX = e.offsetX;
+            lastY = e.offsetY;
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (!isDrawing) return;
+            drawingFunctions[currentTool](e);
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
+
+        canvas.addEventListener('mouseout', () => {
+            isDrawing = false;
+        });
+
+        // Color and size controls
+        const colorPicker = document.getElementById('color-picker');
+        const sizeSlider = document.getElementById('size-slider');
+
+        colorPicker.addEventListener('change', (e) => {
+            ctx.strokeStyle = e.target.value;
+        });
+
+        sizeSlider.addEventListener('input', (e) => {
+            ctx.lineWidth = e.target.value;
+        });
+
+        // Clear canvas
+        document.getElementById('clear-btn').addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            socket.emit('clearCanvas');
+        });
+
+        // Chat functionality
+        const chatMessages = document.getElementById('chat-messages');
+        const messageInput = document.getElementById('message-input');
+        const sendButton = document.querySelector('.send-btn');
+
+        function sendMessage() {
+            const message = messageInput.value.trim();
+            if (message) {
+                socket.emit('chat', { message });
+                messageInput.value = '';
+            }
+        }
+
+        sendButton.addEventListener('click', sendMessage);
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // Socket event handlers
+        socket.on('drawing', (data) => {
+            if (data.type === 'pencil') {
+                ctx.beginPath();
+                ctx.strokeStyle = data.color;
+                ctx.lineWidth = data.width;
+                ctx.moveTo(data.x0, data.y0);
+                ctx.lineTo(data.x1, data.y1);
+                ctx.stroke();
+            } else if (data.type === 'eraser') {
+                ctx.clearRect(data.x - 10, data.y - 10, 20, 20);
+            }
+        });
+
+        socket.on('chat', (data) => {
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = `${data.username}: ${data.message}`;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
+
+        socket.on('canvasCleared', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+
+        // Initial setup
+        ctx.strokeStyle = colorPicker.value;
+        ctx.lineWidth = sizeSlider.value;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+    </script>
+</body>
+</html>
