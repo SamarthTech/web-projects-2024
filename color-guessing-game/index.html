@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div class="start-screen">
+        <h1>Color Guessing Game</h1>
+        <p>Test your knowledge of hex colors!</p>
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <!-- Main Game Container -->
+    <div id="display-container" class="hide">
+        <!-- Header -->
+        <div class="header flex-space">
+            <div class="title">Color Guessing Game</div>
+            <div class="timer"></div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="container"></div>
+
+        <!-- Footer -->
+        <div class="flex-space">
+            <div class="number-of-questions"></div>
+            <button id="next-button" class="hide">Next</button>
+        </div>
+    </div>
+
+    <!-- Score Screen -->
+    <div class="score-container hide">
+        <h2>Game Over!</h2>
+        <div id="user-score"></div>
+        <button id="restart">Play Again</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
