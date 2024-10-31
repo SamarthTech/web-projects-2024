@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Word Scramble Game</h1>
+        <div id="word" aria-live="polite"></div>
+        <div class="input-group">
+            <input type="text" 
+                   id="guess" 
+                   placeholder="Enter your guess"
+                   aria-label="Enter your guess"
+                   autocomplete="off">
+            <button id="submit" aria-label="Submit guess">Submit</button>
+        </div>
+        <div id="message" aria-live="polite"></div>
+        <button id="new-word" aria-label="Get new word">New Word</button>
+        <button id="toggle-dark-mode" aria-label="Toggle dark mode">Toggle Dark Mode</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

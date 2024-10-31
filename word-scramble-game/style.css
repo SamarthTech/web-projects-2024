@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  margin: 0;
+  padding: 20px;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+#container {
+  max-width: 600px;
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#word {
+  font-size: 32px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#guess {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+
+#message {
+  margin: 20px 0;
+  font-weight: bold;
+  min-height: 24px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: 3px solid #45a049;
+  outline-offset: 2px;
+}
+
+.dark-mode button {
+  background-color: #666;
+}
+
+.dark-mode button:hover {
+  background-color: #777;
+}
+
+.dark-mode #guess {
+  background-color: #444;
+  color: #fff;
+  border-color: #666;
+}
+
+@media (max-width: 480px) {
+  .input-group {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  #guess {
+      width: 80%;
+  }
+}
