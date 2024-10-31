@@ -68,7 +68,11 @@ jobs:
             FILE_COUNT=$(echo "$PR_FILES" | wc -l)
             VALID=true
             REASONS=""
-
+            # Check if all files are within a single directory in the root
+            ROOT_DIR=$(echo "$PR_FILES" | cut -d'/' -f1 | sort -u)
+            if [ $(echo "$ROOT_DIR" | wc -l) -ne 1 ] || [ -z "$ROOT_DIR" ] || [ "$ROOT_DIR" = "." ]; then
+              VALID=false
+            fi
             # Check for changes to .github folder
             if echo "$PR_FILES" | grep -q "^\.github/"; then
               VALID=false
