@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="gameStatus">
+            <div class="timer">Time: <span id="timeDisplay">05:00</span></div>
+            <div class="progress-container">
+                <div class="progress-text">Progress: Level <span id="levelDisplay">1</span>/3</div>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="level1" class="level active">
+            <h2>Level 1: The Locked Box</h2>
+            <p>Find the 4-digit code (Year the first iPhone was released)</p>
+            <input type="text" maxlength="4" placeholder="Enter code">
+        </div>
+
+        <div id="level2" class="level">
+            <h2>Level 2: Color Sequence</h2>
+            <p>Enter the sequence using first letters (Red, Green, Blue, Yellow)</p>
+            <input type="text" maxlength="4" placeholder="Enter RGBY sequence">
+        </div>
+
+        <div id="level3" class="level">
+            <h2>Level 3: The Final Lock</h2>
+            <p>Solve: 3x + 7 = 22</p>
+            <input type="text" maxlength="2" placeholder="Enter value of x">
+        </div>
+
+        <div id="controls">
+            <button id="submitBtn">Submit</button>
+            <button id="hintBtn">Get Hint</button>
+        </div>
+
+        <div id="message"></div>
+        <div id="hintText"></div>
+        <div id="hintsRemaining">Hints remaining: 3</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
