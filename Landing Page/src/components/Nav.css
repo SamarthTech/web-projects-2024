@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 72px;
+  align-items: center;
+}
+* {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+:root {
+  --red: #d01c28;
+  --grey: #2e2e2e;
+}
+button {
+  all: unset;
+  padding: 6px 16px;
+  height: 32px;
+  background: var(--red);
+  color: white;
+  font-weight: 500;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 34px;
+}
+.logo {
+  display: flex;
+  align-items: left;
+}
