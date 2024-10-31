@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #19084e;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #9873fe;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+.start-screen,
+.score-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9873fe;
+  z-index: 100;
+}
+
+#start-button,
+#restart {
+  font-size: 1.2em;
+  padding: 1em 3em;
+  border-radius: 2em;
+  background-color: #ffffff;
+  box-shadow: 0 0.5em 1em rgba(37, 22, 80, 0.2);
+}
+
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#display-container {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 37em;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 1em 2em rgba(37, 22, 80, 0.2);
+}
+
+.header {
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header .title {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.timer {
+  font-weight: 500;
+}
+
+.question-color {
+  width: 100%;
+  height: 100px;
+  margin: 1em 0;
+  border-radius: 0.5em;
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.option-div {
+  width: 100%;
+  height: 8em;
+  border-radius: 0.5em;
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.option-div:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.correct {
+  border: 2px solid #4CAF50;
+}
+
+.incorrect {
+  border: 2px solid #f44336;
+}
+
+#next-button {
+  font-size: 1.1em;
+  background-color: #9873fe;
+  color: #ffffff;
+  padding: 0.8em 2em;
+  border-radius: 0.5em;
+  margin-top: 1.5em;
+  width: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  #display-container {
+      width: 95%;
+      padding: 1.5em;
+  }
+
+  .button-container {
+      grid-template-columns: 1fr;
+  }
+
+  .option-div {
+      height: 6em;
+  }
+}
