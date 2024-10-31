@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #1c1c1c;
+	text-align: center;
+}
+
+#wrapper {
+	display: inline-block;
+	margin: 20px;
+}
+
+#left-div {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 20 20 20;
+	padding: 20;
+	border: solid 1px white;
+	width: 286px;
+	height: 572.325px;
+}
+
+#logo {
+	width: 160px;
+	margin-bottom: 15px;
+}
+
+#game-container {
+	position: relative;
+	display: inline-block;
+}
+
+#background {
+	z-index: -1;
+}
+
+#game-canvas {
+	position: absolute;
+}
+
+#score-div,
+#lines-div {
+	color: white;
+	font-size: 23px;
+	font-weight: bold;
+	font-family: "Lucida Console", "Courier New", monospace;
+	text-align: left;
+	margin: 15 0;
+}
