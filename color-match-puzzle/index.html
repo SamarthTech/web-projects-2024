@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Match Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Color Match Puzzle</h1>
+    <p>Match two tiles of the same color or pattern!</p>
+    <div id="gameBoard">
+        <button class="colorTile" style="background-color: #ff0000;" onclick="checkMatch(this)"></button>
+        <button class="colorTile" style="background-color: #00ff00;" onclick="checkMatch(this)"></button>
+        <button class="colorTile" style="background-color: #0000ff;" onclick="checkMatch(this)"></button>
+        <button class="colorTile" style="background-color: #ff0000;" onclick="checkMatch(this)"></button>
+        <button class="colorTile" style="background-color: #00ff00;" onclick="checkMatch(this)"></button>
+        <button class="colorTile" style="background-color: #0000ff;" onclick="checkMatch(this)"></button>
+    </div>
+    <button onclick="toggleColorblindMode()">Toggle Colorblind Mode</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
