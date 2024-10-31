@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Detective Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Crime Scene Investigation</h1>
+        <p>Click on objects to investigate clues and solve the mystery!</p>
+
+        <div id="scene">
+            <!-- Clues and objects for interaction -->
+            <div class="clue" id="note" onclick="investigate('note')">📝 Note</div>
+            <div class="clue" id="footprint" onclick="investigate('footprint')">👣 Footprint</div>
+            <div class="clue" id="weapon" onclick="investigate('weapon')">🔪 Weapon</div>
+            <div class="clue" id="phone" onclick="investigate('phone')">📱 Phone</div>
+        </div>
+
+        <div id="clue-description">
+            <p id="description-text">Select a clue to see more details...</p>
+        </div>
+
+        <div id="accusation">
+            <h3>Who do you think is the culprit?</h3>
+            <select id="suspects">
+                <option value="unknown">Choose a suspect</option>
+                <option value="Alex">Alex</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Taylor">Taylor</option>
+                <option value="Jamie">Jamie</option>
+            </select>
+            <button onclick="makeAccusation()">Accuse</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

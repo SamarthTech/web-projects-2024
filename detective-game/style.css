@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+#game-container {
+    width: 60%;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#scene {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.clue {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#clue-description, #accusation {
+    margin-top: 20px;
+}
+
+#description-text, #result {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
