@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+#gameBoard {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+.colorTile {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.colorTile:hover {
+    transform: scale(1.1);
+}
+
+.patternRed {
+    background-image: url('pattern1.jpeg');
+    background-size: cover;
+}
+
+.patternGreen {
+    background-image: url('pattern2.jpeg');
+    background-size: cover;
+}
+
+.patternBlue {
+    background-image: url('pattern3.jpeg');
+    background-size: cover;
+}
