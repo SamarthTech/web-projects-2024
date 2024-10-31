@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Eco-City Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Eco-City Builder</h1>
+  <div id="controls">
+    <button onclick="addBuilding('factory')">Add Factory (-10)</button>
+    <button onclick="addBuilding('park')">Add Park (+10)</button>
+    <button onclick="addBuilding('house')">Add House (+5)</button>
+    <p>Score: <span id="score">0</span> | Pollution: <span id="pollution">0</span> | Budget: $<span id="budget">50</span> | Population: <span id="population">0</span></p>
+  </div>
+  <div id="city-grid"></div>
+  <p id="game-over" style="display: none; color: red; font-weight: bold;">Game Over! Refresh to play again.</p>
+  <script src="script.js"></script>
+</body>
+</html>
