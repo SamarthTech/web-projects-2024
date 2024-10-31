@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Speed Challenge</h1>
+        <p class="instructions">Type the displayed sentence as quickly and accurately as you can.</p>
+        
+        <!-- Difficulty Level Selector -->
+        <label for="difficulty">Choose Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy (45 sec)</option>
+            <option value="medium" selected>Medium (30 sec)</option>
+            <option value="hard">Hard (15 sec)</option>
+        </select>
+
+        <!-- Display random sentence -->
+        <div id="sentence" class="sentence">Press "Start Game" to begin.</div>
+
+        <!-- Input for typing -->
+        <textarea id="inputText" placeholder="Start typing here..." disabled></textarea>
+
+        <!-- Buttons and Results -->
+        <div class="controls">
+            <button id="startButton">Start Game</button>
+            <p id="timer">Time: <span id="timeLeft">0</span> sec</p>
+        </div>
+
+        <div class="results">
+            <p>Words per minute (WPM): <span id="wpm">0</span></p>
+            <p>Accuracy: <span id="accuracy">0</span>%</p>
+            <p>High Score: <span id="highScore">0</span> WPM</p>
+        </div>
+
+        <!-- Feedback Message -->
+        <div id="feedback" class="feedback"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
